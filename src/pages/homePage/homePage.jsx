@@ -1,4 +1,4 @@
-import LogoSlider from '../../components/logoSlider'
+import LogoSlider from '../../components/logoSlider/logoSlider'
 import AppColors from '../../utils/colors/appColors';
 
 function HomePage() {
@@ -8,7 +8,6 @@ function HomePage() {
       <h1 className="text-7xl font-bold text-gray-800 mb-4 w-11/12" style={{ color: AppColors.WhiteText }}>
         Empowering your digital transformation with <span style={{ color: AppColors.ThemeYellow }}>Innovative Solutions</span>
       </h1>
-
 
       {/* Small Paragraph */}
       <p className="text-lg mb-6 w-10/12" style={{ color: AppColors.NormalText }}>
@@ -24,13 +23,16 @@ function HomePage() {
           Contact Us
         </button>
       </div>
+      
+      {/* LogoSlider */}
       <div className='flex flex-row w-full'>
         <LogoSlider></LogoSlider>
       </div>
 
+      {/* Testimonials */}
+
+
     </div>
-
-
 
   );
 }
