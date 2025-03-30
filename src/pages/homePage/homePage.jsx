@@ -1,4 +1,3 @@
-import LogoSlider from '../../components/logoSlider/logoSlider'
 import AppColors from '../../utils/colors/appColors';
 
 function HomePage() {
@@ -23,17 +22,7 @@ function HomePage() {
           Contact Us
         </button>
       </div>
-      
-      {/* LogoSlider */}
-      <div className='flex flex-row w-full'>
-        <LogoSlider></LogoSlider>
-      </div>
-
-      {/* Testimonials */}
-
-
     </div>
-
   );
 }
 

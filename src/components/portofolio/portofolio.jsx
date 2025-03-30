@@ -1,9 +1,10 @@
-function Testimonials() {
+function Portfolio() {
     return (
         <div className="bg-white mt-2 h-screen text-center">
-            TESTIMONIALS
+            PROTOFOLIO
         </div>
-    );
+
+    )
 }
 
-export default Testimonials;
+export default Portfolio
