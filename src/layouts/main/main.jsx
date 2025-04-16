@@ -8,15 +8,15 @@ import Portfolio from '../../components/portofolio/portofolio';
 
 function Main() {
   return (
-    <>
-    <Header></Header>
-    <Outlet></Outlet>
-    <LogoSlider></LogoSlider>
-    <Services></Services>
-    <Portfolio></Portfolio> 
-    <Testimonials></Testimonials>
-    <Footer></Footer>
-    </>
+    <div className="bg-white dark:bg-[#121212] min-h-screen transition-colors duration-300">
+      <Header />
+      <Outlet />
+      <LogoSlider />
+      <Services />
+      <Portfolio /> 
+      <Testimonials />
+      <Footer />
+    </div>
   )
 }
 
