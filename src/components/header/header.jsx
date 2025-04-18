@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 function Header() {
-  const [activeLink, setActiveLink] = useState("home");
+  const [setActiveLink] = useState("home");
   // Check if dark mode is active
   const [isDarkMode, setIsDarkMode] = useState(document.documentElement.classList.contains('dark'));
 
