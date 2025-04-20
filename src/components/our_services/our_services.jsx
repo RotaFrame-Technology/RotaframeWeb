@@ -2,7 +2,7 @@ function OurServices() {
     return (
         <div className="flex flex-col px-20 pt-24 bg-center bg-cover"
             style={{ backgroundImage: "url('/src/assets/images/serviceBg.png')" }}>
-            <div className="text-4xl font-semibold text-center text-white">OurServices</div>
+            <div className="text-4xl font-semibold text-center text-white">Our Services</div>
             <div className="pt-4 text-base font-normal text-center text-gray-300">Kickstart your next project with templates built by us and our community.</div>
 
             <div className="flex flex-col w-[940px] h-[460px] relative justify-end">

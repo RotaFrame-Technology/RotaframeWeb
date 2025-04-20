@@ -5,6 +5,7 @@ import LogoSlider from '../../components/logoSlider/logoSlider'
 import Testimonials from '../../components/testimonials/testimonials';
 import Portfolio from '../../components/portofolio/portofolio';
 import OurServices from '../../components/our_services/our_services';
+import Banner from '../../components/banner/banner';
 
 function Main() {
   return (
@@ -14,6 +15,7 @@ function Main() {
       <LogoSlider />
       <OurServices />
       <Portfolio /> 
+      <Banner/>
       <Testimonials />
       <Footer />
     </div>
