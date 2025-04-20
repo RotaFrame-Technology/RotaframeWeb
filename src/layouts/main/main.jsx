@@ -3,8 +3,8 @@ import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 import LogoSlider from '../../components/logoSlider/logoSlider'
 import Testimonials from '../../components/testimonials/testimonials';
-import Services from '../../components/services/services';
 import Portfolio from '../../components/portofolio/portofolio';
+import OurServices from '../../components/our_services/our_services';
 
 function Main() {
   return (
@@ -12,7 +12,7 @@ function Main() {
       <Header />
       <Outlet />
       <LogoSlider />
-      <Services />
+      <OurServices />
       <Portfolio /> 
       <Testimonials />
       <Footer />
