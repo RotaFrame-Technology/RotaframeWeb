@@ -6,6 +6,7 @@ import Testimonials from '../../components/testimonials/testimonials';
 import Portfolio from '../../components/portofolio/portofolio';
 import OurServices from '../../components/our_services/our_services';
 import Banner from '../../components/banner/banner';
+import ContactUs from '../../components/contact_us/contact_us';
 
 function Main() {
   return (
@@ -17,6 +18,7 @@ function Main() {
       <Portfolio /> 
       <Banner/>
       <Testimonials />
+      <ContactUs/>
       <Footer />
     </div>
   )
