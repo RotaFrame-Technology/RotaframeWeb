@@ -5,18 +5,20 @@ import { FaMoon, FaSun } from "react-icons/fa";
 function Header() {
   const [setActiveLink] = useState("home");
   // Check if dark mode is active
-  const [isDarkMode, setIsDarkMode] = useState(document.documentElement.classList.contains('dark'));
+  const [isDarkMode, setIsDarkMode] = useState(
+    document.documentElement.classList.contains("dark")
+  );
 
   const toggleDarkMode = () => {
-    if (document.documentElement.classList.contains('dark')) {
+    if (document.documentElement.classList.contains("dark")) {
       // Currently dark, switch to light
-      document.documentElement.classList.remove('dark');
-      localStorage.removeItem('theme');
+      document.documentElement.classList.remove("dark");
+      localStorage.removeItem("theme");
       setIsDarkMode(false);
     } else {
       // Currently light, switch to dark
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
     }
   };
@@ -26,19 +28,21 @@ function Header() {
   };
 
   return (
-    <header className="w-full h-12 px-[120px] sticky top-5 z-50 bg-white dark:bg-[#171717] transition-colors duration-300 flex items-center justify-center">
-      <div className="w-full max-w-[1440px] flex flex-row items-center justify-between bg-[#EDEDED] dark:bg-[#171717] px-6 py-3 rounded-xl">
-
-        
+    <header className="w-full sticky top-5 z-50 flex items-center justify-center">
+      <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between bg-[#EDEDED] dark:bg-[#171717] px-6 py-3 rounded-xl transition-colors duration-300 shadow-md">
         {/* Icon */}
         <div className="flex items-center">
           <img
-            src={isDarkMode ? "/src/assets/images/Rotaframe Yellow.svg" : "/src/assets/images/Rotaframe Black.svg"}
+            src={
+              isDarkMode
+                ? "/src/assets/images/Rotaframe Yellow.svg"
+                : "/src/assets/images/Rotaframe Black.svg"
+            }
             className="h-[40px] w-[160px] ml-[8px]"
             alt="Rotaframe Logo"
           />
         </div>
-  
+
         {/* Nav Links & Actions */}
         <div className="flex flex-row gap-20 items-center">
           <div className="flex flex-row gap-5 font-semibold">
@@ -53,17 +57,19 @@ function Header() {
               </Link>
             ))}
           </div>
-  
+
           {/* Theme toggle + CTA */}
           <div className="flex flex-row gap-5">
             <button
               onClick={toggleDarkMode}
               className="text-2xl text-black dark:text-white"
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+              aria-label={
+                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </button>
-  
+
             <button className="px-6 py-[5px] text-[18px] bg-[#FFD400] text-black border-[#005F7E] rounded-lg">
               Contact Us
             </button>

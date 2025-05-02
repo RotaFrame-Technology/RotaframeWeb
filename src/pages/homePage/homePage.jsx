@@ -1,3 +1,5 @@
+import LogoSlider from '../../components/logoSlider/logoSlider'
+
 function HomePage() {
   return (
     <section className="w-full bg-white dark:bg-[#121212] transition-colors duration-300 flex justify-center">
@@ -26,8 +28,11 @@ function HomePage() {
             Contact Us
           </button>
         </div>
+        <LogoSlider />
       </div>
+      
     </section>
+    
   );
 }
 
