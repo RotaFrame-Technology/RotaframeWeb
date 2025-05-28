@@ -1,22 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 function Header() {
   const [setActiveLink] = useState("home");
-  // Check if dark mode is active
   const [isDarkMode, setIsDarkMode] = useState(
     document.documentElement.classList.contains("dark")
   );
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDarkMode = () => {
     if (document.documentElement.classList.contains("dark")) {
-      // Currently dark, switch to light
       document.documentElement.classList.remove("dark");
       localStorage.removeItem("theme");
       setIsDarkMode(false);
     } else {
-      // Currently light, switch to dark
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
@@ -27,9 +25,24 @@ function Header() {
     setActiveLink(link.toLowerCase());
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full sticky top-5 z-50 flex items-center justify-center">
-      <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between bg-[#EDEDED] dark:bg-[#171717] px-6 py-3 rounded-xl transition-colors duration-300 shadow-md">
+    <header className="w-full sticky top-1 z-50 flex items-center justify-center">
+      <div
+        className={`w-full max-w-[1440px] mx-auto flex items-center justify-between px-6 py-3 rounded-xl transition-all duration-300 shadow-md
+          ${isScrolled
+            ? "bg-transparent backdrop-blur-md dark:bg-transparent"
+            : "bg-[#EDEDED] dark:bg-[#171717]"
+          }`}
+      >
         {/* Icon */}
         <div className="flex items-center">
           <img
@@ -44,7 +57,7 @@ function Header() {
         </div>
 
         {/* Nav Links & Actions */}
-        <div className="flex flex-row gap-20 items-center">
+        <div className="flex flex-row gap-8 items-center">
           <div className="flex flex-row gap-5 font-semibold">
             {["Home", "About Us", "Services", "Portfolio"].map((item) => (
               <Link
@@ -59,13 +72,11 @@ function Header() {
           </div>
 
           {/* Theme toggle + CTA */}
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-row gap-9">
             <button
               onClick={toggleDarkMode}
               className="text-2xl text-black dark:text-white"
-              aria-label={
-                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
-              }
+              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </button>
