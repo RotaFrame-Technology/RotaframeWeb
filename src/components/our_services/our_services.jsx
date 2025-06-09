@@ -65,7 +65,7 @@ function OurServices() {
                 alt="Service 2 Hover"
               />
             </div>
-            <div className="flex flex-col w-full ml-[380px] bg-white dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
+            <div className="flex flex-col w-full ml-[380px] bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
               <div className="text-[#FBBC05] font-semibold">Multi-Platform</div>
               <div className="font-normal text-2xl pt-2">
                 e-Commerce Development
@@ -107,7 +107,7 @@ function OurServices() {
                 alt="Service 3 Hover"
               />
             </div>
-            <div className="flex flex-col w-full ml-[380px] bg-white dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
+            <div className="flex flex-col w-full ml-[380px] bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
               <div className="text-[#FBBC05] font-semibold">Multi-Platform</div>
               <div className="font-normal text-2xl pt-2">
                 e-Commerce Development
@@ -149,7 +149,7 @@ function OurServices() {
                 alt="Service 4 Hover"
               />
             </div>
-            <div className="flex flex-col w-full ml-[380px] bg-white dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
+            <div className="flex flex-col w-full ml-[380px] bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
               <div className="text-[#FBBC05] font-semibold">Multi-Platform</div>
               <div className="font-normal text-2xl pt-2">
                 e-Commerce Development
