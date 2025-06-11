@@ -1,12 +1,13 @@
 function Footer() {
     return (
-        <div className="flex flex-col w-full h-[1100px] items-center">
+        <div className="flex flex-col mt-5 w-full h-[800px] items-center">
             {/* Footer GIF */}
-            <div className="h-[750px] w-full justify-center flex flex-row">
+            <div className="mt-5  w-full justify-center overflow-hidden relative">
                 <img
                     src="/src/assets/images/ContactUs.gif"
                     alt="Footer Animation"
-                    className="w-full h-full object-cover rounded-4xl"
+                    className="w-full  translate-y-[-50%]  object-cover rounded-4xl  invert dark:invert-0 "
+                    
                 />
             </div>
 
@@ -30,7 +31,7 @@ function Footer() {
                     </div>
 
                     {/* Footer Links */}
-                    <div className="flex flex-row mt-4 gap-16">
+                    <div className="flex flex-row  gap-16">
                         <div className="flex flex-col gap-2">
                             <div className="text-lg font-semibold mb-2 text-[#000000] dark:text-[#FAFAFA]">
                                 Services
@@ -71,9 +72,9 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-row w-full h-[1px] bg-[#D9D9D9] dark:bg-[#2E2E2E] mt-12"></div>
+                <div className="flex flex-row w-full h-[1px] bg-[#D9D9D9] dark:bg-[#2E2E2E]"></div>
 
-                <div className="flex flex-row w-full text-normal text-[#5C5C5C] dark:text-[#898989] justify-center mt-5">
+                <div className="flex flex-row w-full text-normal text-[#5C5C5C] dark:text-[#898989] justify-center">
                     2025 © Rotaframe Technology
                 </div>
             </div>

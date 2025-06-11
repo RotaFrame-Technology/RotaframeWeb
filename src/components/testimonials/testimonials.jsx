@@ -25,7 +25,7 @@ function Testimonials() {
 
     return (
         <section className="w-full bg-white dark:bg-[#121212] transition-colors duration-300 flex justify-center">
-            <div className="flex flex-col items-center justify-center text-center px-4 w-full max-w-[1440px] mt-[100px] md:mt-[240px] md:mb-20">
+            <div className="flex flex-col items-center justify-center text-center px-4 w-full max-w-[1440px]  md:mt-[120px] md:mb-20">
                 
                 {/* Section Title */}
                 <h2 className="text-[65px] leading-[72px] font-bold mb-4 w-11/12 text-gray-800 dark:text-white">
