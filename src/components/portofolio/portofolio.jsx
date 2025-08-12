@@ -79,18 +79,11 @@ function Portfolio() {
                     className="h-[18px] w-[18px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
-                    insider Business
+                    Travel Nebula
                   </div>
                 </div>
                 <div className="text-sm text-[#898989] w-1/2 mt-2">
-                  A{" "}
-                  <span className="text-gray-800 dark:text-white">dynamic</span>{" "}
-                  web landing page aimed at driving sales for a specific
-                  product. The{" "}
-                  <span className="text-gray-800 dark:text-white">
-                    landing page
-                  </span>{" "}
-                  serves as the initial point of contact for potential.
+                  This project aims to develop a user-friendly and visually engaging mobile application interface for seamless travel ticket booking.
                 </div>
               </div>
 
@@ -138,18 +131,11 @@ function Portfolio() {
                     className="h-[18px] w-[16px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
-                    insider Business
+                    iNfo
                   </div>
                 </div>
                 <div className="text-sm text-[#898989] w-1/2 mt-2">
-                  A{" "}
-                  <span className="text-gray-800 dark:text-white">dynamic</span>{" "}
-                  web landing page aimed at driving sales for a specific
-                  product. The{" "}
-                  <span className="text-gray-800 dark:text-white">
-                    landing page
-                  </span>{" "}
-                  serves as the initial point of contact for potential.
+                  This project aims to develop a user-friendly and visually engaging mobile application interface for seamless travel ticket booking.
                 </div>
               </div>
 

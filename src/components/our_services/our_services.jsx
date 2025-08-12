@@ -68,7 +68,7 @@ function OurServices() {
             <div className="flex flex-col w-full ml-[380px] bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
               <div className="text-[#FBBC05] font-semibold">Multi-Platform</div>
               <div className="font-normal text-2xl pt-2">
-                e-Commerce Development
+                Custom Software Development
               </div>
               <div className="text-gray-600 dark:text-gray-400 font-normal text-sm pt-2">
                 Unleash the potential of your online identity with Rotaframe
@@ -110,16 +110,10 @@ function OurServices() {
             <div className="flex flex-col w-full ml-[380px] bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
               <div className="text-[#FBBC05] font-semibold">Multi-Platform</div>
               <div className="font-normal text-2xl pt-2">
-                e-Commerce Development
+                Mobile Application Development
               </div>
               <div className="text-gray-600 dark:text-gray-400 font-normal text-sm pt-2">
-                Unleash the potential of your online identity with Rotaframe
-                Technology's bespoke web design and development services. Our
-                expert team crafts captivating websites and robust web
-                applications that leave a lasting impression on your visitors.
-                From visually stunning interfaces to seamless user experiences,
-                we tailor every aspect to align with your brand and engage your
-                audience effectively.
+                Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications. Elevate your user experience, resonate with your audience, and make a lasting impact in the digital realm.
               </div>
               <button className="text-gray-600 dark:text-gray-400 text-start text-sm flex flex-row gap-2 items-center mt-6">
                 <div>Read more</div>
@@ -152,16 +146,10 @@ function OurServices() {
             <div className="flex flex-col w-full ml-[380px] bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl justify-center px-6">
               <div className="text-[#FBBC05] font-semibold">Multi-Platform</div>
               <div className="font-normal text-2xl pt-2">
-                e-Commerce Development
+                UX/UI & Product Development
               </div>
               <div className="text-gray-600 dark:text-gray-400 font-normal text-sm pt-2">
-                Unleash the potential of your online identity with Rotaframe
-                Technology's bespoke web design and development services. Our
-                expert team crafts captivating websites and robust web
-                applications that leave a lasting impression on your visitors.
-                From visually stunning interfaces to seamless user experiences,
-                we tailor every aspect to align with your brand and engage your
-                audience effectively.
+                Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors. From visually stunning interfaces to seamless user experiences, we tailor every aspect to align with your brand and engage your audience effectively.
               </div>
               <button className="text-gray-600 dark:text-gray-400 text-start text-sm flex flex-row gap-2 items-center mt-6">
                 <div>Read more</div>
