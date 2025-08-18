@@ -59,7 +59,7 @@ function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src={isDarkMode ? "/assets/images/Rotaframe White.png" : "/assets/images/Rotaframe Black.png"}
+              src={isDarkMode ? "/assets/images/Rotaframe Yellow.png" : "/assets/images/Rotaframe Black.png"}
               className="h-[25px] sm:h-[30px] w-auto"
               alt="Rotaframe Logo"
             />
