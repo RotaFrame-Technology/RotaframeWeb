@@ -60,8 +60,8 @@ function Header() {
           <img
             src={
               isDarkMode
-                ? "/src/assets/images/Rotaframe Yellow.png"
-                : "/src/assets/images/Rotaframe Black.png"
+                ? "/assets/images/Rotaframe White.png"
+                : "/assets/images/Rotaframe Black.png"
             }
             className="h-[30px] w-[157px] ml-[8px]"
             alt="Rotaframe Logo"

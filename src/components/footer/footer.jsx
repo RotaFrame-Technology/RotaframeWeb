@@ -35,12 +35,12 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Logo and Social Icons */}
           <div className="flex flex-col items-start">
-            <img src="/src/assets/icons/Rotaframe.svg" alt="Rotaframe Logo" />
+            <img src="/assets/icons/Rotaframe.svg" alt="Rotaframe Logo" />
             <div className="flex flex-row gap-4 mt-10">
               {[1, 2, 3, 4].map((num) => (
                 <button key={num} className="cursor-pointer">
                   <img
-                    src={`/src/assets/images/social${num}.svg`}
+                    src={`/assets/images/social${num}.svg`}
                     alt={`social-icon-${num}`}
                     className="w-[20px] h-[20px]"
                   />

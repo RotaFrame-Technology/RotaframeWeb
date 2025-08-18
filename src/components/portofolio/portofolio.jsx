@@ -15,7 +15,7 @@ function Portfolio() {
               <div className="flex flex-col">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src="/src/assets/images/portfolioicon.png"
+                    src="/assets/images/portfolioicon.png"
                     className="h-[18px] w-[18px] invert dark:invert-0"
                   />
 
@@ -38,14 +38,14 @@ function Portfolio() {
               <div className="flex flex-col gap-1 text-white">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/github.png"}
+                    src={"/assets/images/github.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">GitHub</div>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/behance.png"}
+                    src={"/assets/images/behance.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">
@@ -58,14 +58,14 @@ function Portfolio() {
                     Read more
                   </div>
                   <img
-                    src={"/src/assets/images/arrowup.png"}
+                    src={"/assets/images/arrowup.png"}
                     className="h-[20px] w-[20px] "
                   />
                 </div>
               </div>
             </div>
             <img
-              src={"/src/assets/images/portfolio1.png"}
+              src={"/assets/images/portfolio1.png"}
               className="h-[330px] w-[350px] absolute right-0"
             />
           </div>
@@ -75,7 +75,7 @@ function Portfolio() {
               <div className="flex flex-col">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/portfoliomobileicon.png"}
+                    src={"/assets/images/portfoliomobileicon.png"}
                     className="h-[18px] w-[18px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
@@ -90,14 +90,14 @@ function Portfolio() {
               <div className="flex flex-col gap-1 text-white">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/github.png"}
+                    src={"/assets/images/github.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">GitHub</div>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/behance.png"}
+                    src={"/assets/images/behance.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">
@@ -110,14 +110,14 @@ function Portfolio() {
                     Read more
                   </div>
                   <img
-                    src={"/src/assets/images/arrowup.png"}
+                    src={"/assets/images/arrowup.png"}
                     className="h-[20px] w-[20px]"
                   />
                 </div>
               </div>
             </div>
             <img
-              src={"/src/assets/images/portfolio2.png"}
+              src={"/assets/images/portfolio2.png"}
               className="h-[300px] w-[145px] absolute right-0"
             />
           </div>
@@ -127,7 +127,7 @@ function Portfolio() {
               <div className="flex flex-col">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/portfoliomobileicon.png"}
+                    src={"/assets/images/portfoliomobileicon.png"}
                     className="h-[18px] w-[16px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
@@ -142,14 +142,14 @@ function Portfolio() {
               <div className="flex flex-col gap-1 text-white">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/github.png"}
+                    src={"/assets/images/github.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">GitHub</div>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/behance.png"}
+                    src={"/assets/images/behance.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">
@@ -162,14 +162,14 @@ function Portfolio() {
                     Read more
                   </div>
                   <img
-                    src={"/src/assets/images/arrowup.png"}
+                    src={"/assets/images/arrowup.png"}
                     className="h-[20px] w-[20px]"
                   />
                 </div>
               </div>
             </div>
             <img
-              src={"/src/assets/images/portfolio3.png"}
+              src={"/assets/images/portfolio3.png"}
               className="h-[300px] w-[145px] absolute right-0"
             />
           </div>
@@ -181,7 +181,7 @@ function Portfolio() {
               <div className="flex flex-col">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/portfoliomobileicon.png"}
+                    src={"/assets/images/portfoliomobileicon.png"}
                     className="h-[18px] w-[16px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
@@ -203,14 +203,14 @@ function Portfolio() {
               <div className="flex flex-col gap-1 text-white">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/github.png"}
+                    src={"/assets/images/github.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">GitHub</div>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/behance.png"}
+                    src={"/assets/images/behance.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">
@@ -223,14 +223,14 @@ function Portfolio() {
                     Read more
                   </div>
                   <img
-                    src={"/src/assets/images/arrowup.png"}
+                    src={"/assets/images/arrowup.png"}
                     className="h-[20px] w-[20px]"
                   />
                 </div>
               </div>
             </div>
             <img
-              src={"/src/assets/images/portfolio2.png"}
+              src={"/assets/images/portfolio2.png"}
               className="h-[300px] w-[145px] absolute right-0"
             />
           </div>
@@ -240,7 +240,7 @@ function Portfolio() {
               <div className="flex flex-col">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/portfoliomobileicon.png"}
+                    src={"/assets/images/portfoliomobileicon.png"}
                     className="h-[18px] w-[16px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
@@ -262,14 +262,14 @@ function Portfolio() {
               <div className="flex flex-col gap-1 text-white">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/github.png"}
+                    src={"/assets/images/github.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">GitHub</div>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/behance.png"}
+                    src={"/assets/images/behance.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">
@@ -282,14 +282,14 @@ function Portfolio() {
                     Read more
                   </div>
                   <img
-                    src={"/src/assets/images/arrowup.png"}
+                    src={"/assets/images/arrowup.png"}
                     className="h-[20px] w-[20px]"
                   />
                 </div>
               </div>
             </div>
             <img
-              src={"/src/assets/images/portfolio3.png"}
+              src={"/assets/images/portfolio3.png"}
               className="h-[300px] w-[145px] absolute right-0"
             />
           </div>
@@ -298,7 +298,7 @@ function Portfolio() {
               <div className="flex flex-col">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/portfolioicon.png"}
+                    src={"/assets/images/portfolioicon.png"}
                     className="h-[18px] w-[18px] invert dark:invert-0"
                   />
                   <div className="text-lg font-normal text-gray-800 dark:text-white">
@@ -320,14 +320,14 @@ function Portfolio() {
               <div className="flex flex-col gap-1 text-white">
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/github.png"}
+                    src={"/assets/images/github.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">GitHub</div>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <img
-                    src={"/src/assets/images/behance.png"}
+                    src={"/assets/images/behance.png"}
                     className="h-[20px] w-[20px] invert dark:invert-0"
                   />
                   <div className="text-base font-normal text-gray-800 dark:text-white">
@@ -339,14 +339,14 @@ function Portfolio() {
                     Read more
                   </div>
                   <img
-                    src={"/src/assets/images/arrowup.png"}
+                    src={"/assets/images/arrowup.png"}
                     className="h-[20px] w-[20px]"
                   />
                 </div>
               </div>
             </div>
             <img
-              src={"/src/assets/images/portfolio1.png"}
+              src={"/assets/images/portfolio1.png"}
               className="h-[330px] w-[350px] absolute right-0"
             />
           </div>

@@ -27,12 +27,12 @@ function ContactUs() {
             <div className="flex flex-row items-center gap-2">
               {/* Light Mode Image */}
               <img
-                src="/src/assets/images/email-black.png"
+                src="/assets/images/email-black.png"
                 className="h-[40px] w-[40px] block dark:hidden"
               />
               {/* Dark Mode Image */}
               <img
-                src="/src/assets/images/email.png"
+                src="/assets/images/email.png"
                 className="h-[40px] w-[40px] hidden dark:block"
               />
               <div className="flex flex-col">
@@ -48,11 +48,11 @@ function ContactUs() {
             {/* Phone Row */}
             <div className="flex flex-row items-center gap-2">
               <img
-                src="/src/assets/images/phone-black.svg"
+                src="/assets/images/phone-black.svg"
                 className="h-[40px] w-[40px] block dark:hidden"
               />
               <img
-                src="/src/assets/images/phone.svg"
+                src="/assets/images/phone.svg"
                 className="h-[40px] w-[40px] hidden dark:block"
               />
               <div className="flex flex-col">

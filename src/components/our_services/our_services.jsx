@@ -1,6 +1,6 @@
 function OurServices() {
   return (
-    <div className="flex flex-col px-20 bg-center bg-cover bg-none dark:bg-[url('/src/assets/images/serviceBg.png')]">
+    <div className="flex flex-col px-20 bg-center bg-cover bg-none dark:bg-[url('/assets/images/serviceBg.png')]">
       <div className="text-4xl font-semibold text-center text-gray-800 dark:text-white">
         Our Services
       </div>
@@ -13,12 +13,12 @@ function OurServices() {
         <div className="flex flex-row w-full h-[360px] border border-gray-400 rounded-2xl group-hover:border-[#FFD400]">
           <div className="absolute top-0 flex flex-col w-2/5">
             <img
-              src={"/src/assets/images/service1.svg"}
+              src={"/assets/images/service1.svg"}
               className="h-[405px] w-[480px] group-hover:hidden"
               alt="Service 1"
             />
             <img
-              src={"/src/assets/images/servicecol1.png"}
+              src={"/assets/images/servicecol1.png"}
               className="h-[405px] w-[480px] hidden group-hover:block"
               alt="Service 1 Hover"
             />
@@ -41,7 +41,7 @@ function OurServices() {
             <button className="text-gray-600 dark:text-gray-400 text-start text-sm flex flex-row gap-2 items-center mt-6">
               <div>Read more</div>
               <img
-                src={"/src/assets/images/arrowup.png"}
+                src={"/assets/images/arrowup.png"}
                 className="h-[14px] w-[14px]"
                 alt="Arrow"
               />
@@ -55,12 +55,12 @@ function OurServices() {
           <div className="flex flex-row w-full h-[360px] border border-gray-400 rounded-2xl group-hover:border-[#FFD400]">
             <div className="absolute top-0 flex flex-col w-2/5">
               <img
-                src={"/src/assets/images/service2.png"}
+                src={"/assets/images/service2.png"}
                 className="h-[405px] w-[480px] group-hover:hidden"
                 alt="Service 2"
               />
               <img
-                src={"/src/assets/images/service2cols.png"}
+                src={"/assets/images/service2cols.png"}
                 className="h-[405px] w-[480px] hidden group-hover:block"
                 alt="Service 2 Hover"
               />
@@ -82,7 +82,7 @@ function OurServices() {
               <button className="text-gray-600 dark:text-gray-400 text-start text-sm flex flex-row gap-2 items-center mt-6">
                 <div>Read more</div>
                 <img
-                  src={"/src/assets/images/arrowup.png"}
+                  src={"/assets/images/arrowup.png"}
                   className="h-[14px] w-[14px]"
                   alt="Arrow"
                 />
@@ -97,12 +97,12 @@ function OurServices() {
           <div className="flex flex-row w-full h-[360px] border border-gray-400 rounded-2xl group-hover:border-[#FFD400]">
             <div className="absolute top-0 flex flex-col w-2/5">
               <img
-                src={"/src/assets/images/service3.png"}
+                src={"/assets/images/service3.png"}
                 className="h-[405px] w-[480px] group-hover:hidden"
                 alt="Service 3"
               />
               <img
-                src={"/src/assets/images/service3cols.png"}
+                src={"/assets/images/service3cols.png"}
                 className="h-[405px] w-[480px] hidden group-hover:block"
                 alt="Service 3 Hover"
               />
@@ -118,7 +118,7 @@ function OurServices() {
               <button className="text-gray-600 dark:text-gray-400 text-start text-sm flex flex-row gap-2 items-center mt-6">
                 <div>Read more</div>
                 <img
-                  src={"/src/assets/images/arrowup.png"}
+                  src={"/assets/images/arrowup.png"}
                   className="h-[14px] w-[14px]"
                   alt="Arrow"
                 />
@@ -133,12 +133,12 @@ function OurServices() {
           <div className="flex flex-row w-full h-[360px] border border-gray-400 rounded-2xl group-hover:border-[#FFD400]">
             <div className="absolute top-0 flex flex-col w-2/5">
               <img
-                src={"/src/assets/images/service4.png"}
+                src={"/assets/images/service4.png"}
                 className="h-[405px] w-[480px] group-hover:hidden"
                 alt="Service 4"
               />
               <img
-                src={"/src/assets/images/service4cols.png"}
+                src={"/assets/images/service4cols.png"}
                 className="h-[405px] w-[480px] hidden group-hover:block"
                 alt="Service 4 Hover"
               />
@@ -154,7 +154,7 @@ function OurServices() {
               <button className="text-gray-600 dark:text-gray-400 text-start text-sm flex flex-row gap-2 items-center mt-6">
                 <div>Read more</div>
                 <img
-                  src={"/src/assets/images/arrowup.png"}
+                  src={"/assets/images/arrowup.png"}
                   className="h-[14px] w-[14px]"
                   alt="Arrow"
                 />

@@ -8,124 +8,124 @@ function LogoSlider() {
         <div className="justify-center hidden ml-10 mr-10 sm:grid lg:flex md:w-[1440px]">
           <Marquee direction="left" speed={20} className="mb-8">
             <img
-              src="/src/assets/images/logoSlider/Figma.png"
+              src="/assets/images/logoSlider/Figma.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Illustrator.png"
+              src="/assets/images/logoSlider/Illustrator.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Photoshop.png"
+              src="/assets/images/logoSlider/Photoshop.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/React.png"
+              src="/assets/images/logoSlider/React.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/WooCommerce.png"
+              src="/assets/images/logoSlider/WooCommerce.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Dotnet.png"
+              src="/assets/images/logoSlider/Dotnet.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Wordpress.png"
+              src="/assets/images/logoSlider/Wordpress.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Swift.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-
-            <img
-              src="/src/assets/images/logoSlider/Figma.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/Illustrator.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/Photoshop.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/React.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/WooCommerce.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/Dotnet.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/Wordpress.png"
-              alt=""
-              className="w-20 h-20 mx-8"
-            />
-            <img
-              src="/src/assets/images/logoSlider/Swift.png"
+              src="/assets/images/logoSlider/Swift.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
 
             <img
-              src="/src/assets/images/logoSlider/Figma.png"
+              src="/assets/images/logoSlider/Figma.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Illustrator.png"
+              src="/assets/images/logoSlider/Illustrator.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Photoshop.png"
+              src="/assets/images/logoSlider/Photoshop.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/React.png"
+              src="/assets/images/logoSlider/React.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/WooCommerce.png"
+              src="/assets/images/logoSlider/WooCommerce.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Dotnet.png"
+              src="/assets/images/logoSlider/Dotnet.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Wordpress.png"
+              src="/assets/images/logoSlider/Wordpress.png"
               alt=""
               className="w-20 h-20 mx-8"
             />
             <img
-              src="/src/assets/images/logoSlider/Swift.png"
+              src="/assets/images/logoSlider/Swift.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+
+            <img
+              src="/assets/images/logoSlider/Figma.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/Illustrator.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/Photoshop.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/React.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/WooCommerce.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/Dotnet.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/Wordpress.png"
+              alt=""
+              className="w-20 h-20 mx-8"
+            />
+            <img
+              src="/assets/images/logoSlider/Swift.png"
               alt=""
               className="w-20 h-20 mx-8"
             />

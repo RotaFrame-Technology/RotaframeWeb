@@ -19,7 +19,7 @@ function SearchBar() {
             {/* Dropdown button */}
             <div className="h-8 w-[2px] bg-gray-500"></div>
             <div className="flex items-center gap-2 rounded-md px-3 py-2">
-                <img src="/src/assets/icons/menu.svg" className="h-5 w-5" alt="Menu Icon" />
+                <img src="/assets/icons/menu.svg" className="h-5 w-5" alt="Menu Icon" />
                 <select
                     value={orgType}
                     onChange={(e) => setOrgType(e.target.value)}
@@ -38,7 +38,7 @@ function SearchBar() {
             <div className="h-8 w-[2px] bg-gray-500"></div>
 
             <div className="flex flex-row items-center gap-2 rounded-md px-3 py-2">
-                <img src="/src/assets/icons/location.svg" className="h-5 w-5" alt="Menu Icon" />
+                <img src="/assets/icons/location.svg" className="h-5 w-5" alt="Menu Icon" />
                 <select
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
