@@ -68,9 +68,7 @@ const TestimonialCard = ({ img, name, username, body }) => {
     <figure
       className={cn(
         "w-full max-w-[800px] cursor-pointer overflow-hidden rounded-xl border p-5 mb-3 break-inside-avoid",
-        // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
@@ -96,20 +94,17 @@ const TestimonialCard = ({ img, name, username, body }) => {
 
 export function TestimonialsMasonry() {
   return (
-    <div className="w-full bg-white dark:bg-[#121212] transition-colors duration-300 flex flex-col items-center py-12">
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#121212] transition-colors duration-300 flex flex-col items-center py-12">
       <h2 className="text-[65px] leading-[72px] font-bold mb-10 w-11/12 text-gray-800 dark:text-white text-center">
         Testimonials
       </h2>
 
       <div className="relative w-full flex justify-center">
-        {/* Left Blur Overlay */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-[30%] sm:w-[32%] md:w-[30%] lg:w-[28%] xl:w-[28%] bg-gradient-to-r from-white/100 dark:from-[#121212]/100 to-transparent blur-[64px] z-10" />
-        {/* Right Blur Overlay */}
         <div className="pointer-events-none absolute inset-y-0 right-0 w-[30%] sm:w-[32%] md:w-[30%] lg:w-[28%] xl:w-[28%] bg-gradient-to-l from-white/100 dark:from-[#121212]/100 to-transparent blur-[64px] z-10" />
-        {/* Bottom-to-Top Blur for Second Row */}
         <div className="pointer-events-none absolute left-0 bottom-0 w-full h-2/3 bg-gradient-to-t from-white/100 dark:from-[#121212]/100 to-transparent blur-[64px] z-10" />
         <div
-          className="columns-1 md:columns-2 lg:columns-5 gap-5 w-full px-4 text-center"
+          className="columns-1 md:columns-2 lg:columns-5 gap-5 w-full text-center"
           style={{ columnGap: "1rem" }}
         >
           {testimonials.map((review, idx) => (
