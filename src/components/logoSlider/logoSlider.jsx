@@ -13,18 +13,14 @@ function LogoSlider() {
   ];
 
   const mobileFallbackLogos = [
-    { src: "images/asp.png", alt: "ASP.NET" },
-    { src: "images/woo.png", alt: "WooCommerce" },
-    { src: "images/wordpress.png", alt: "WordPress" },
-    { src: "images/Figma.png", alt: "Figma" },
-    { src: "images/framer.png", alt: "Framer" },
-    { src: "images/Photoshop.png", alt: "Photoshop" },
-    { src: "images/Illustrator.png", alt: "Illustrator" },
-    { src: "images/React.svg", alt: "React" },
-    { src: "images/Next.svg", alt: "Next.js" },
-    { src: "images/view.png", alt: "Vue.js" },
-    { src: "images/Flutter.png", alt: "Flutter" },
-    { src: "images/swift.png", alt: "Swift" },
+    { src: "/assets/images/logoSlider/Figma.png", alt: "Figma" },
+    { src: "/assets/images/logoSlider/Illustrator.png", alt: "Illustrator" },
+    { src: "/assets/images/logoSlider/Photoshop.png", alt: "Photoshop" },
+    { src: "/assets/images/logoSlider/React.png", alt: "React" },
+    { src: "/assets/images/logoSlider/WooCommerce.png", alt: "WooCommerce" },
+    { src: "/assets/images/logoSlider/Dotnet.png", alt: "Dotnet" },
+    { src: "/assets/images/logoSlider/Wordpress.png", alt: "Wordpress" },
+    { src: "/assets/images/logoSlider/Swift.png", alt: "Swift" },
   ];
 
   return (
