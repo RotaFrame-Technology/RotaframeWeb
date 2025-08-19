@@ -16,9 +16,9 @@ function Footer() {
           className="w-full max-w-[1440px]"
           style={{ height: "450px", position: "relative" }}
         >
-          {/* <Suspense fallback={<div className="w-full h-full bg-black" />}>
+          <Suspense fallback={<div className="w-full h-full bg-black" />}>
             <LazyGlobe className="w-full h-full object-cover rounded-4xl invert-0 dark:invert z-0" />
-          </Suspense> */}
+          </Suspense>
         </div>
       </div>
 
