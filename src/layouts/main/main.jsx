@@ -17,7 +17,7 @@ function Main() {
       <OurServices />
       <Portfolio /> 
       <Banner/>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ContactUs/>
       <Footer />
     </div>
