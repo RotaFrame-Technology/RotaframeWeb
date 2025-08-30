@@ -4,9 +4,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// Force light mode before rendering
-document.documentElement.classList.remove('dark');
-localStorage.removeItem('theme');
+// Force dark mode before rendering
+if (!localStorage.getItem('theme')) {
+  document.documentElement.classList.add('dark');
+  localStorage.setItem('theme', 'dark');
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

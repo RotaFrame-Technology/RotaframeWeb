@@ -1,10 +1,57 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 
 const LazyGlobe = React.lazy(() =>
   import("@/components/magicui/globe").then((mod) => ({ default: mod.Globe }))
 );
 
 function Footer() {
+  // Fallback state to ensure theme consistency
+  const [isDarkMode, setIsDarkMode] = useState(
+    document.documentElement.classList.contains("dark")
+  );
+
+  useEffect(() => {
+    // Initialize theme based on localStorage
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    }
+
+    // Listen for storage events to detect theme changes
+    const handleStorageChange = () => {
+      const isDark = localStorage.getItem("theme") === "dark";
+      setIsDarkMode(isDark);
+      if (isDark) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    // Observe changes to document.documentElement classList
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          const isDark = document.documentElement.classList.contains("dark");
+          setIsDarkMode(isDark);
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div
       className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8 footer-container"
@@ -40,9 +87,13 @@ function Footer() {
           {/* Logo and Social Icons */}
           <div className="flex flex-col items-start">
             <img
-              src="/assets/icons/Rotaframe.svg"
+              src={
+                isDarkMode
+                  ? "/assets/images/Rotaframe Yellow.png"
+                  : "/assets/images/Rotaframe Black.png"
+              }
               alt="Rotaframe Technology"
-              className="h-8 sm:h-10 w-auto"
+              className="h-[35px] sm:h-[40px] w-auto"
             />
             <div className="flex flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
               {[1, 2, 3, 4].map((num) => (
@@ -74,7 +125,7 @@ function Footer() {
               ].map((service) => (
                 <div
                   key={service}
-                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
                 >
                   {service}
                 </div>
@@ -88,7 +139,7 @@ function Footer() {
               {["Home", "Services", "Portfolio", "Contact"].map((link) => (
                 <div
                   key={link}
-                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
                 >
                   {link}
                 </div>
@@ -102,7 +153,7 @@ function Footer() {
               {["Terms of Service", "Privacy Policy"].map((legal) => (
                 <div
                   key={legal}
-                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
                 >
                   {legal}
                 </div>
@@ -113,7 +164,7 @@ function Footer() {
 
         <div className="mt-8 sm:mt-10 mb-4 sm:mb-6 h-[1px] w-full bg-[#D9D9D9] dark:bg-[#2E2E2E]" />
 
-        <div className="text-center text-xs sm:text-sm text-[#5C5C5C] dark:text-[#898989]">
+        <div className="text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400">
           2025 © Rotaframe Technology
         </div>
       </div>
@@ -135,7 +186,6 @@ function Footer() {
             display: flex;
             align-items: flex-start;
             justify-content: center;
-
           }
           .globe-element {
             transform: scale(0.6) scaleX(1.2);
