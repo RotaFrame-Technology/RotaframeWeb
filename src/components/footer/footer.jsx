@@ -13,14 +13,16 @@ function Footer() {
       {/* Globe Section */}
       <div
         className="w-full flex justify-center relative overflow-visible"
-        style={{ height: "220px", zIndex: 0,  }}
+        style={{ height: "220px", zIndex: 0 }}
       >
         <div
-          className="w-full max-w-[1440px]"
+          className="w-full max-w-[1440px] globe-container"
           style={{ height: "550px", position: "relative" }}
         >
           <Suspense fallback={<div className="w-full h-full bg-black" />}>
-            <LazyGlobe className="w-full h-full object-cover rounded-4xl invert-0 dark:invert z-0" />
+            <LazyGlobe
+              className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0"
+            />
           </Suspense>
         </div>
       </div>
@@ -100,7 +102,7 @@ function Footer() {
               {["Terms of Service", "Privacy Policy"].map((legal) => (
                 <div
                   key={legal}
-                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transitionColors"
                 >
                   {legal}
                 </div>
@@ -117,9 +119,33 @@ function Footer() {
       </div>
 
       <style>{`
+        @media (max-width: 640px) {
+          .globe-container {
+            height: 150px; /* Reduced height for mobile */
+          }
+          .globe-section {
+            height: 150px; /* Match outer container to prevent clipping */
+            overflow: visible;
+          }
+          .globe-element {
+            transform: scale(0.5); /* Scale down globe for mobile */
+            transform-origin: center; /* Center the scaling */
+          }
+        }
+        @media (min-width: 641px) {
+          .globe-container {
+            height: 550px; /* Preserve original desktop height */
+          }
+          .globe-section {
+            height: 220px; /* Preserve original desktop height */
+          }
+          .globe-element {
+            transform: scale(1); /* Full size for desktop */
+          }
+        }
         @media (min-width: 768px) {
           .responsive-footer-margin {
-            margin-top: 80px; 
+            margin-top: 80px;
           }
         }
       `}</style>
