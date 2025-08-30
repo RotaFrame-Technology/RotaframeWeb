@@ -6,15 +6,18 @@ const LazyGlobe = React.lazy(() =>
 
 function Footer() {
   return (
-    <div className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8">
+    <div
+      className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8"
+      style={{ marginTop: "60px" }}
+    >
       {/* Globe Section */}
       <div
-        className="w-full flex justify-center overflow-hidden relative"
-        style={{ height: "300px" }}
+        className="w-full flex justify-center relative overflow-visible"
+        style={{ height: "220px", zIndex: 0,  }}
       >
         <div
           className="w-full max-w-[1440px]"
-          style={{ height: "450px", position: "relative" }}
+          style={{ height: "550px", position: "relative" }}
         >
           <Suspense fallback={<div className="w-full h-full bg-black" />}>
             <LazyGlobe className="w-full h-full object-cover rounded-4xl invert-0 dark:invert z-0" />
@@ -24,9 +27,9 @@ function Footer() {
 
       {/* Footer Content */}
       <div
-        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#F9F9F9] dark:bg-[#000000] transition-colors duration-300 responsive-footer-margin"
+        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-6 py-12 sm:py-8 md:py-10 bg-[#F9F9F9] dark:bg-[#000000] transition-colors duration-300"
         style={{
-          marginTop: "-100px",
+          marginTop: "0px",
           borderTopLeftRadius: "1.5rem",
           borderTopRightRadius: "1.5rem",
         }}
@@ -34,14 +37,17 @@ function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10">
           {/* Logo and Social Icons */}
           <div className="flex flex-col items-start">
-            <img 
-              src="/assets/icons/Rotaframe.svg" 
+            <img
+              src="/assets/icons/Rotaframe.svg"
               alt="Rotaframe Technology"
               className="h-8 sm:h-10 w-auto"
             />
             <div className="flex flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
               {[1, 2, 3, 4].map((num) => (
-                <button key={num} className="cursor-pointer hover:opacity-80 transition-opacity">
+                <button
+                  key={num}
+                  className="cursor-pointer hover:opacity-80 transition-opacity"
+                >
                   <img
                     src={`/assets/images/social${num}.svg`}
                     alt={`social-icon-${num}`}
@@ -111,12 +117,9 @@ function Footer() {
       </div>
 
       <style>{`
-        .responsive-footer-margin {
-          margin-top: -100px;
-        }
         @media (min-width: 768px) {
           .responsive-footer-margin {
-            margin-top: -150px;
+            margin-top: 80px; 
           }
         }
       `}</style>
