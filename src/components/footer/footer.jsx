@@ -12,8 +12,8 @@ function Footer() {
     >
       {/* Globe Section */}
       <div
-        className="w-full flex justify-center relative overflow-visible"
-        style={{ height: "220px", zIndex: 0 }}
+        className="w-full flex justify-center relative overflow-visible globe-section"
+        style={{ height: "220px", zIndex: 1 }}
       >
         <div
           className="w-full max-w-[1440px] globe-container"
@@ -21,7 +21,7 @@ function Footer() {
         >
           <Suspense fallback={<div className="w-full h-full bg-black" />}>
             <LazyGlobe
-              className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0"
+              className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0 globe-element"
             />
           </Suspense>
         </div>
@@ -29,7 +29,7 @@ function Footer() {
 
       {/* Footer Content */}
       <div
-        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-6 py-12 sm:py-8 md:py-10 bg-[#F9F9F9] dark:bg-[#000000] transition-colors duration-300"
+        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-6 py-12 sm:py-8 md:py-10 bg-[#F9F9F9] dark:bg-[#000000] transition-colors duration-300 footer-content"
         style={{
           marginTop: "0px",
           borderTopLeftRadius: "1.5rem",
@@ -102,7 +102,7 @@ function Footer() {
               {["Terms of Service", "Privacy Policy"].map((legal) => (
                 <div
                   key={legal}
-                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transitionColors"
+                  className="text-sm sm:text-base text-[#5C5C5C] dark:text-[#898989] hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
                 >
                   {legal}
                 </div>
@@ -120,27 +120,47 @@ function Footer() {
 
       <style>{`
         @media (max-width: 640px) {
-          .globe-container {
-            height: 150px; /* Reduced height for mobile */
-          }
           .globe-section {
-            height: 150px; /* Match outer container to prevent clipping */
+            height: 200px;
             overflow: visible;
+            z-index: 1;
+          }
+          .globe-container {
+            height: 500px; 
+            width: 120%; /* Maintain wider width */
+            max-width: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+           
           }
           .globe-element {
-            transform: scale(0.5); /* Scale down globe for mobile */
-            transform-origin: center; /* Center the scaling */
+            transform: scale(0.6) scaleX(1.2); 
+            transform-origin: top center;
+            position: relative;
+            top: 0;
+          }
+          .footer-content {
+            margin-top: -200px; /* Adjust to overlap bottom 50% of larger globe */
           }
         }
         @media (min-width: 641px) {
-          .globe-container {
-            height: 550px; /* Preserve original desktop height */
-          }
           .globe-section {
-            height: 220px; /* Preserve original desktop height */
+            height: 220px;
+            overflow: visible;
+            z-index: 1;
+          }
+          .globe-container {
+            height: 550px;
+            width: 100%;
+            max-width: 1440px;
           }
           .globe-element {
-            transform: scale(1); /* Full size for desktop */
+            transform: scale(1);
+            top: 0;
+          }
+          .footer-content {
+            margin-top: 0px;
           }
         }
         @media (min-width: 768px) {
