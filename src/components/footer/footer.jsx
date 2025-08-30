@@ -7,7 +7,7 @@ const LazyGlobe = React.lazy(() =>
 function Footer() {
   return (
     <div
-      className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8"
+      className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8 footer-container"
       style={{ marginTop: "60px" }}
     >
       {/* Globe Section */}
@@ -120,31 +120,37 @@ function Footer() {
 
       <style>{`
         @media (max-width: 640px) {
+          .footer-container {
+            margin-top: 20px; /* Reduced top space in mobile view */
+          }
           .globe-section {
-            height: 300px;
+            height: 200px;
             overflow: visible;
             z-index: 1;
           }
           .globe-container {
-            height: 500px; 
-            width: 110%; /* Maintain wider width */
+            height: 400px;
+            width: 100%;
             max-width: none;
             display: flex;
             align-items: flex-start;
             justify-content: center;
-           
+
           }
           .globe-element {
-            transform: scale(0.6) scaleX(1.2); 
+            transform: scale(0.6) scaleX(1.2);
             transform-origin: top center;
             position: relative;
             top: 0;
           }
           .footer-content {
-            margin-top: -150px;
+            margin-top: -200px;
           }
         }
         @media (min-width: 641px) {
+          .footer-container {
+            margin-top: 60px; /* Original desktop margin */
+          }
           .globe-section {
             height: 220px;
             overflow: visible;
