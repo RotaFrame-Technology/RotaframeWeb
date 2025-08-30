@@ -121,13 +121,13 @@ function Footer() {
       <style>{`
         @media (max-width: 640px) {
           .globe-section {
-            height: 200px;
+            height: 300px;
             overflow: visible;
             z-index: 1;
           }
           .globe-container {
             height: 500px; 
-            width: 120%; /* Maintain wider width */
+            width: 110%; /* Maintain wider width */
             max-width: none;
             display: flex;
             align-items: flex-start;
@@ -141,7 +141,7 @@ function Footer() {
             top: 0;
           }
           .footer-content {
-            margin-top: -200px; /* Adjust to overlap bottom 50% of larger globe */
+            margin-top: -150px;
           }
         }
         @media (min-width: 641px) {
