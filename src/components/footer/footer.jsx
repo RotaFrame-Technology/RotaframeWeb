@@ -36,7 +36,7 @@ function Footer() {
           <div className="flex flex-col items-start">
             <img 
               src="/assets/icons/Rotaframe.svg" 
-              alt="Rotaframe Logo"
+              alt="Rotaframe Technology"
               className="h-8 sm:h-10 w-auto"
             />
             <div className="flex flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
