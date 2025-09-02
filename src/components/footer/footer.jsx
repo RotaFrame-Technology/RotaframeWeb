@@ -4,20 +4,34 @@ const LazyGlobe = React.lazy(() =>
   import("@/components/magicui/globe").then((mod) => ({ default: mod.Globe }))
 );
 
-function Footer() {
-  // Fallback state to ensure theme consistency
-  const [isDarkMode, setIsDarkMode] = useState(
-    document.documentElement.classList.contains("dark")
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth <= 640 : false
   );
 
   useEffect(() => {
-    // Initialize theme based on localStorage
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+}
+
+function Footer() {
+  const [isDarkMode, setIsDarkMode] = useState(
+    document.documentElement.classList.contains("dark")
+  );
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.add("dark");
       setIsDarkMode(true);
     }
 
-    // Listen for storage events to detect theme changes
     const handleStorageChange = () => {
       const isDark = localStorage.getItem("theme") === "dark";
       setIsDarkMode(isDark);
@@ -30,7 +44,6 @@ function Footer() {
 
     window.addEventListener("storage", handleStorageChange);
 
-    // Observe changes to document.documentElement classList
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === "class") {
@@ -45,7 +58,6 @@ function Footer() {
       attributeFilter: ["class"],
     });
 
-    // Cleanup on unmount
     return () => {
       window.removeEventListener("storage", handleStorageChange);
       observer.disconnect();
@@ -57,22 +69,24 @@ function Footer() {
       className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8 footer-container"
       style={{ marginTop: "60px" }}
     >
-      {/* Globe Section */}
-      <div
-        className="w-full flex justify-center relative overflow-visible globe-section"
-        style={{ height: "220px", zIndex: 1 }}
-      >
+      {/* Globe Section (only mobile) */}
+      {isMobile && (
         <div
-          className="w-full max-w-[1440px] globe-container"
-          style={{ height: "550px", position: "relative" }}
+          className="w-full flex justify-center relative overflow-visible globe-section"
+          style={{ height: "220px", zIndex: 1 }}
         >
-          <Suspense fallback={<div className="w-full h-full bg-black" />}>
-            <LazyGlobe
-              className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0 globe-element"
-            />
-          </Suspense>
+          <div
+            className="w-full max-w-[1440px] globe-container"
+            style={{ height: "550px", position: "relative" }}
+          >
+            <Suspense fallback={<div className="w-full h-full bg-black" />}>
+              <LazyGlobe
+                className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0 globe-element"
+              />
+            </Suspense>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Footer Content */}
       <div
@@ -172,7 +186,7 @@ function Footer() {
       <style>{`
         @media (max-width: 640px) {
           .footer-container {
-            margin-top: 20px; /* Reduced top space in mobile view */
+            margin-top: 20px;
           }
           .globe-section {
             height: 200px;
@@ -199,21 +213,7 @@ function Footer() {
         }
         @media (min-width: 641px) {
           .footer-container {
-            margin-top: 60px; /* Original desktop margin */
-          }
-          .globe-section {
-            height: 220px;
-            overflow: visible;
-            z-index: 1;
-          }
-          .globe-container {
-            height: 550px;
-            width: 100%;
-            max-width: 1440px;
-          }
-          .globe-element {
-            transform: scale(1);
-            top: 0;
+            margin-top: 60px;
           }
           .footer-content {
             margin-top: 0px;
