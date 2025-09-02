@@ -66,34 +66,32 @@ function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex flex-row gap-8 items-center">
-            <div className="flex flex-row gap-5">
-              {["Home", "About Us", "Services", "Portfolio"].map((item) => (
-                <Link
-                  key={item}
-                  to="/HomePageInner"
-                  onClick={() => handleLinkClick(item)}
-                  className="px-2 text-[15px] py-2 no-underline text-black dark:text-[#FAFAFA] hover:text-[#FFD400] transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
-            
-            {/* Desktop Theme toggle + CTA */}
-            <div className="flex flex-row gap-6">
-              <button
-                onClick={toggleDarkMode}
-                className="text-xl text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
-                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-              >
-                {isDarkMode ? <FaSun /> : <FaMoon />}
-              </button>
-              <button className="px-4 py-[5px] text-base bg-[#FFD400] text-black border-[#005F7E] rounded-lg font-semibold hover:bg-[#003F5E] hover:text-white transition-colors">
-                Contact Us
-              </button>
-            </div>
-          </div>
+<div className="hidden lg:flex flex-row gap-8 items-center">
+  <div className="flex flex-row gap-5">
+    {["Home", "About Us", "Services", "Portfolio"].map((item) => (
+      <span
+        key={item}
+        className="px-2 text-[15px] py-2 text-black dark:text-[#FAFAFA] hover:text-[#FFD400] transition-colors cursor-default"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+
+  {/* Desktop Theme toggle + CTA */}
+  <div className="flex flex-row gap-6">
+    <button
+      onClick={toggleDarkMode}
+      className="text-xl text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
+      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+    >
+      {isDarkMode ? <FaSun /> : <FaMoon />}
+    </button>
+    <button className="px-4 py-[5px] text-base bg-[#FFD400] text-black border-[#005F7E] rounded-lg font-semibold hover:bg-[#003F5E] hover:text-white transition-colors">
+      Contact Us
+    </button>
+  </div>
+</div>
 
           {/* Mobile Menu Button and Theme Toggle */}
           <div className="flex lg:hidden items-center gap-3">
@@ -123,23 +121,22 @@ function Header() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex flex-col p-6 pt-20">
-              {["Home", "About Us", "Services", "Portfolio"].map((item) => (
-                <Link
-                  key={item}
-                  to="/HomePageInner"
-                  onClick={() => handleLinkClick(item)}
-                  className="py-3 px-2 text-base no-underline text-black dark:text-[#FAFAFA] hover:text-[#FFD400] border-b border-gray-200 dark:border-gray-600 transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
-              <button 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-6 px-4 py-3 text-base bg-[#FFD400] text-black rounded-lg font-semibold hover:bg-[#003F5E] hover:text-white transition-colors w-full"
-              >
-                Contact Us
-              </button>
-            </div>
+  {["Home", "About Us", "Services", "Portfolio"].map((item) => (
+    <span
+      key={item}
+      className="py-3 px-2 text-base text-black dark:text-[#FAFAFA] hover:text-[#FFD400] border-b border-gray-200 dark:border-gray-600 transition-colors cursor-default"
+    >
+      {item}
+    </span>
+  ))}
+  <button 
+    onClick={() => setIsMobileMenuOpen(false)}
+    className="mt-6 px-4 py-3 text-base bg-[#FFD400] text-black rounded-lg font-semibold hover:bg-[#003F5E] hover:text-white transition-colors w-full"
+  >
+    Contact Us
+  </button>
+</div>
+
           </div>
         </div>
       )}
