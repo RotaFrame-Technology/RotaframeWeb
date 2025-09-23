@@ -1,8 +1,55 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { RiSendPlaneFill } from "react-icons/ri";
+import toast, { Toaster } from "react-hot-toast";
 
 function ContactUs() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5qe72vj",
+        "template_r1108tv",
+        form.current,
+        "CveuwAuQ3YH0yrgvF"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Message Sent! We'll get back to you shortly.", {
+            duration: 4000,
+            position: "top-center",
+            style: {
+              background: "#333",
+              color: "#fff",
+              borderRadius: "8px",
+              padding: "16px",
+            },
+          });
+          form.current.reset(); // Reset form after successful submission
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Failed to send message. Please try again.", {
+            duration: 4000,
+            position: "top-center",
+            style: {
+              background: "#333",
+              color: "#fff",
+              borderRadius: "8px",
+              padding: "16px",
+            },
+          });
+        }
+      );
+  };
+
   return (
     <div className="flex flex-col items-center w-full mt-12 sm:mt-24 px-4 sm:px-6 lg:px-8">
+      <Toaster />
       <div className="w-full max-w-[1100px] flex flex-col lg:flex-row gap-8 lg:gap-12">
         {/* Contact Info Section */}
         <div className="flex flex-col justify-between w-full lg:w-1/2">
@@ -21,7 +68,7 @@ function ContactUs() {
               <span className="text-black dark:text-white">
                 impactful solutions
               </span>{" "}
-              tailored to your Diversity your needs.
+              tailored to your needs.
             </div>
           </div>
 
@@ -74,60 +121,74 @@ function ContactUs() {
 
         {/* Form Section */}
         <div className="flex flex-col w-full lg:w-[512px] bg-[#F3F3F3] dark:bg-[#171717] items-center px-4 sm:px-5 py-6 sm:py-8 rounded-2xl border border-gray-300 dark:border-gray-600">
-          <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <div className="flex flex-col w-full sm:w-1/2">
+          <form ref={form} onSubmit={sendEmail} className="w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
+              <div className="flex flex-col w-full sm:w-1/2">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
+                  First name
+                </div>
+                <input
+                  type="text"
+                  placeholder="First name"
+                  name="first_name"
+                  className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full bg-white dark:bg-transparent"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col w-full sm:w-1/2">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
+                  Last Name
+                </div>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="last_name"
+                  className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full bg-white dark:bg-transparent"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col w-full mt-3">
               <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
-                First name
+                Company Email
               </div>
               <input
-                type="text"
-                placeholder="First name"
+                type="email"
+                placeholder="Company Email"
+                name="email"
                 className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full bg-white dark:bg-transparent"
+                required
               />
             </div>
 
-            <div className="flex flex-col w-full sm:w-1/2">
+            <div className="flex flex-col w-full mt-3">
               <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
-                Last Name
+                What are you interested in?
               </div>
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full bg-white dark:bg-transparent"
+              <textarea
+                placeholder="Share more about what you want to accomplish"
+                name="message"
+                className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full h-24 sm:h-32 bg-white dark:bg-transparent"
+                required
               />
             </div>
-          </div>
 
-          <div className="flex flex-col w-full mt-3">
-            <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
-              Company Email
+            <button
+              className="flex flex-row justify-center items-center w-full py-2 mt-4 text-sm sm:text-base font-semibold text-black rounded-lg bg-amber-300 hover:bg-amber-400"
+              type="submit"
+            >
+              <span>Send</span>
+              <RiSendPlaneFill className="ml-2" />
+            </button>
+
+            <div className="text-xs text-gray-600 dark:text-[#898989] mt-4 text-center">
+              By submitting this form, I confirm that I have read and understood
+              the{" "}
+              <span className="text-black dark:text-white">Privacy Policy</span>
             </div>
-            <input
-              type="text"
-              placeholder="Company Email"
-              className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full bg-white dark:bg-transparent"
-            />
-          </div>
-
-          <div className="flex flex-col w-full mt-3">
-            <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
-              What are you interested in?
-            </div>
-            <textarea
-              placeholder="Share more about what you want to accomplish"
-              className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full h-24 sm:h-32 bg-white dark:bg-transparent"
-            />
-          </div>
-
-          <button className="flex flex-row justify-center w-full py-2 mt-4 text-sm sm:text-base font-semibold text-black rounded-lg bg-amber-300 hover:bg-amber-400">
-            Send
-          </button>
-
-          <div className="text-xs text-gray-600 dark:text-[#898989] mt-4 text-center">
-            By submitting this form, I confirm that I have read and understood
-            the{" "}
-            <span className="text-black dark:text-white">Privacy Policy</span>
-          </div>
+          </form>
         </div>
       </div>
     </div>
