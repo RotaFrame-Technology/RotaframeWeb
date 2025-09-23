@@ -1,22 +1,26 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomePage from "../../pages/homePage/homePage";
 import Main from "../../layouts/main/main";
-import NotFound from "../../pages/notFound/NotFound";  
-import ErrorPage from "../../pages/error/ErrorPage";  
+import NotFound from "../../pages/notFound/NotFound";
+import ErrorPage from "../../pages/error/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement: <ErrorPage />, 
+    errorElement: <ErrorPage />,
     children: [
       {
-        index: true,             
+        index: true,
         element: <HomePage />
       },
       {
-        path: "*",               
-        element: <NotFound />      
+        path: "home",
+        element: <Navigate to="/" replace />
+      },
+      {
+        path: "*",
+        element: <NotFound />
       }
     ]
   }
