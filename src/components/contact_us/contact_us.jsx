@@ -152,11 +152,11 @@ function ContactUs() {
 
             <div className="flex flex-col w-full mt-3">
               <div className="text-xs sm:text-sm text-gray-600 dark:text-[#898989]">
-                Company Email
+                Email
               </div>
               <input
                 type="email"
-                placeholder="Company Email"
+                placeholder="Email"
                 name="email"
                 className="border border-gray-300 dark:border-[#898989] rounded-lg px-2 text-gray-900 dark:text-[#898989] text-xs sm:text-sm py-2 mt-2 w-full bg-white dark:bg-transparent"
                 required
