@@ -48,7 +48,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full mt-12 sm:mt-24 px-4 sm:px-6 lg:px-8">
+    <div id="contact" className="flex flex-col items-center w-full mt-12 sm:mt-24 px-4 sm:px-6 lg:px-8">
       <Toaster />
       <div className="w-full max-w-[1100px] flex flex-col lg:flex-row gap-8 lg:gap-12">
         {/* Contact Info Section */}

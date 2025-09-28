@@ -92,7 +92,23 @@ function Header() {
               >
                 {isDarkMode ? <FaSun /> : <FaMoon />}
               </button>
-              <button className="w-[120px] h-[40px] bg-[#FFD400] text-black border border-[#005F7E] rounded-lg font-semibold text-base hover:bg-[#003F5E] hover:text-white transition-colors">
+              <button
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    const headerOffset = 150;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition =
+                      elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                className="w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
+              >
                 Contact Us
               </button>
             </div>
@@ -142,8 +158,22 @@ function Header() {
                 </span>
               ))}
               <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-6 w-[120px] h-[40px] bg-[#FFD400] text-black border border-[#005F7E] rounded-lg font-semibold text-base hover:bg-[#003F5E] hover:text-white transition-colors"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    const headerOffset = 150;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition =
+                      elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                className="mt-6 w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
               >
                 Contact Us
               </button>

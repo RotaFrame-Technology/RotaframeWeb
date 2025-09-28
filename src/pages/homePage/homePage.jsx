@@ -21,18 +21,35 @@ function HomePage() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full sm:w-auto">
-          <button className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#FFD400] text-black text-base sm:text-lg font-semibold rounded-lg hover:bg-[#003F5E] hover:text-white transition-colors">
-            Request Proposal
-          </button>
-          <button className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#287150] text-white text-base sm:text-lg font-semibold rounded-lg hover:bg-[#003F5E] transition-colors">
-            Contact Us
-          </button>
+          <button className="w-full sm:w-auto px-4 sm:px-6 h-[45px] bg-[#FFD400] text-black text-base sm:text-lg font-semibold rounded-lg transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer">
+  Request Proposal
+</button>
+
+<button
+  onClick={() => {
+    const element = document.getElementById("contact");
+    if (element) {
+      const headerOffset = 150;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  }}
+  className="w-full sm:w-auto px-4 sm:px-6 h-[45px] border border-black text-black dark:border-[#FFD400] dark:text-[#FFD400] text-base sm:text-lg font-semibold rounded-lg transition-all duration-200 hover:bg-black hover:text-white dark:hover:bg-[#FFD400] dark:hover:text-black cursor-pointer"
+>
+  Contact Us
+</button>
+
+
         </div>
+
         <LogoSlider />
       </div>
-      
     </section>
-    
   );
 }
 
