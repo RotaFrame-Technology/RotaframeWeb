@@ -69,8 +69,9 @@ function Footer() {
       className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8 footer-container"
       style={{ marginTop: "60px" }}
     >
-      {/* Globe Section (only mobile) */}
-      {isMobile && (
+      {/* Globe Section  */}
+
+      { (
         <div
           className="w-full flex justify-center relative overflow-visible globe-section"
           style={{ height: "220px", zIndex: 1 }}

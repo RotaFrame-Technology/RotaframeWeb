@@ -3,7 +3,7 @@ import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 
 import Testimonials from '../../components/testimonials/testimonials';
-import Portfolio from '../../components/portofolio/portofolio';
+import Portfolio from '../../components/portfolio/portfolio';
 import OurServices from '../../components/our_services/our_services';
 import Banner from '../../components/banner/banner';
 import ContactUs from '../../components/contact_us/contact_us';

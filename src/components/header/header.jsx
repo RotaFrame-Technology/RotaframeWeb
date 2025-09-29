@@ -162,7 +162,7 @@ function Header() {
                   setIsMobileMenuOpen(false);
                   const element = document.getElementById("contact");
                   if (element) {
-                    const headerOffset = 150;
+                    const headerOffset = 80;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition =
                       elementPosition + window.pageYOffset - headerOffset;
