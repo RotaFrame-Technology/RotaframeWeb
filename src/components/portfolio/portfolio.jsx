@@ -112,7 +112,7 @@ function Portfolio() {
                         {item.title}
                       </div>
                     </div>
-                    <div className="text-xs sm:text-sm text-[#898989] mt-2">
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
                       {item.description}
                     </div>
                   </div>

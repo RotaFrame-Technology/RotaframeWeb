@@ -48,7 +48,7 @@ function Header() {
 
         {/* Main header container */}
         <div
-          className={`w-full max-w-[1400px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300 shadow-md
+          className={`w-full max-w-[1400px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300
             ${
               isScrolled
                 ? "bg-transparent backdrop-blur-md dark:bg-transparent"

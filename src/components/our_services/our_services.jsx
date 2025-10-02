@@ -18,12 +18,12 @@ function OurServices() {
               <div className="absolute top-0 flex flex-col w-2/5">
                 <img
                   src="/assets/images/service1.svg"
-                  className="h-[405px] w-[480px] group-hover:hidden transition-opacity duration-300"
+                  className="w-full h-full object-cover group-hover:hidden transition-opacity duration-300"
                   alt="e-Commerce Development"
                 />
                 <img
                   src="/assets/images/servicecol1.png"
-                  className="h-[405px] w-[480px] hidden group-hover:block transition-opacity duration-300"
+                  className="w-full h-full object-cover hidden group-hover:block transition-opacity duration-300"
                   alt="e-Commerce Development Hover"
                 />
               </div>
@@ -100,12 +100,12 @@ function OurServices() {
               <div className="absolute top-0 flex flex-col w-2/5">
                 <img
                   src="/assets/images/service2.png"
-                  className="h-[405px] w-[480px] group-hover:hidden transition-opacity duration-300"
+                  className="w-full h-full object-cover group-hover:hidden transition-opacity duration-300"
                   alt="Custom Software Development"
                 />
                 <img
                   src="/assets/images/service2cols.png"
-                  className="h-[405px] w-[480px] hidden group-hover:block transition-opacity duration-300"
+                  className="w-full h-full object-cover hidden group-hover:block transition-opacity duration-300"
                   alt="Custom Software Development Hover"
                 />
               </div>
@@ -182,12 +182,12 @@ function OurServices() {
               <div className="absolute top-0 flex flex-col w-2/5">
                 <img
                   src="/assets/images/service3.png"
-                  className="h-[405px] w-[480px] group-hover:hidden transition-opacity duration-300"
+                  className="w-full h-full object-cover group-hover:hidden transition-opacity duration-300"
                   alt="Mobile Application Development"
                 />
                 <img
                   src="/assets/images/service3cols.png"
-                  className="h-[405px] w-[480px] hidden group-hover:block transition-opacity duration-300"
+                  className="w-full h-full object-cover hidden group-hover:block transition-opacity duration-300"
                   alt="Mobile Application Development Hover"
                 />
               </div>
@@ -252,15 +252,15 @@ function OurServices() {
           {/* Desktop Layout */}
           <div className="hidden lg:flex flex-col h-[460px] justify-end">
             <div className="flex flex-row w-full h-[360px] border border-gray-400 rounded-2xl group-hover:border-[#FFD400] transition-colors duration-300">
-              <div className="absolute top-0 flex flex-col w-2/5">
+              <div className="absolute top-4 left-0 flex flex-col w-[38%] h-[360px] overflow-hidden">
                 <img
                   src="/assets/images/service4.png"
-                  className="h-[405px] w-[480px] group-hover:hidden transition-opacity duration-300"
+                  className="w-[100%] h-[100%] object-cover group-hover:hidden transition-opacity duration-300"
                   alt="UX/UI & Product Development"
                 />
                 <img
                   src="/assets/images/service4cols.png"
-                  className="h-[405px] w-[480px] hidden group-hover:block transition-opacity duration-300"
+                  className="w-[100%] h-[100%] object-cover hidden group-hover:block transition-opacity duration-300"
                   alt="UX/UI & Product Development Hover"
                 />
               </div>
