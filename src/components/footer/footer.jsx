@@ -74,11 +74,11 @@ function Footer() {
       { (
         <div
           className="w-full flex justify-center relative overflow-visible globe-section"
-          style={{ height: "220px", zIndex: 1 }}
+          style={{ height: "300px", zIndex: 1 }}
         >
           <div
             className="w-full max-w-[1440px] globe-container"
-            style={{ height: "550px", position: "relative" }}
+            style={{ height: isMobile ? "700px" : "600px", position: "relative" }}
           >
             <Suspense fallback={<div className="w-full h-full bg-black" />}>
               <LazyGlobe

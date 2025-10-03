@@ -8,6 +8,8 @@ function Header() {
   );
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   const toggleDarkMode = () => {
     if (document.documentElement.classList.contains("dark")) {
@@ -24,10 +26,24 @@ function Header() {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+
+      // Determine scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past initial threshold
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
@@ -38,7 +54,11 @@ function Header() {
 
   return (
     <>
-      <header className="w-full sticky top-4 sm:top-7 z-50 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <header
+        className={`w-full sticky top-4 sm:top-7 z-50 flex items-center justify-center px-4 sm:px-6 lg:px-8 transition-transform duration-300 ${
+          isVisible ? "translate-y-0" : "-translate-y-[120%]"
+        }`}
+      >
         {/* Top strip background */}
         <div
           className={`absolute -top-4 sm:-top-7 left-0 w-full h-4 sm:h-7 z-[-1] ${
@@ -51,8 +71,8 @@ function Header() {
           className={`w-full max-w-[1400px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300
             ${
               isScrolled
-                ? "bg-transparent backdrop-blur-md dark:bg-transparent"
-                : "bg-[#EDEDED] dark:bg-[#171717]"
+                ? "bg-white/70 dark:bg-[#171717]"
+        : "bg-[#EDEDED] dark:bg-[#171717]"
             }`}
         >
           {/* Logo */}
