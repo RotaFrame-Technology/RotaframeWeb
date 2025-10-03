@@ -13,8 +13,8 @@ function OurServices() {
       <div className="relative mb-8 lg:mb-12 lg:h-[460px]">
         <div className="absolute right-0 w-3/6 h-[460px] hidden lg:block z-0">
           <img
-            src="/assets/images/Vector.png"
-            className="w-full h-full object-cover"
+            src="/assets/images/VectorWhite.png"
+            className="w-full h-full object-cover dark:src-['/assets/images/Vector.png']"
             alt="Vector Background"
           />
         </div>
@@ -104,8 +104,8 @@ function OurServices() {
       <div className="relative mb-8 lg:mb-12 lg:h-[460px]">
         <div className="absolute -left-5 w-3/6 h-full hidden lg:block z-0">
           <img
-            src="/assets/images/VectorLeft.png"
-            className="w-full h-full object-cover"
+            src="/assets/images/VectorLeftWhite.png"
+            className="w-full h-full object-cover dark:src-['/assets/images/VectorLeft.png']"
             alt="Vector Background"
           />
         </div>
@@ -195,8 +195,8 @@ function OurServices() {
       <div className="relative mb-8 lg:mb-12 lg:h-[460px]">
         <div className="absolute right-0 w-3/6 h-[460px] hidden lg:block z-0">
           <img
-            src="/assets/images/Vector.png"
-            className="w-full h-full object-cover"
+            src="/assets/images/VectorWhite.png"
+            className="w-full h-full object-cover dark:src-['/assets/images/Vector.png']"
             alt="Vector Background"
           />
         </div>
@@ -277,8 +277,8 @@ function OurServices() {
       <div className="relative lg:h-[460px]">
         <div className="absolute -left-5 w-3/6 h-full hidden lg:block z-0">
           <img
-            src="/assets/images/VectorLeft.png"
-            className="w-full h-full object-cover"
+            src="/assets/images/VectorLeftWhite.png"
+            className="w-full h-full object-cover dark:src-['/assets/images/VectorLeft.png']"
             alt="Vector Background"
           />
         </div>

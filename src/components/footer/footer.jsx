@@ -67,18 +67,17 @@ function Footer() {
   return (
     <div
       className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8 footer-container"
-      style={{ marginTop: "60px" }}
     >
       {/* Globe Section  */}
 
       { (
         <div
           className="w-full flex justify-center relative overflow-visible globe-section"
-          style={{ height: "300px", zIndex: 1 }}
+          style={{ height: isMobile ? "230px" : "300px", zIndex: 1 }}
         >
           <div
             className="w-full max-w-[1440px] globe-container"
-            style={{ height: isMobile ? "700px" : "600px", position: "relative" }}
+            style={{ height: isMobile ? "600px" : "600px", position: "relative" }}
           >
             <Suspense fallback={<div className="w-full h-full bg-black" />}>
               <LazyGlobe
@@ -186,9 +185,6 @@ function Footer() {
 
       <style>{`
         @media (max-width: 640px) {
-          .footer-container {
-            margin-top: 20px;
-          }
           .globe-section {
             height: 200px;
             overflow: visible;
@@ -208,13 +204,10 @@ function Footer() {
             position: relative;
             top: 0;
           }
-          .footer-content {
-            margin-top: -200px;
-          }
         }
         @media (min-width: 641px) {
           .footer-container {
-            margin-top: 60px;
+            margin-top: 30px;
           }
           .footer-content {
             margin-top: 0px;
