@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
   const [activeLink, setActiveLink] = useState("home");
   const [isDarkMode, setIsDarkMode] = useState(
     document.documentElement.classList.contains("dark")
@@ -72,7 +75,7 @@ function Header() {
             ${
               isScrolled
                 ? "bg-white/70 dark:bg-[#171717]"
-        : "bg-[#EDEDED] dark:bg-[#171717]"
+                : "bg-[#EDEDED] dark:bg-[#171717]"
             }`}
         >
           {/* Logo */}
@@ -83,8 +86,12 @@ function Header() {
                   ? "/assets/images/Rotaframe Yellow.png"
                   : "/assets/images/Rotaframe Black.png"
               }
-              className="h-[25px] sm:h-[30px] w-auto"
+              className="h-[25px] sm:h-[30px] w-auto cursor-pointer"
               alt="Rotaframe Technology"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                navigate("/home");
+              }}
             />
           </div>
 
@@ -94,6 +101,21 @@ function Header() {
               {["Home", "About Us", "Services", "Portfolio"].map((item) => (
                 <span
                   key={item}
+                  onClick={() => {
+                    if (item === "Home") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      navigate("/home");
+                    } else if (item === "Services") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      navigate("/services");
+                    } else {
+                      const sectionId = item.toLowerCase().replace(/\s+/g, "");
+                      const element = document.getElementById(sectionId);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
                   className="px-2 text-[15px] py-2 text-black dark:text-[#FAFAFA] hover:text-[#FFD400] transition-colors cursor-pointer"
                 >
                   {item}
@@ -116,7 +138,7 @@ function Header() {
                 onClick={() => {
                   const element = document.getElementById("contact");
                   if (element) {
-                    const headerOffset = 150;
+                    const headerOffset = 80;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition =
                       elementPosition + window.pageYOffset - headerOffset;
@@ -172,17 +194,34 @@ function Header() {
               {["Home", "About Us", "Services", "Portfolio"].map((item) => (
                 <span
                   key={item}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    if (item === "Home") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      navigate("/home");
+                    } else if (item === "Services") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      navigate("/services");
+                    } else {
+                      const sectionId = item.toLowerCase().replace(/\s+/g, "");
+                      const element = document.getElementById(sectionId);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
                   className="py-3 px-2 text-base text-black dark:text-[#FAFAFA] hover:text-[#FFD400] border-b border-gray-200 dark:border-gray-600 transition-colors cursor-pointer"
                 >
                   {item}
                 </span>
               ))}
+
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   const element = document.getElementById("contact");
                   if (element) {
-                    const headerOffset = 80;
+                    const headerOffset = 40;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition =
                       elementPosition + window.pageYOffset - headerOffset;
