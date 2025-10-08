@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
+import PropTypes from "prop-types";
 
-function LogoSlider() {
+function LogoSlider({ noMargin = false }) {
   const logoData = [
     { src: "/assets/images/logoSlider/Figma.png", alt: "Figma" },
     { src: "/assets/images/logoSlider/Illustrator.png", alt: "Illustrator" },
@@ -24,9 +25,12 @@ function LogoSlider() {
   ];
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto overflow-hidden px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-row w-full justify-center mt-16 sm:mt-20 lg:mt-[100px]">
-        {/* Desktop/Tablet Logo Slider */}
+    <div
+      className={`w-full max-w-[1440px] mx-auto overflow-hidden px-4 sm:px-6 lg:px-8 ${
+        noMargin ? "" : "mt-16 sm:mt-20 lg:mt-[100px]"
+      }`}
+    >
+      <div className="flex flex-row w-full justify-center">
         <div className="hidden sm:flex justify-center w-full px-4 lg:px-10">
           <Marquee direction="left" speed={20} className="mb-8">
             {[...Array(3)].map((_, repeatIndex) =>
@@ -42,7 +46,6 @@ function LogoSlider() {
           </Marquee>
         </div>
 
-        {/* Mobile Logo Slider */}
         <div className="w-full sm:hidden">
           <Marquee
             direction="left"
@@ -67,5 +70,9 @@ function LogoSlider() {
     </div>
   );
 }
+
+LogoSlider.propTypes = {
+  noMargin: PropTypes.bool,
+};
 
 export default LogoSlider;
