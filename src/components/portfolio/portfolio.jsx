@@ -1,16 +1,19 @@
-function Portfolio() {
+import React from "react";
+import PropTypes from "prop-types";
+
+function Portfolio({ noHeader = false }) {
   const portfolioItems = [
     {
-      title: "insider Business",
+      title: "Moonbeam Glamour",
       description:
-        "A dynamic web landing page aimed at driving sales for a specific product. The landing page serves as the initial point of contact for potential customers.",
+        "A premium eCommerce platform designed to deliver a fast, elegant, and intuitive shopping experience for beauty and cosmetics customers.",
       icon: "/assets/images/portfolioicon.png",
       img: "/assets/images/portfolio1.png",
       imgClass:
         "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
       width: "w-full sm:w-2/4",
       github: "",
-      behance: "https://www.behance.net/gallery/188126183/Landing-Page-Design",
+      behance: "",
       readMore: "",
     },
     {
@@ -53,16 +56,16 @@ function Portfolio() {
       readMore: "",
     },
     {
-      title: "insider Business",
+      title: "iNfo",
       description:
-        "A dynamic web landing page aimed at driving sales for a specific product. The landing page serves as the initial point of contact for potential customers.",
+        "This project aims to develop a user-friendly and visually engaging mobile application interface for seamless travel ticket booking.",
       icon: "/assets/images/portfoliomobileicon.png",
       img: "/assets/images/portfolio3.png",
       imgClass:
         "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[120px] md:w-[145px]",
       width: "w-full sm:w-1/4",
       github: "",
-      behance: "",
+      behance: "https://www.behance.net/gallery/182259823/iNfo-Mobile-Application-Prototype",
       readMore: "",
     },
     {
@@ -70,25 +73,29 @@ function Portfolio() {
       description:
         "A dynamic web landing page aimed at driving sales for a specific product. The landing page serves as the initial point of contact for potential customers.",
       icon: "/assets/images/portfolioicon.png",
-      img: "/assets/images/portfolio1.png",
+      img: "/assets/images/portfolio5.png",
       imgClass:
         "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
       width: "w-full sm:w-2/4",
       github: "",
-      behance: "",
+      behance: "https://www.behance.net/gallery/188126183/Landing-Page-Design",
       readMore: "",
     },
   ];
 
   return (
     <div className="flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-24">
-      <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white">
-        Our Portfolio
-      </div>
-      <div className="pt-4 text-sm sm:text-base font-normal text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-        Kickstart your next project with templates built by us and our
-        community.
-      </div>
+      {!noHeader && (
+  <>
+    <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white">
+      Our Portfolio
+    </div>
+    <div className="pt-4 text-sm sm:text-base font-normal text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+      Kickstart your next project with templates built by us and our community.
+    </div>
+  </>
+)}
+
       <div className="flex flex-col w-full gap-4 mt-8 sm:mt-12 md:mt-20">
         {[0, 3].map((start, rowIndex) => (
           <div
@@ -219,7 +226,12 @@ function Portfolio() {
         ))}
       </div>
     </div>
+
   );
 }
+
+Portfolio.propTypes = {
+  noHeading: PropTypes.bool,
+};
 
 export default Portfolio;

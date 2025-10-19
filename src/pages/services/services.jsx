@@ -53,22 +53,21 @@ const Services = () => {
     },
   ];
 
-  return (
+return (
   <section className="w-full">
     {/* Hero Section */}
-    <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[300px] bg-cover bg-center relative mt-12">
-      {/* Inner container for proper left-right spacing */}
+    <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[300px] bg-cover bg-center relative mt-16">
       <div className="w-full max-w-[1440px] mx-auto h-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 px-4 sm:px-6 lg:px-10">
         {/* Text */}
         <div className="text-left md:w-1/2">
-          <p className="text-[20px] font-bold text-white">Our Services</p>
-          <h1 className="mt-2 text-[48px] sm:text-[60px] md:text-[72px] font-bold text-white leading-tight">
+          <p className="text-[18px] sm:text-[20px] font-bold text-white">Our Services</p>
+          <h1 className="mt-2 text-[40px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold text-white leading-tight">
             <span className="text-[#B4B4B4] block">Innovating the</span> Future
           </h1>
         </div>
 
         {/* Video Thumbnail */}
-        <div className="relative w-full md:w-1/2 max-w-md aspect-video bg-black rounded-lg overflow-hidden cursor-pointer mt-4 md:mt-0">
+        <div className="relative w-full md:w-1/2 max-w-md aspect-video bg-black rounded-lg overflow-hidden cursor-pointer">
           <img
             src="/video-thumbnail.jpg"
             alt="Video Thumbnail"
@@ -93,18 +92,20 @@ const Services = () => {
     <Banner />
 
     {/* Services Section */}
-    <div className="services-container flex flex-col items-center w-full">
-      <hr className="w-full border-t mt-14 border-[#2E2E2E]" />
+    <div className="services-container flex flex-col items-center w-full py-14 sm:py-16">
+      {/* Top Divider */}
+      <hr className="w-full border-t border-[#2E2E2E]" />
 
-      <div className="w-full max-w-[1440px] flex flex-col px-4 sm:px-6 lg:px-10 mt-6 mb-4 space-y-16">
+      {/* Services List */}
+      <div className="w-full max-w-[1440px] flex flex-col px-4 sm:px-6 lg:px-10 mt-14 sm:mt-20 space-y-18 sm:space-y-20">
         {sections.map((section, index) => (
           <div key={index} className="w-full">
-            <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold lg:w-1/4 text-left">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
+              <h2 className="text-[26px] sm:text-[30px] lg:text-[35px] font-bold lg:w-1/4 text-left">
                 {section.title}
               </h2>
               <div className="lg:w-3/4 text-left space-y-4">
-                <p className="text-lg sm:text-xl font-semibold text-[#B4B4B4]">
+                <p className="text-base sm:text-lg font-semibold text-[#B4B4B4]">
                   {section.subtitle}
                 </p>
                 {section.paragraphs.map((p, i) => (
@@ -120,20 +121,30 @@ const Services = () => {
                 </p>
               </div>
             </div>
-            <hr className="w-full border-t mt-8 sm:mt-12 border-[#2E2E2E]" />
+
+            {/* Divider between sections */}
+            {index !== sections.length - 1 && (
+              <hr className="w-full border-t mt-12 sm:mt-20 border-[#2E2E2E]" />
+            )}
           </div>
         ))}
       </div>
 
+      {/* Middle Divider */}
+      <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
+
       {/* Logo Slider */}
-      <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-6 mb-4">
+      <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-16 sm:mt-20">
         <LogoSlider noMargin />
       </div>
 
-      <hr className="w-full border-t mt-8 border-[#2E2E2E]" />
+      {/* Bottom Divider */}
+      <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
 
-      {/* Contact Us */}
-      <ContactUs />
+      {/* Contact Section */}
+      <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16">
+        <ContactUs />
+      </div>
     </div>
   </section>
 );

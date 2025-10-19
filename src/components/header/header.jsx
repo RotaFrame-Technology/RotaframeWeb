@@ -108,6 +108,9 @@ function Header() {
                     } else if (item === "Services") {
                       window.scrollTo({ top: 0, behavior: "smooth" });
                       navigate("/services");
+                    } else if (item === "Portfolio") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      navigate("/portfolio");
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
@@ -202,6 +205,9 @@ function Header() {
                     } else if (item === "Services") {
                       window.scrollTo({ top: 0, behavior: "smooth" });
                       navigate("/services");
+                    } else if (item === "Portfolio") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      navigate("/portfolio");
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
