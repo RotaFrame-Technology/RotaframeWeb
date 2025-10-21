@@ -1,10 +1,10 @@
-import React from "react";
+
 import ContactUs from "../../components/contact_us/contact_us";
 import LogoSlider from "../../components/logoSlider/logoSlider";
 import Banner from "../../components/banner/banner";
-import PortfolioItems from "../../components/portfolio/portfolio";
+import Portfolio from "../../components/portfolio/portfolio";
 
-const Portfolio = () => {
+const PortfolioPage = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
@@ -12,12 +12,13 @@ const Portfolio = () => {
         <div className="w-full max-w-[1440px] mx-auto h-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 px-4 sm:px-6 lg:px-10">
           {/* Text */}
           <div className="text-left md:w-1/2">
-            <p className="text-[18px] sm:text-[20px] font-bold text-white">
+            <p className="text-[18px] sm:text-[20px] ml-1 font-bold text-gray-800 dark:text-white">
               Project Portfolio
             </p>
             <h1 className="mt-2 text-[40px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold text-white leading-tight">
-              <span className="text-[#B4B4B4] block">Innovating the</span>{" "}
-              Future
+              <span className="text-gray-600 dark:text-gray-400 block">Innovating the</span>{" "}
+              <div className="text-gray-800 dark:text-white">Future</div>
+              
             </h1>
           </div>
 
@@ -48,7 +49,7 @@ const Portfolio = () => {
 
       <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
 
-      <PortfolioItems noHeader />
+      <Portfolio noHeader />
 
       {/* Logo Slider */}
       <div className="services-container flex flex-col mt-10 items-center w-full py-14 sm:py-16">
@@ -67,4 +68,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;

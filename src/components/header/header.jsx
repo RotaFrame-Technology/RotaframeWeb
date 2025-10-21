@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [activeLink, setActiveLink] = useState("home");
   const [isDarkMode, setIsDarkMode] = useState(
@@ -14,6 +15,42 @@ function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
+  // Handle active link updates
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/" || path.includes("home")) setActiveLink("home");
+    else if (path.includes("services")) setActiveLink("services");
+    else if (path.includes("portfolio")) setActiveLink("portfolio");
+    else setActiveLink("");
+  }, [location]);
+
+  // Handle scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // Restore theme from localStorage
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    }
+  }, []);
+
+  // Toggle theme
   const toggleDarkMode = () => {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
@@ -28,32 +65,21 @@ function Header() {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 50);
+  // Smooth scroll to contact section
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
-      // Determine scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past initial threshold
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setIsVisible(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
-      setIsDarkMode(true);
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
-  }, []);
+  };
 
   return (
     <>
@@ -62,21 +88,20 @@ function Header() {
           isVisible ? "translate-y-0" : "-translate-y-[120%]"
         }`}
       >
-        {/* Top strip background */}
+        {/* Background strip */}
         <div
           className={`absolute -top-4 sm:-top-7 left-0 w-full h-4 sm:h-7 z-[-1] ${
             isDarkMode ? "bg-[#121212]" : "bg-white"
           }`}
         />
 
-        {/* Main header container */}
+        {/* Main header */}
         <div
-          className={`w-full max-w-[1400px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300
-            ${
-              isScrolled
-                ? "bg-white/70 dark:bg-[#171717]"
-                : "bg-[#EDEDED] dark:bg-[#171717]"
-            }`}
+          className={`w-full max-w-[1400px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300 ${
+            isScrolled
+              ? "bg-white/70 dark:bg-[#171717]"
+              : "bg-[#EDEDED] dark:bg-[#171717]"
+          }`}
         >
           {/* Logo */}
           <div className="flex items-center">
@@ -90,7 +115,7 @@ function Header() {
               alt="Rotaframe Technology"
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
-                navigate("/home");
+                navigate("/");
               }}
             />
           </div>
@@ -103,13 +128,11 @@ function Header() {
                   key={item}
                   onClick={() => {
                     if (item === "Home") {
+                      navigate("/");
                       window.scrollTo({ top: 0, behavior: "smooth" });
-                      navigate("/home");
                     } else if (item === "Services") {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
                       navigate("/services");
                     } else if (item === "Portfolio") {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
                       navigate("/portfolio");
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
@@ -119,7 +142,11 @@ function Header() {
                       }
                     }
                   }}
-                  className="px-2 text-[15px] py-2 text-black dark:text-[#FAFAFA] hover:text-[#FFD400] transition-colors cursor-pointer"
+                  className={`relative px-2 text-[15px] py-2 cursor-pointer transition-colors ${
+                    activeLink === item.toLowerCase().replace(/\s+/g, "")
+                      ? "text-black dark:text-[#FFD400] after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-3/5 after:h-[2px] after:bg-[#FFD400] dark:after:bg-[#FFD400] after:rounded-full"
+                      : "text-black dark:text-[#FAFAFA] hover:text-[#FFD400] dark:hover:text-[#FFD400]"
+                  }`}
                 >
                   {item}
                 </span>
@@ -138,20 +165,7 @@ function Header() {
                 {isDarkMode ? <FaSun /> : <FaMoon />}
               </button>
               <button
-                onClick={() => {
-                  const element = document.getElementById("contact");
-                  if (element) {
-                    const headerOffset = 80;
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition =
-                      elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: "smooth",
-                    });
-                  }
-                }}
+                onClick={scrollToContact}
                 className="w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
               >
                 Contact Us
@@ -159,21 +173,17 @@ function Header() {
             </div>
           </div>
 
-          {/* Mobile Menu Button + Theme Toggle */}
+          {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-3">
             <button
               onClick={toggleDarkMode}
               className="text-lg text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
-              aria-label={
-                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
-              }
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </button>
             <button
               onClick={toggleMobileMenu}
               className="text-lg text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
-              aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -181,7 +191,7 @@ function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
           className="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
@@ -200,13 +210,11 @@ function Header() {
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     if (item === "Home") {
+                      navigate("/");
                       window.scrollTo({ top: 0, behavior: "smooth" });
-                      navigate("/home");
                     } else if (item === "Services") {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
                       navigate("/services");
                     } else if (item === "Portfolio") {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
                       navigate("/portfolio");
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
@@ -225,18 +233,7 @@ function Header() {
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  const element = document.getElementById("contact");
-                  if (element) {
-                    const headerOffset = 40;
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition =
-                      elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: "smooth",
-                    });
-                  }
+                  scrollToContact();
                 }}
                 className="mt-6 w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
               >

@@ -1,10 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Main from "../../layouts/main/main";
 import HomePage from "../../pages/homePage/homePage";
-import Service from "../../pages/services/services";
+import ServicesPage from "../../pages/servicesPage/servicesPage";
 import NotFound from "../../pages/notFound/NotFound";
 import ErrorPage from "../../pages/error/ErrorPage";
-import Portfolio from "../../pages/portfolio/portfolio";
+import PortfolioPage from "../../pages/portfolioPage/portfolioPage";
+import ProjectPage from "../../pages/projectPage/projectPage";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,15 @@ const router = createBrowserRouter([
       },
       {
         path: "services",
-        element: <Service />,
+        element: <ServicesPage />,
       },
       {
         path: "portfolio",
-        element: <Portfolio />,
+        element: <PortfolioPage />,
+      },
+      {
+        path: "project/:projectId",
+        element: <ProjectPage />
       },
       {
         path: "home",

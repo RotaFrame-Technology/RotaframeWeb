@@ -1,9 +1,9 @@
-import React from "react";
+
 import ContactUs from "../../components/contact_us/contact_us";
 import LogoSlider from "../../components/logoSlider/logoSlider";
 import Banner from "../../components/banner/banner";
 
-const Services = () => {
+const ServicesPage = () => {
   const sections = [
     {
       title: "eCommerce Development",
@@ -60,9 +60,10 @@ return (
       <div className="w-full max-w-[1440px] mx-auto h-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 px-4 sm:px-6 lg:px-10">
         {/* Text */}
         <div className="text-left md:w-1/2">
-          <p className="text-[18px] sm:text-[20px] font-bold text-white">Our Services</p>
+          <p className="text-[18px] sm:text-[20px] font-bold text-gray-800 dark:text-white ml-1">Our Services</p>
           <h1 className="mt-2 text-[40px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold text-white leading-tight">
-            <span className="text-[#B4B4B4] block">Innovating the</span> Future
+            <span className="text-gray-600 dark:text-gray-400 block">Innovating the</span> 
+            <div className="text-gray-800 dark:text-white">Future</div>
           </h1>
         </div>
 
@@ -105,18 +106,18 @@ return (
                 {section.title}
               </h2>
               <div className="lg:w-3/4 text-left space-y-4">
-                <p className="text-base sm:text-lg font-semibold text-[#B4B4B4]">
+                <p className="text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-400">
                   {section.subtitle}
                 </p>
                 {section.paragraphs.map((p, i) => (
                   <p
                     key={i}
-                    className="text-sm sm:text-base text-[#B4B4B4] leading-relaxed"
+                    className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed"
                   >
                     {p}
                   </p>
                 ))}
-                <p className="pt-2 text-sm sm:text-base text-[#B4B4B4]">
+                <p className="pt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
                   <strong>Key focus:</strong> {section.keyFocus}
                 </p>
               </div>
@@ -151,4 +152,4 @@ return (
 
 };
 
-export default Services;
+export default ServicesPage;
