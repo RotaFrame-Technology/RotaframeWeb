@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import portfolioItems from "./portfolioItemsData.js";
@@ -107,7 +106,7 @@ function Portfolio({ noHeader = false }) {
                     )}
 
                     {/* Read more */}
-                    {/* <div className="mt-3">
+                    <div className="mt-3">
                       {item.readMore ? (
                         // If item.readMore exists, link to external URL
                         <a
@@ -131,6 +130,7 @@ function Portfolio({ noHeader = false }) {
                           to={`/project/${item.title
                             .replace(/\s+/g, "-")
                             .toLowerCase()}`}
+                          onClick={() => window.scrollTo(0, 0)}
                           className="flex flex-row items-center gap-2 cursor-pointer"
                         >
                           <div className="text-xs sm:text-sm font-normal text-[#898989] hover:text-[#FFD400]">
@@ -143,7 +143,7 @@ function Portfolio({ noHeader = false }) {
                           />
                         </Link>
                       )}
-                    </div> */}
+                    </div>
                   </div>
                 </div>
                 <img

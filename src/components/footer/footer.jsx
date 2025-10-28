@@ -90,7 +90,7 @@ function Footer() {
 
       {/* Footer Content */}
       <div
-        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-6 py-12 sm:py-8 md:py-10 bg-[#F9F9F9] dark:bg-[#000000] transition-colors duration-300 footer-content"
+        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-6 py-12 sm:py-8 md:py-10 bg-[#F9F9F9] dark:bg-[#0F0F0F] transition-colors duration-300 footer-content"
         style={{
           marginTop: "0px",
           borderTopLeftRadius: "1.5rem",
