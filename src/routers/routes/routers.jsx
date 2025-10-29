@@ -5,7 +5,7 @@ import ServicesPage from "../../pages/servicesPage/servicesPage";
 import NotFound from "../../pages/notFound/NotFound";
 import ErrorPage from "../../pages/error/ErrorPage";
 import PortfolioPage from "../../pages/portfolioPage/portfolioPage";
-import ProjectPage from "../../pages/projectPage/projectPage";
+import PortfolioSinglePage from "../../pages/portfolioSinglePage/portfolioSinglePage";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
         element: <PortfolioPage />,
       },
       {
-        path: "project/:projectId",
-        element: <ProjectPage />
+        path: "portfolio/:portfolioId",
+        element: <PortfolioSinglePage />
       },
       {
         path: "home",
