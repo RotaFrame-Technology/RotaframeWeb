@@ -6,6 +6,21 @@ function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    if (location.state?.scrollTo === "contact") {
+      const element = document.getElementById("contact");
+      if (element) {
+        setTimeout(() => {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }, 400); // slight delay for page render
+      }
+    }
+  }, [location]);
+
   const [activeLink, setActiveLink] = useState("home");
   const [isDarkMode, setIsDarkMode] = useState(
     document.documentElement.classList.contains("dark")
@@ -14,6 +29,10 @@ function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Handle active link updates
   useEffect(() => {
@@ -67,19 +86,26 @@ function Header() {
 
   // Smooth scroll to contact section
   const scrollToContact = () => {
+  const isPortfolioSingle =
+    location.pathname.startsWith("/portfolio/") &&
+    location.pathname !== "/portfolio";
+
+  if (isPortfolioSingle) {
+    // ✅ If on a portfolio project page, go home and scroll to contact
+    navigate("/", { state: { scrollTo: "contact" } });
+  } else {
+    // ✅ Otherwise, scroll to contact section on the same page
     const element = document.getElementById("contact");
     if (element) {
-      const headerOffset = 80;
+      const headerOffset = 20;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
-  };
+  }
+};
+
 
   return (
     <>
@@ -129,11 +155,13 @@ function Header() {
                   onClick={() => {
                     if (item === "Home") {
                       navigate("/");
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      scrollToTop();
                     } else if (item === "Services") {
                       navigate("/services");
+                      setTimeout(scrollToTop, 100); // delay to ensure navigation completes
                     } else if (item === "Portfolio") {
                       navigate("/portfolio");
+                      setTimeout(scrollToTop, 100);
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
@@ -211,11 +239,13 @@ function Header() {
                     setIsMobileMenuOpen(false);
                     if (item === "Home") {
                       navigate("/");
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      scrollToTop();
                     } else if (item === "Services") {
                       navigate("/services");
+                      setTimeout(scrollToTop, 100);
                     } else if (item === "Portfolio") {
                       navigate("/portfolio");
+                      setTimeout(scrollToTop, 100);
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);

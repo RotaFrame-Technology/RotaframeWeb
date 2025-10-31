@@ -1,10 +1,7 @@
 import { useParams } from "react-router-dom";
-import ContactUs from "../../components/contact_us/contact_us";
-import LogoSlider from "../../components/logoSlider/logoSlider";
-import Banner from "../../components/banner/banner";
 import { CheckCircle } from "lucide-react";
-import { useEffect } from "react";  
-// Project Data
+import { useEffect } from "react";
+
 const projectsData = [
   // ──────────────────────────────────────────────────────────────
   // 1. Moonbeam Glamour
@@ -12,21 +9,24 @@ const projectsData = [
   {
     id: "moonbeam-glamour",
     title: "Moonbeam Glamour",
+    icon: "/assets/images/portfolioicon.png",
     subtitle: "Cosmetics E-Commerce Platform",
     tagline:
       "A premium online store built for high performance, visual elegance, and seamless customer experience.",
     industry: "Beauty & Cosmetics",
-    duration: "3 Months",
     scope: "UI/UX, Development, Optimization",
+    duration: "3 Months",
     client: "Moonbeam Glamour",
-    platform: "Web (WordPress eCommerce)",
     heroImage: "/images/moonbeam-glamour-hero.jpg",
     overview: [
-      "Moonbeam Glamour partnered with Rotaframe Technology to build a luxury-grade cosmetics eCommerce platform that perfectly blends brand storytelling with cutting-edge performance. The vision was to create a digital experience that reflects elegance, trust, and sophistication while being technically robust and lightning fast.",
-      "The platform features intuitive product navigation, engaging visuals, and a smooth checkout experience that encourages users to explore and purchase effortlessly. Every page element was crafted with a focus on speed, stability, and aesthetics—ensuring seamless performance across all devices. Performance optimization was a core part of our process, reducing load times, enhancing mobile usability, and driving measurable business results through better engagement and conversions. Moonbeam Glamour stands as a showcase of how refined design and optimized performance can elevate an online store’s credibility and success.",
+      "Moonbeam Glamour partnered with Rotaframe Technology to build a luxury-grade cosmetics eCommerce platform that perfectly blends brand storytelling with cutting-edge performance. The vision was to create a digital experience that reflects elegance, trust, and sophistication while being technically robust and lightning fast. The website was designed to embody the brand’s premium identity through a clean, modern interface that resonates with its target audience—beauty enthusiasts seeking quality and style.",
+      "The platform features intuitive product navigation, engaging visuals, and a smooth checkout experience that encourages users to explore and purchase effortlessly. Every page element was crafted with a focus on speed, stability, and aesthetics ensuring seamless performance across all devices. Performance optimization was a core part of our process, reducing load times, enhancing mobile usability, and driving measurable business results through better engagement and conversions. Moonbeam Glamour stands as a showcase of how refined design and optimized performance can elevate an online store’s credibility and success.",
     ],
-    solution:
-      "We analysed the requirements and customer flows, then proposed a concise roadmap to prioritize product discovery, reduce checkout steps, and improve perceived speed. Design choices were validated against quick prototypes and user walkthroughs. Implementation focused on three areas of UX clarity, content efficiency (image optimization and selective loading), and reliability (caching and CDN). Each release went through performance testing and iterative refinement until metrics met our targets. The result is a WordPress-based eCommerce site that delivers fast page loads, stable layouts, and a checkout experience designed to convert casual visitors.",
+    solution: [
+      "We analysed the requirements and customer flows, then proposed a concise roadmap prioritize product discovery, reduce checkout steps, and improve perceived speed. Design choices were validated against quick prototypes and user walkthroughs.",
+      "Implementation focused on three areas of UX clarity, content efficiency (image optimization and selective loading), and reliability (caching and CDN). Each release went through performance testing and iterative refinement until metrics met our targets.",
+      "The result is a WordPress-based eCommerce site that delivers fast page loads, stable layouts, and a checkout experience designed to convert casual visitors.",
+    ],
     performanceMetrics: [
       ["Performance Score", "93%", "Excellent"],
       ["TBT", "0ms", "Zero Blocking"],
@@ -35,8 +35,6 @@ const projectsData = [
       ["CLS", "0", "Perfect Stability"],
       ["TTI", "0.76s", "Smooth"],
       ["Fully Loaded Time", "1.7s", "Quick Load"],
-      ["Bounce Rate", "35%", "Engagement Boost"],
-      ["Conversion Rate", "25%", "Sales Growth"],
     ],
     businessImpact:
       "Optimized speed, design, and usability led to increased engagement and sales. The fast and stable experience built user trust and supported measurable business growth.",
@@ -64,21 +62,32 @@ const projectsData = [
     id: "cineru",
     title: "CineRu",
     subtitle: "Mobile Subtitle Downloading App",
+    icon: "/assets/images/portfoliomobileicon.png",
     tagline:
       "A minimal, fast, and user-friendly mobile app designed for seamless subtitle search and downloading.",
     industry: "Entertainment / Cinema",
-    duration: "Case Study (Concept → Hi-Fi Prototype)",
     scope: "User Research, App UI/UX, Prototyping, Interaction Design",
-    client: null,
     platform: "Mobile (iOS / Android focus)",
+    duration: "Case Study (Concept → Hi-Fi Prototype)",
     heroImage: "/images/cineru-hero.jpg",
     overview: [
       "CineRu is a mobile UI/UX design project that reimagines the subtitle downloading experience for movie lovers. The goal was to create an app that makes it quick and intuitive for users to find accurate subtitles for their favorite movies and series without ads, clutter, or confusion.",
       "The app’s interface was built around clarity, efficiency, and modern aesthetics. Through elegant typography, dark cinematic visuals, and an intuitive search experience, CineRu offers a simple yet engaging platform that prioritizes user satisfaction and usability.",
       "The design process focused on reducing steps to download, improving readability, and introducing a fluid user flow that enhances accessibility across devices.",
     ],
-    solution:
-      "Our design team conducted research into existing subtitle apps and identified common frustrations such as complicated navigation, intrusive ads, and confusing file management. We then mapped user journeys to create a seamless flow from searching for a title to previewing and downloading subtitles within seconds.\n\nKey UX priorities included:\n• A unified search and filter system to quickly locate accurate subtitles.\n• Preview screens with detailed subtitle metadata and ratings.\n• Minimal steps between search, preview, and download actions.\n• Integration of lightweight animations for feedback and progress visibility.\n\nVisual design adopted a dark cinematic theme with contrasting highlights for interactive elements, ensuring a polished, film-inspired experience. Every interface was optimized for readability and one-handed use, making CineRu both functional and visually immersive.",
+    solution: [
+      "Our design team conducted research into existing subtitle apps and identified common frustrations such as complicated navigation, intrusive ads, and confusing file management. We then mapped user journeys to create a seamless flow from searching for a title to previewing and downloading subtitles within seconds.",
+      {
+        type: "list",
+        items: [
+          "A unified search and filter system to quickly locate accurate subtitles.",
+          "Preview screens with detailed subtitle metadata and ratings.",
+          "Minimal steps between search, preview, and download actions.",
+          "Integration of lightweight animations for feedback and progress visibility.",
+        ],
+      },
+      "Visual design adopted a dark cinematic theme with contrasting highlights for interactive elements, ensuring a polished, film-inspired experience. Every interface was optimized for readability and one-handed use, making CineRu both functional and visually immersive.",
+    ],
     performanceMetrics: null,
     businessImpact:
       "While conceptual, the CineRu prototype demonstrates strong potential for market adoption among entertainment users. The app’s focus on simplicity and performance could significantly improve user retention and engagement in a segment often dominated by ad-heavy or complex alternatives. The design showcases how a refined UX approach can transform a basic tool into an enjoyable, trustworthy platform encouraging users to return frequently. Such design principles can directly translate into higher app store ratings, reduced churn, and increased word of mouth once developed into a full-scale product.",
@@ -91,52 +100,76 @@ const projectsData = [
       "Minimal interaction steps and gesture-friendly navigation",
       "Enhanced usability and accessibility across mobile devices",
     ],
-    finalDesignText:
-      "The final design presents a smooth and cinematic user journey from searching movie titles to previewing and downloading subtitles. Users can easily search, filter, and preview subtitles with a visually rich yet minimal layout. The download process features clear progress indicators, visual confirmation screens, and micro-interactions that enhance the overall feedback experience.",
+    finalDesignText: [
+      "The final design presents a smooth and cinematic user journey from searching movie titles to previewing and downloading subtitles. The app interface highlights clarity, accessibility, and consistency throughout every interaction.",
+      " Users can easily search, filter, and preview subtitles with a visually rich yet minimal layout. The download process features clear progress indicators, visual confirmation screens, and micro-interactions that enhance the overall feedback experience. ",
+      " Every screen was optimized for fast performance, dark theme readability, and touch-friendly controls, ensuring that CineRu feels both elegant and effortless to use across mobile devices.",
+    ],
     finalImage: null,
   },
 
   // ──────────────────────────────────────────────────────────────
-  // 3. Jayanath Spices
-  // ──────────────────────────────────────────────────────────────
-  // ──────────────────────────────────────────────────────────────
-  // 3. Rest Provide
+  // 3. Rest Provider
   // ──────────────────────────────────────────────────────────────
   {
-    id: "rest-provide",
-    title: "Rest Provide",
-    subtitle: "Food Ordering App Onboarding",
+    id: "rest-provider",
+    title: "Rest Provider",
+    subtitle: "Online Food Ordering Platform",
+    icon: "/assets/images/portfoliomobileicon.png",
     tagline:
-      "A simple, user-friendly onboarding for a food ordering app, guiding users through setup and preferences with clear visuals.",
-    industry: "Food & Delivery",
-    duration: "Case Study (Concept → Hi-Fi Prototype)",
-    scope: "UI/UX Design, Onboarding Flow, Interaction Design",
-    client: null,
-    platform: "Mobile (iOS / Android)",
-    heroImage: "/images/rest-provide-hero.jpg",
+      "A fast, user-friendly food ordering application designed and developed to connect customers with nearby restaurants, ensuring a smooth browsing, ordering, and delivery experience.",
+    industry: "Food & Beverage / On-Demand Delivery",
+    scope:
+      "UI/UX Design, Mobile App Development, API Integration, Real Time Tracking",
+    platform: "Mobile (Android / iOS)",
+    heroImage: "/images/rest-provider-hero.jpg",
     overview: [
-      "Rest Provide is a mobile UI/UX design project focused on creating a smooth and engaging onboarding experience for a food ordering app.",
-      "The goal was to guide new users through account setup, preference selection, and location permissions using minimal steps, clear visuals, and intuitive interactions.",
-      "Designed with a clean, appetizing aesthetic featuring bold food imagery, friendly illustrations, and simple typography, the onboarding flow ensures users feel confident and ready to order within seconds.",
+      "Rest Provider is a fully developed online food ordering platform that enables users to discover restaurants, browse menus, place orders, and track deliveries in real time.",
+      "The project aimed to create a high-performance mobile application with an engaging interface and reliable backend infrastructure to deliver a smooth, end-to-end experience.",
+      "The Rotaframe team handled both UI/UX design and mobile app development, ensuring the platform achieved visual excellence and technical stability. From restaurant listings to secure payments, every feature was optimized for ease of use, speed, and customer satisfaction.",
     ],
-    solution:
-      "We analyzed common friction points in food app onboarding—confusing forms, too many steps, and unclear value propositions. The solution streamlined the process into 3-4 key screens:\n\n• **Welcome Screen** with vibrant food visuals and a clear value statement.\n• **Preference Selection** using swipeable cards for cuisine types and dietary options.\n• **Location & Permissions** with contextual explanations and one-tap enable.\n• **Final Confirmation** with a personalized greeting and direct access to the menu.\n\nVisual design used warm tones, high-quality food photography, and micro-interactions to create delight and trust. Each step was optimized for one-handed use and accessibility.",
-    performanceMetrics: null,
+    solution: [
+      "To build a food ordering experience that stands out in a competitive market, our team conducted in-depth research into user behaviors and key frustrations such as slow load times, complicated checkouts, and poor restaurant discovery. Our solution combined strong visual identity with robust functionality to create a digital platform that feels both simple and intelligent.",
+      {
+        type: "list",
+        items: [
+          "Interactive Home Screen – Featuring curated restaurants and trending dishes.",
+          "Advanced Search & Filters – Allowing users to browse by cuisine, distance, or ratings.",
+          "Smooth Ordering Flow – Cart management, order customization, and instant checkout.",
+          "Real-Time Order Tracking – Live updates from preparation to delivery.",
+          "Restaurant Dashboard – Enabling vendors to manage menus, orders, and deliveries.",
+          "Secure Payment Gateway – Supporting multiple payment methods with transaction safety.",
+        ],
+      },
+      "The result is a complete digital ecosystem for users, restaurants, and delivery services—fast, secure, and scalable for future growth.",
+    ],
+    performanceMetrics: [
+      ["Performance Score", "95%", "Excellent"],
+      ["Average Load Time", "1.3s", "Fast"],
+      ["API Response Time", "0.41s", "Optimized"],
+      ["Restaurant Sync Delay", "<1s", "Instant Update"],
+      ["Average Order Completion Time", "2.5min", "Smooth Flow"],
+      ["Crash Rate", "0%", "Stable"],
+      ["User Retention Rate", "88%", "High Engagement"],
+    ],
     businessImpact:
-      "While conceptual, the Rest Provide onboarding prototype demonstrates strong potential to reduce drop-off rates during signup and increase first-order completion. By making setup fast, clear, and enjoyable, it helps food delivery apps convert more users at the critical first impression stage. The design can lead to higher activation rates, better retention, and stronger brand perception in a competitive market.",
-    clientFeedback: null,
+      "The Rest Provider platform transformed the client’s business from manual order handling to a fully digital, automated system. The app helped improve customer satisfaction, reduce order errors, and increase restaurant efficiency. Early deployments showed a 40% improvement in order handling speed and a significant rise in repeat customers. With its scalable architecture, Rest Provider is ready to integrate with third-party delivery APIs and expand into new regional markets.",
+    clientFeedback: {
+      quote:
+        "Rotaframe built a complete food ordering solution that perfectly blends design and performance. The app feels modern, loads fast, and works flawlessly—it has simplified our entire restaurant operation and given customers a better way to order.",
+      author: "Rest Provider Team",
+    },
     highlights: [
-      "3-step onboarding completed in under 30 seconds",
-      "Swipe-based preference selection for cuisines & diets",
-      "Contextual permission requests with clear benefits",
-      "Personalized final screen with user name and location",
-      "Warm, appetizing visuals with high-quality food imagery",
-      "Fully accessible and one-handed navigation",
-      "Micro-interactions for delight and feedback",
+      "Average load time – 1.3 seconds",
+      "Fast and secure ordering and payment process",
+      "Real-time tracking with instant restaurant updates",
+      "Responsive design for mobile-first experience",
+      "Optimized backend for high performance and zero crashes",
+      "Smooth and intuitive UI enhancing customer engagement",
     ],
     finalDesignText:
-      "The final onboarding flow delivers a fast, friendly, and visually rich introduction to the food ordering experience. Each screen is crafted to reduce cognitive load, build trust, and excite users about their first order. The interface adapts seamlessly across devices, ensuring consistency and performance on both iOS and Android.",
-    finalImage: null,
+      "The final design showcases a vibrant and intuitive mobile experience that captures the essence of food discovery and quick service. The home interface highlights top restaurants and offers dynamic visuals of dishes, while the ordering and tracking screens maintain clarity and precision.",
+    finalImage: "/images/rest-provider-landing.jpg",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -146,13 +179,13 @@ const projectsData = [
     id: "info",
     title: "iNfo",
     subtitle: "Mobile Application for Institutes",
+    icon: "/assets/images/portfoliomobileicon.png",
     tagline:
       "A smart, secure mobile app designed for seamless information and document sharing between students, lecturers, and administrative staff.",
     industry: "Education / Information Management",
-    duration: "Case Study (Concept → Hi-Fi Prototype)",
     scope: "UI/UX Design, Mobile App Development, System Integration",
-    client: "iNfo (Academic Solutions Concept)",
     platform: "Mobile (Android / iOS)",
+    client: "iNfo (Academic Solutions Concept)",
     heroImage: "/images/info-hero.jpg",
     overview: [
       "iNfo is a mobile application conceptualized and developed to simplify academic communication and digital document distribution within educational institutes.",
@@ -160,8 +193,20 @@ const projectsData = [
       "Our design and development teams at Rotaframe Technology collaborated to build an app that focuses on clarity, accessibility, and reliability—giving institutions a digital ecosystem to manage their communication and resource sharing effortlessly.",
       "The UI was built with a modern, minimal interface ensuring that students and staff can navigate easily while maintaining high performance and data security standards.",
     ],
-    solution:
-      "Our research identified that most educational institutes face communication delays and scattered document sharing through multiple channels such as emails, printed notices, and social media. To address this gap, we designed a dedicated mobile app that provides structured communication between administration, lecturers, and students.\n\nKey UX and development focuses included:\n• Centralized Dashboard showing announcements, materials, and event updates.\n• Role-Based Access System for managing content visibility per user type (student, lecturer, admin).\n• Secure Document Uploads & Downloads with cloud integration.\n• Push Notifications for real-time updates on new uploads or notices.\n• Admin Control Panel to manage departments, files, and user permissions efficiently.\n\nThe app was designed with a clean, educational aesthetic, featuring neutral tones, readable typography, and clear visual hierarchies. Development prioritized lightweight architecture for performance and smooth synchronization between server and mobile client.",
+    solution: [
+      "Our research identified that most educational institutes face communication delays and scattered document sharing through multiple channels such as emails, printed notices, and social media. To address this gap, we designed a dedicated mobile app that provides structured communication between administration, lecturers, and students.",
+      {
+        type: "list",
+        items: [
+          "Centralized Dashboard showing announcements, materials, and event updates.",
+          "Role-Based Access System for managing content visibility per user type (student, lecturer, admin).",
+          "Secure Document Uploads & Downloads with cloud integration.",
+          "Push Notifications for real-time updates on new uploads or notices.",
+          "Admin Control Panel to manage departments, files, and user permissions efficiently.",
+        ],
+      },
+      "The app was designed with a clean, educational aesthetic, featuring neutral tones, readable typography, and clear visual hierarchies. Development prioritized lightweight architecture for performance and smooth synchronization between server and mobile client.",
+    ],
     performanceMetrics: [
       ["Performance Score", "94%", "Excellent"],
       ["Average Load Time", "1.4s", "Fast"],
@@ -198,38 +243,49 @@ const projectsData = [
   {
     id: "travel-nebula",
     title: "Travel Nebula",
-    subtitle: "Travel Ticket Booking Mobile App",
+    subtitle: "Travel Booking Mobile Application",
+    icon: "/assets/images/portfoliomobileicon.png",
     tagline:
-      "A user-friendly and visually engaging mobile application interface for seamless travel ticket booking.",
-    industry: "Travel & Tourism",
-    duration: "Case Study (Concept → Hi-Fi Prototype)",
-    scope: "UI/UX Design, Prototyping, Interaction Design",
-    client: null,
-    platform: "Mobile (iOS / Android)",
+      "A modern, user-centric mobile app built to simplify trip planning, bookings, and travel discovery with an intuitive and visually engaging experience.",
+    industry: "Travel & Hospitality",
+    scope: "UI/UX Design, Mobile App Development, Booking Flow Optimization",
+    platform: "Mobile (Android / iOS)",
     heroImage: "/images/travel-nebula-hero.jpg",
     overview: [
-      "Travel Nebula is a mobile UI/UX design project aimed at simplifying travel planning and ticket booking for modern travelers.",
-      "The app focuses on delivering an intuitive, visually rich experience that allows users to search, compare, and book flights, trains, buses, and accommodations—all within a single, elegant interface.",
-      "Designed with a clean aesthetic, vibrant imagery, and smooth interactions, Travel Nebula prioritizes speed, clarity, and delight in every step of the booking journey.",
+      "This Travel Booking Mobile App was developed to offer users a seamless experience for discovering destinations, comparing travel options (flights, hotels, tours), and completing bookings all from one mobile interface.",
+      "The goal was to reduce booking complexity, highlight rich visuals of travel experiences, and ensure high performance across mobile devices.",
     ],
-    solution:
-      "We conducted user research to identify pain points in existing travel apps—complex search filters, cluttered results, and lengthy booking flows. The solution centered on a streamlined, step-by-step booking process with smart defaults, predictive search, and visual route mapping.\n\nKey design decisions:\n• Unified search bar with auto-suggestions and filters.\n• Card-based result layout with price comparison and real-time availability.\n• One-tap booking with saved traveler profiles.\n• Interactive map view for destination exploration.\n• Micro-interactions and progress indicators for a premium feel.\n\nThe visual language uses soft gradients, travel-inspired icons, and high-quality photography to evoke excitement and trust.",
-    performanceMetrics: null,
+    solution: [
+      "Following user research into common travel app pain points (complex booking flows, slow load times, lack of intuitive discovery), the team mapped key user journeys—search → compare → book → confirm.",
+      "The design features a clean, image-led UI showcasing destinations, interactive filters for travel options, one-tap booking flows, and real-time confirmation screens. Performance was optimized through streamlined navigation, light image assets, and efficient backend integration. The app was developed with responsiveness and ease of use in mind, targeting both first-time travelers and experienced users.",
+    ],
+    performanceMetrics: [
+      ["Performance Score", "95%", "Excellent"],
+      ["Average Load Time", "1.2s", "Fast"],
+      ["API Response Time", "0.42s", "Optimized"],
+      ["Booking Completion Rate", "87%", "Strong Conversion"],
+      ["Session Duration", "8min", "Active Usage"],
+      ["Crash Rate", "0%", "Stable"],
+      ["User Retention Rate", "91%", "High Engagement"],
+    ],
     businessImpact:
-      "While conceptual, Travel Nebula demonstrates a high-potential design for the competitive travel booking market. Its focus on simplicity, visual appeal, and speed could drive higher conversion rates, reduce abandonment, and position the app as a preferred choice for frequent travelers. The prototype showcases how thoughtful UX can turn a functional tool into an enjoyable travel companion.",
-    clientFeedback: null,
+      "By delivering a streamlined, visually compelling booking experience, the app sets a strong foundation to reduce abandonment during booking, increase user trust, and improve engagement. The design strengthens the brand’s position as a modern travel platform and supports future scalability into global markets, additional travel categories (tours, experiences), and partner integrations.",
+    clientFeedback: {
+      quote:
+        "Rotaframe designed a beautiful and lightning-fast travel app that feels effortless to use. The attention to detail in both design and performance truly stands out—everything from searching to booking works flawlessly and delivers an enjoyable experience for our users.",
+      author: "Travel Nebula Project Team",
+    },
     highlights: [
-      "One-tap search with predictive suggestions",
-      "Real-time price and availability comparison",
-      "Interactive map-based destination discovery",
-      "Saved traveler profiles for faster booking",
-      "Clean, vibrant UI with travel-inspired visuals",
-      "Smooth micro-interactions and progress feedback",
-      "Fully responsive across iOS and Android",
+      "Dynamic search & filter system for travel options",
+      "One-tap booking flow with simplified checkout",
+      "Rich visual storytelling of destinations and travel experiences",
+      "Optimized performance for mobile with fast load times",
+      "Responsive UI for Android & iOS with consistent visual identity",
+      "Scalable architecture for future expansion and feature growth",
     ],
     finalDesignText:
-      "The final prototype delivers a polished, intuitive travel booking experience. From search to confirmation, every screen is designed for clarity, speed, and visual delight. The interface adapts beautifully across devices, ensuring a consistent and premium experience for all users.",
-    finalImage: null,
+      "The final product features a clean, immersive interface that guides users through destination exploration, booking, and itinerary management in just a few taps. High-quality visuals, smooth transitions, and gesture-based navigation create a delightful travel planning experience.",
+    finalImage: "/images/travel-nebula-landing.jpg",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -239,11 +295,12 @@ const projectsData = [
     id: "cloothik",
     title: "Cloothik",
     subtitle: "Online Clothing Store Platform",
+    icon: "/assets/images/portfolioicon.png",
     tagline:
       "A modern eCommerce platform built to deliver a stylish, fast, and seamless fashion shopping experience.",
     industry: "Fashion & Apparel",
-    duration: "3 Months",
     scope: "UI/UX Design, Development, SEO Optimization",
+    duration: "3 Months",
     client: "Cloothik Store",
     platform: "Web",
     heroImage: "/images/cloothik-hero.jpg",
@@ -253,8 +310,11 @@ const projectsData = [
       "Our goal was to design and develop a user-friendly website that simplifies the entire online purchase journey from browsing collections to secure checkout while maintaining top-tier performance and scalability.",
       "Each design element was thoughtfully aligned with the brand’s modern aesthetic and color theme to deliver an immersive shopping experience that attracts fashion-conscious audiences.",
     ],
-    solution:
-      "After gathering the client’s requirements, our team analyzed the target market and user flow to design an optimized structure focusing on product visibility, checkout simplicity, and brand trust. We built the website using a performance-driven approach emphasizing visual storytelling, fast-loading product galleries, and seamless navigation across all devices. Performance and usability testing were carried out throughout development to ensure the website achieved our speed and stability benchmarks. SEO optimization and responsive design further enhanced visibility and accessibility across search engines and mobile devices.",
+    solution: [
+      "After gathering the client’s requirements, our team analyzed the target market and user flow to design an optimized structure focusing on product visibility, checkout simplicity, and brand trust.",
+      "We built the website using a performance-driven approach emphasizing visual storytelling, fast-loading product galleries, and seamless navigation across all devices.",
+      "Performance and usability testing were carried out throughout development to ensure the website achieved our speed and stability benchmarks. SEO optimization and responsive design further enhanced visibility and accessibility across search engines and mobile devices.",
+    ],
     performanceMetrics: [
       ["Performance Score", "92%", "Excellent"],
       ["TBT", "0ms", "Zero Blocking"],
@@ -288,11 +348,11 @@ const projectsData = [
 
 const PortfolioSinglePage = () => {
   useEffect(() => {
-  if (sessionStorage.getItem("scrollToTop") === "true") {
-    window.scrollTo(0, 0);
-    sessionStorage.removeItem("scrollToTop");
-  }
-}, []);
+    if (sessionStorage.getItem("scrollToTop") === "true") {
+      window.scrollTo(0, 0);
+      sessionStorage.removeItem("scrollToTop");
+    }
+  }, []);
 
   const { portfolioId } = useParams();
   const project = projectsData.find((p) => p.id === portfolioId);
@@ -301,112 +361,190 @@ const PortfolioSinglePage = () => {
     return <div className="text-center py-20">Project not found</div>;
 
   return (
-    <section className="w-full  text-white">
+    <section className="w-full text-white dark:text-white">
       {/* HERO */}
       <div className="w-full py-16 md:py-20">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="md:w-1/2 space-y-4">
-            <h2 className="uppercase text-sm tracking-wider text-[#FFD400] font-semibold">
+            <h2 className="uppercase text-sm tracking-wider font-semibold flex items-center gap-2 text-gray-800 dark:text-gray-300">
+              <img
+                src={project.icon}
+                alt={project.industry}
+                className="w-5 h-5 object-contain invert dark:invert-0"
+              />
               {project.industry}
             </h2>
-            <h1 className="text-[36px] sm:text-[48px] md:text-[56px] font-bold leading-tight text-white">
+            <h1 className="text-[36px] sm:text-[48px] md:text-[56px] font-bold leading-tight text-gray-800 dark:text-white">
               {project.title}
             </h1>
-            <p className="text-gray-400 text-[17px] leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed">
               {project.tagline}
             </p>
           </div>
-
           {/* Thumbnail */}
           <div className="relative w-full md:w-1/2 max-w-md aspect-video rounded-lg overflow-hidden">
-            <img
-              src={project.heroImage}
-              alt={project.title}
-              className="w-full h-full object-cover opacity-90"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="white"
-                viewBox="0 0 24 24"
-                stroke="none"
-                className="w-14 h-14 opacity-90"
-              >
-                <path d="M5.25 5.25v13.5L19.5 12 5.25 5.25z" />
-              </svg>
-            </div>
+            {/* <img TODO
+          src={project.heroImage}
+          alt={project.title}
+          className="w-full h-full object-cover opacity-90"
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            viewBox="0 0 24 24"
+            stroke="none"
+            className="w-14 h-14 opacity-90"
+          >
+            <path d="M5.25 5.25v13.5L19.5 12 5.25 5.25z" />
+          </svg>
+        </div> */}
           </div>
         </div>
-      </div>
-
-      {/* PROJECT DETAILS */}
-      <div className="py-12">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left text-sm">
-          <div>
-            <h4 className="font-semibold text-gray-400">Industry</h4>
-            <p className="text-white mt-1">{project.industry}</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-400">Duration</h4>
-            <p className="text-white mt-1">{project.duration}</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-400">Scope</h4>
-            <p className="text-white mt-1">{project.scope}</p>
-          </div>
-          {project.client && (
-            <div>
-              <h4 className="font-semibold text-gray-400">Client</h4>
-              <p className="text-white mt-1">{project.client}</p>
+        {/* PROJECT DETAILS */}
+        <div className="py-12">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="flex flex-wrap gap-8 text-left text-sm">
+              {project.industry && (
+                <div className="min-w-[150px]">
+                  <h4 className="font-semibold text-gray-400 dark:text-gray-400">
+                    Industry
+                  </h4>
+                  <p className="text-gray-800 dark:text-white mt-1">
+                    {project.industry}
+                  </p>
+                </div>
+              )}
+              {project.duration && (
+                <div className="min-w-[150px] ml-3">
+                  <h4 className="font-semibold text-gray-400 dark:text-gray-400">
+                    Duration
+                  </h4>
+                  <p className="text-gray-800 dark:text-white mt-1">
+                    {project.duration}
+                  </p>
+                </div>
+              )}
+              {project.scope && (
+                <div className="min-w-[150px] ml-3">
+                  <h4 className="font-semibold text-gray-400 dark:text-gray-400">
+                    Scope
+                  </h4>
+                  <p className="text-gray-800 dark:text-white mt-1">
+                    {project.scope}
+                  </p>
+                </div>
+              )}
+              {project.client && (
+                <div className="min-w-[150px] ml-3">
+                  <h4 className="font-semibold text-gray-400 dark:text-gray-400">
+                    Client
+                  </h4>
+                  <p className="text-gray-800 dark:text-white mt-1">
+                    {project.client}
+                  </p>
+                </div>
+              )}
+              {project.platform && (
+                <div className="min-w-[150px] ml-3">
+                  <h4 className="font-semibold text-gray-400 dark:text-gray-400">
+                    Platform
+                  </h4>
+                  <p className="text-gray-800 dark:text-white mt-1">
+                    {project.platform}
+                  </p>
+                </div>
+              )}
             </div>
-          )}
-          {project.platform && (
-            <div className="md:col-start-1 md:col-end-5 mt-4">
-              <h4 className="font-semibold text-gray-400">Platform</h4>
-              <p className="text-white mt-1">{project.platform}</p>
-            </div>
-          )}
+            <button className="mt-8 w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer">
+              Live Demo
+            </button>
+          </div>
         </div>
       </div>
 
       {/* PROJECT OVERVIEW */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
-        <h2 className="text-2xl font-bold mb-6 text-white">Project Overview</h2>
+        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
+          Project Overview
+        </h2>
         {project.overview.map((para, i) => (
-          <p key={i} className="text-gray-400 text-[17px] leading-relaxed mt-4">
+          <p
+            key={i}
+            className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mt-4"
+          >
             {para}
           </p>
         ))}
       </div>
 
       {/* SOLUTION & ANALYSIS */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
-        <h2 className="text-2xl font-bold mb-6 text-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
           Solution & Analysis
         </h2>
-        <p className="text-gray-400 text-[17px] leading-relaxed">
-          {project.solution}
-        </p>
+
+        {Array.isArray(project.solution) ? (
+          project.solution.map((item, i) => {
+            // If it's just a paragraph (string)
+            if (typeof item === "string") {
+              return (
+                <p
+                  key={i}
+                  className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mt-4"
+                >
+                  {item}
+                </p>
+              );
+            }
+
+            // If it's a list object (with bullets)
+            if (item.type === "list" && Array.isArray(item.items)) {
+              return (
+                <ul
+                  key={i}
+                  className="list-disc list-inside text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed ml-4 mt-4 space-y-2"
+                >
+                  {item.items.map((li, j) => (
+                    <li key={j}>{li}</li>
+                  ))}
+                </ul>
+              );
+            }
+
+            return null;
+          })
+        ) : (
+          <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mt-4">
+            {project.solution}
+          </p>
+        )}
       </div>
 
       {/* PERFORMANCE METRICS (Only for eCommerce) */}
       {project.performanceMetrics && (
-        <div className="py-16 bg-gradient-to-b">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-            <h2 className="text-2xl font-bold mb-8 text-white text-center">
-              Performance Metrics
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
-              {project.performanceMetrics.map(([label, value, sub], i) => (
-                <div
-                  key={i}
-                  className="p-4 bg-[#1A1A1A] border border-[#2E2E2E] rounded-lg"
-                >
-                  <h4 className="text-[#FFD400] font-semibold text-lg">
+        <div className="flex flex-row justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-[1440px] mx-auto min-h-[130px] flex flex-col lg:flex-row items-center gap-6 lg:gap-0 px-4 sm:px-6 lg:px-10">
+            {/* Text Section */}
+            <div className="flex flex-col w-full lg:w-2/5 gap-1 text-center lg:text-left">
+              <div className="text-2xl sm:text-3xl lg:text-4xl text-gray-400 dark:text-gray-400 font-semibold">
+                Performance
+              </div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 dark:text-white">
+                Metrics Overview
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="flex flex-col sm:flex-row justify-between w-full gap-6 sm:gap-4 lg:gap-0 lg:px-12">
+              {project.performanceMetrics.map(([label, value], i) => (
+                <div key={i} className="flex flex-col items-center gap-1">
+                  <div className="text-2xl sm:text-3xl font-semibold text-gray-800 dark:text-white">
+                    {value}
+                  </div>
+                  <div className="text-gray-400 dark:text-gray-400 text-xs sm:text-sm font-semibold text-center">
                     {label}
-                  </h4>
-                  <p className="text-3xl font-bold text-white mt-1">{value}</p>
-                  <p className="text-sm text-gray-500 mt-1">{sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -416,8 +554,10 @@ const PortfolioSinglePage = () => {
 
       {/* BUSINESS IMPACT */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
-        <h2 className="text-2xl font-bold mb-6 text-white">Business Impact</h2>
-        <p className="text-gray-400 text-[17px] leading-relaxed">
+        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white text-center">
+          Business Impact
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed text-center">
           {project.businessImpact}
         </p>
 
@@ -440,34 +580,17 @@ const PortfolioSinglePage = () => {
         )}
       </div>
 
-      {/* FINAL DESIGN & SHOWCASE */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
-        <h2 className="text-2xl font-bold mb-6 text-white">
-          Final Design & Performance Showcase
-        </h2>
-        <p className="text-gray-400 text-[17px] leading-relaxed mb-8">
-          {project.finalDesignText}
-        </p>
-        {project.finalImage && (
-          <img
-            src={project.finalImage}
-            alt={`${project.title} Landing`}
-            className="w-full rounded-lg shadow-2xl"
-          />
-        )}
-      </div>
-
       {/* PROJECT HIGHLIGHTS */}
       <div className="py-16">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-          <h2 className="text-2xl font-bold mb-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white text-center">
             Project Highlights
           </h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          <ul className="grid grid-cols-2 gap-4 max-w-3xl mx-auto">
             {project.highlights.map((item, i) => (
               <li
                 key={i}
-                className="flex items-center gap-3 text-gray-400 text-[17px]"
+                className="flex items-center gap-3 text-gray-400 dark:text-gray-400 text-[17px]"
               >
                 <CheckCircle className="text-[#FFD400] w-5 h-5 flex-shrink-0" />{" "}
                 {item}
@@ -477,37 +600,53 @@ const PortfolioSinglePage = () => {
         </div>
       </div>
 
+      {/* FINAL DESIGN & SHOWCASE */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
+        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white text-center">
+          Final Design & Performance Showcase
+        </h2>
+
+        {Array.isArray(project.finalDesignText) ? (
+          project.finalDesignText.map((para, i) => (
+            <p
+              key={i}
+              className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mb-6 text-center"
+            >
+              {para}
+            </p>
+          ))
+        ) : (
+          <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mb-8 text-center">
+            {project.finalDesignText}
+          </p>
+        )}
+
+        {/* Optional image */}
+        {/* {project.finalImage && (
+    <img
+      src={project.finalImage}
+      alt={`${project.title} Landing`}
+      className="w-full rounded-lg shadow-2xl"
+    />
+  )} */}
+      </div>
+
       {/* CLIENT FEEDBACK */}
       {project.clientFeedback && (
-        <div className="py-16">
+        <div className="py-8">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 text-center">
-            <h2 className="text-2xl font-bold mb-6 text-white">
+            <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
               Client Feedback
             </h2>
-            <blockquote className="text-lg italic text-gray-400 max-w-3xl mx-auto">
+            <blockquote className="text-lg italic text-gray-400 dark:text-gray-400 max-w-3xl mx-auto">
               “{project.clientFeedback.quote}”
             </blockquote>
-            <p className="mt-4 font-semibold text-white">
+            <p className="mt-4 font-semibold text-gray-800 dark:text-white">
               — {project.clientFeedback.author} —
             </p>
           </div>
         </div>
       )}
-
-      {/* LOGO SLIDER & CONTACT */}
-      <div className="services-container flex flex-col items-center w-full py-14 sm:py-16 ">
-        <hr className="w-full border-t border-[#2E2E2E]" />
-        <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-16 sm:mt-20">
-          <LogoSlider noMargin />
-        </div>
-        <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
-        <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16">
-          <ContactUs />
-        </div>
-      </div>
-
-      {/* FOOTER BANNER */}
-      <Banner />
     </section>
   );
 };

@@ -27,7 +27,7 @@ const portfolioItems = [
     readMore: "",
   },
   {
-    title: "Rest Provide",
+    title: "Rest Provider",
     description:
       "A simple, user-friendly onboarding for a food ordering app, guiding users through setup and preferences with clear visuals.",
     icon: "/assets/images/portfoliomobileicon.png",
