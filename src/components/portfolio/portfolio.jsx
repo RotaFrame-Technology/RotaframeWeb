@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import portfolioItems from "./portfolioItemsData.js";
 function Portfolio({ noHeader = false }) {
   return (
-    <div className="flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-24">
+    <div className="flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-12">
       {!noHeader && (
         <>
           <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white">
@@ -126,22 +126,27 @@ function Portfolio({ noHeader = false }) {
                       ) : (
                         // If no external link, route to internal project page
                         <Link
-  to={`/portfolio/${item.title.replace(/\s+/g, "-").toLowerCase()}`}
-  onClick={() => {
-    sessionStorage.setItem("portfolioScroll", window.scrollY);
-    sessionStorage.setItem("scrollToTop", "true");
-  }}
-  className="flex flex-row items-center gap-2 cursor-pointer"
->
-  <div className="text-xs sm:text-sm font-normal text-[#898989] hover:text-[#FFD400]">
-    Read more
-  </div>
-  <img
-    src="/assets/images/arrowup.png"
-    className="h-[16px] w-[16px] sm:h-[20px] sm:w-[20px]"
-    alt="Arrow"
-  />
-</Link>
+                          to={`/portfolio/${item.title
+                            .replace(/\s+/g, "-")
+                            .toLowerCase()}`}
+                          onClick={() => {
+                            sessionStorage.setItem(
+                              "portfolioScroll",
+                              window.scrollY
+                            );
+                            sessionStorage.setItem("scrollToTop", "true");
+                          }}
+                          className="flex flex-row items-center gap-2 cursor-pointer"
+                        >
+                          <div className="text-xs sm:text-sm font-normal text-[#898989] hover:text-[#FFD400]">
+                            Read more
+                          </div>
+                          <img
+                            src="/assets/images/arrowup.png"
+                            className="h-[16px] w-[16px] sm:h-[20px] sm:w-[20px]"
+                            alt="Arrow"
+                          />
+                        </Link>
                       )}
                     </div>
                   </div>

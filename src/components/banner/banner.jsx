@@ -1,6 +1,6 @@
 function Banner() {
   return (
-    <div className="flex flex-row justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-row justify-center mt-12 sm:mt-18 md:mt-24 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-[1440px] mx-auto min-h-[130px] flex flex-col lg:flex-row items-center gap-6 lg:gap-0 px-4 sm:px-6 lg:px-10">
         {/* Text Section */}
         <div className="flex flex-col w-full lg:w-2/5 gap-1 text-center lg:text-left">

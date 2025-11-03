@@ -143,7 +143,7 @@ return (
       <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
 
       {/* Contact Section */}
-      <div id="contact" className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16">
+      <div id="contact" className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-2 sm:mt-2">
         <ContactUs />
       </div>
     </div>
