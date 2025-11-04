@@ -70,7 +70,7 @@ return (
         {/* Video Thumbnail */}
         <div className="relative w-full md:w-1/2 max-w-md aspect-video bg-black rounded-lg overflow-hidden cursor-pointer">
           <img
-            src="/video-thumbnail.jpg"
+            src="/assets/images/video-thumbnail.png"
             alt="Video Thumbnail"
             className="w-full h-full object-cover"
           />

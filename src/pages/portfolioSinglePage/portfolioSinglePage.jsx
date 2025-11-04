@@ -17,7 +17,7 @@ const projectsData = [
     scope: "UI/UX, Development, Optimization",
     duration: "3 Months",
     client: "Moonbeam Glamour",
-    heroImage: "/images/moonbeam-glamour-hero.jpg",
+    heroImage: "/assets/images/moonbeam-glamour-hero.png",
     overview: [
       "Moonbeam Glamour partnered with Rotaframe Technology to build a luxury-grade cosmetics eCommerce platform that perfectly blends brand storytelling with cutting-edge performance. The vision was to create a digital experience that reflects elegance, trust, and sophistication while being technically robust and lightning fast. The website was designed to embody the brand’s premium identity through a clean, modern interface that resonates with its target audience—beauty enthusiasts seeking quality and style.",
       "The platform features intuitive product navigation, engaging visuals, and a smooth checkout experience that encourages users to explore and purchase effortlessly. Every page element was crafted with a focus on speed, stability, and aesthetics ensuring seamless performance across all devices. Performance optimization was a core part of our process, reducing load times, enhancing mobile usability, and driving measurable business results through better engagement and conversions. Moonbeam Glamour stands as a showcase of how refined design and optimized performance can elevate an online store’s credibility and success.",
@@ -52,7 +52,7 @@ const projectsData = [
     ],
     finalDesignText:
       "The completed website reflects the harmony of design and functionality. Below are visuals of the full landing page along with performance reports demonstrating the site’s exceptional responsiveness and speed consistency across devices.",
-    finalImage: "/images/moonbeam-landing.jpg",
+    finalImage: "/assets/images/moonbeam-glamour-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -69,7 +69,7 @@ const projectsData = [
     scope: "User Research, App UI/UX, Prototyping, Interaction Design",
     platform: "Mobile (iOS / Android focus)",
     duration: "Case Study (Concept → Hi-Fi Prototype)",
-    heroImage: "/images/cineru-hero.jpg",
+    heroImage: "/assets/images/moonbeam-glamour-hero.png",
     overview: [
       "CineRu is a mobile UI/UX design project that reimagines the subtitle downloading experience for movie lovers. The goal was to create an app that makes it quick and intuitive for users to find accurate subtitles for their favorite movies and series without ads, clutter, or confusion.",
       "The app’s interface was built around clarity, efficiency, and modern aesthetics. Through elegant typography, dark cinematic visuals, and an intuitive search experience, CineRu offers a simple yet engaging platform that prioritizes user satisfaction and usability.",
@@ -105,7 +105,7 @@ const projectsData = [
       " Users can easily search, filter, and preview subtitles with a visually rich yet minimal layout. The download process features clear progress indicators, visual confirmation screens, and micro-interactions that enhance the overall feedback experience. ",
       " Every screen was optimized for fast performance, dark theme readability, and touch-friendly controls, ensuring that CineRu feels both elegant and effortless to use across mobile devices.",
     ],
-    finalImage: null,
+    finalImage: "/assets/images/moonbeam-glamour-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -122,7 +122,7 @@ const projectsData = [
     scope:
       "UI/UX Design, Mobile App Development, API Integration, Real Time Tracking",
     platform: "Mobile (Android / iOS)",
-    heroImage: "/images/rest-provider-hero.jpg",
+    heroImage: "/assets/images/rest-provider-hero.png",
     overview: [
       "Rest Provider is a fully developed online food ordering platform that enables users to discover restaurants, browse menus, place orders, and track deliveries in real time.",
       "The project aimed to create a high-performance mobile application with an engaging interface and reliable backend infrastructure to deliver a smooth, end-to-end experience.",
@@ -169,7 +169,7 @@ const projectsData = [
     ],
     finalDesignText:
       "The final design showcases a vibrant and intuitive mobile experience that captures the essence of food discovery and quick service. The home interface highlights top restaurants and offers dynamic visuals of dishes, while the ordering and tracking screens maintain clarity and precision.",
-    finalImage: "/images/rest-provider-landing.jpg",
+    finalImage: "/assets/images/rest-provider-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -186,7 +186,7 @@ const projectsData = [
     scope: "UI/UX Design, Mobile App Development, System Integration",
     platform: "Mobile (Android / iOS)",
     client: "iNfo (Academic Solutions Concept)",
-    heroImage: "/images/info-hero.jpg",
+    heroImage: "/assets/images/moonbeam-glamour-hero.png",
     overview: [
       "iNfo is a mobile application conceptualized and developed to simplify academic communication and digital document distribution within educational institutes.",
       "The goal was to create a centralized, user-friendly platform where institutes can share notices, timetables, course materials, and official documents securely and efficiently.",
@@ -234,7 +234,7 @@ const projectsData = [
     ],
     finalDesignText:
       "The final design presents a clean, functional, and modern mobile interface built to simplify how educational institutes share information and documents with students and staff. The dashboard-based layout ensures that all key features—announcements, course materials, and notices—are accessible within seconds, reducing communication friction and improving user experience.",
-    finalImage: "/images/info-landing.jpg",
+    finalImage: "/assets/images/moonbeam-glamour-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -250,7 +250,7 @@ const projectsData = [
     industry: "Travel & Hospitality",
     scope: "UI/UX Design, Mobile App Development, Booking Flow Optimization",
     platform: "Mobile (Android / iOS)",
-    heroImage: "/images/travel-nebula-hero.jpg",
+    heroImage: "/assets/images/travel-nebula-hero.png",
     overview: [
       "This Travel Booking Mobile App was developed to offer users a seamless experience for discovering destinations, comparing travel options (flights, hotels, tours), and completing bookings all from one mobile interface.",
       "The goal was to reduce booking complexity, highlight rich visuals of travel experiences, and ensure high performance across mobile devices.",
@@ -285,7 +285,7 @@ const projectsData = [
     ],
     finalDesignText:
       "The final product features a clean, immersive interface that guides users through destination exploration, booking, and itinerary management in just a few taps. High-quality visuals, smooth transitions, and gesture-based navigation create a delightful travel planning experience.",
-    finalImage: "/images/travel-nebula-landing.jpg",
+    finalImage: "/assets/images/travel-nebula-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -303,7 +303,7 @@ const projectsData = [
     duration: "3 Months",
     client: "Cloothik Store",
     platform: "Web",
-    heroImage: "/images/cloothik-hero.jpg",
+    heroImage: "/assets/images/cloothik-hero.png",
     overview: [
       "Cloothik partnered with Rotaframe Technology (Pvt) Ltd to develop a visually engaging and high-performing online clothing store designed to represent elegance, trend, and trust.",
       "The platform was conceptualized to reflect the brand’s youthful, fashionable identity through a minimal and responsive interface creating a shopping experience that’s intuitive and conversion-focused.",
@@ -342,7 +342,73 @@ const projectsData = [
     ],
     finalDesignText:
       "The final website showcases a balance of modern fashion design and high technical performance. Below are visuals of the homepage and selected key pages, demonstrating the platform’s speed, layout consistency, and visual appeal across desktop and mobile devices.",
-    finalImage: "/images/cloothik-landing.jpg",
+    finalImage: "/assets/images/cloothik-final.png",
+  },
+  // ──────────────────────────────────────────────────────────────
+  // 7. Jayanath Spices
+  // ──────────────────────────────────────────────────────────────
+  {
+    id: "jayanath-spices",
+    title: "Jayanath Spices",
+    subtitle: "Premium Organic Spice Exporter Website",
+    icon: "/assets/images/portfolioicon.png",
+    tagline:
+      "A refreshed and user-centric design for a premium organic spice exporter, delivering heritage, clarity and global appeal.",
+    industry: "Food & Beverage / Organic Spices",
+    scope:
+      "Website UI/UX Design, Responsive Web Interface, Storytelling & Brand Alignment",
+    duration: "1 Month (UI/UX Design & Prototype)",
+    client: "Jayanath Spices (Pvt) Ltd",
+    platform: "Web (Desktop & Mobile)",
+    heroImage: "/assets/images/jayanath-spices-hero.png",
+    overview: [
+      "Jayanath Spices approached us to elevate their digital presence by redesigning their website to reflect their legacy of over four decades in organic spice farming, and reach new global export markets.",
+      "The objective was to craft a website that communicates trust, premium quality, and sustainability while enhancing usability for both international clients and end consumers.",
+      "The new design emphasizes immersive visuals of products, clear storytelling of origin and certifications, and a streamlined browsing experience across devices.",
+    ],
+    solution: [
+      "We started by reviewing the brand’s heritage, range of certified organic products and global market positioning. Using this, we mapped key user journeys discovering the product range, understanding the brand story, and contacting for export.",
+      {
+        type: "list",
+        items: [
+          "A bold hero section showing premium spice photography and authentic heritage context.",
+          "Clear product categories and filters to facilitate quick browsing of dozens of spice types.",
+          "Dedicated sections for certifications, sustainability practices and global export capabilities to build trust.",
+          "Fully responsive design ensuring performance, readability and conversion on mobile, tablet and desktop.",
+          "Optimised navigation with minimal levels of hierarchy so international buyers can access key info in 2-3 clicks.",
+        ],
+      },
+    ],
+    performanceMetrics: [
+      ["Performance Score", "96%", "Excellent"],
+      ["Fully Loaded Time", "1.4s", "Lightning Fast"],
+      ["LCP", "1.2s", "Fast First Paint"],
+      ["CLS", "0.02", "Near Perfect"],
+      ["TTI", "0.9s", "Instant Interaction"],
+      ["SEO Visibility", "High", "Optimized"],
+      ["Mobile Usability", "100%", "Flawless"],
+    ],
+    businessImpact:
+      "By aligning the digital experience with the brand’s premium positioning and global export focus, the redesigned website strengthens Jayanath Spices’ appeal in competitive international markets. Key benefits include improved first impressions, increased confidence for wholesale buyers, and a clearer export-ready image. The simplified user flows reduce friction in inquiry submission and improve engagement metrics. Through efficient design and storytelling, the site now supports positioning as a sustainability-driven leader in Sri Lankan organic spices.",
+    clientFeedback: {
+      quote:
+        "Rotaframe delivered a beautiful, fast, and authentic digital experience that truly reflects our heritage and global ambitions. The website has become a powerful tool for connecting with international buyers.",
+      author: "Jayanath Spices (Pvt) Ltd",
+    },
+    highlights: [
+      "Fully responsive design tailored for global export and local visitors",
+      "Streamlined navigation for 40+ product SKUs with category filtering",
+      "Elevated brand storytelling for heritage, certifications & sustainability",
+      "Rapid load-time homepage with rich imagery and minimal clutter",
+      "Optimised user journey from landing → product exploration → contact form",
+      "Visual design aligned with premium organic aesthetic and global markets",
+    ],
+    finalDesignText: [
+      "The final design delivers a refined, story-driven website that blends the rich heritage of Sri Lankan spices with a modern digital experience. Each page was crafted to highlight authenticity, product quality, and the brand’s global export strength.",
+      "The homepage opens with immersive spice imagery and a clear brand story, while product pages showcase each item with detailed descriptions, certifications, and high-quality visuals. A responsive grid layout ensures smooth navigation and consistent design across devices.",
+      "The site’s performance was optimized for fast load times and SEO visibility, ensuring an excellent user experience for both international buyers and local customers. The design achieves a balance of beauty, performance, and trust, effectively positioning Jayanath Spices as a premium exporter in the global organic market.",
+    ],
+    finalImage: "/assets/images/jayanath-spices-final.png",
   },
 ];
 
@@ -364,8 +430,9 @@ const PortfolioSinglePage = () => {
     <section className="w-full text-white dark:text-white">
       {/* HERO */}
       <div className="w-full py-16 md:py-20">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="md:w-1/2 space-y-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-stretch gap-10">
+          {/* Left Column */}
+          <div className="md:w-1/2 space-y-4 flex flex-col">
             <h2 className="uppercase text-sm tracking-wider font-semibold flex items-center gap-2 text-gray-800 dark:text-gray-300">
               <img
                 src={project.icon}
@@ -380,33 +447,11 @@ const PortfolioSinglePage = () => {
             <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed">
               {project.tagline}
             </p>
-          </div>
-          {/* Thumbnail */}
-          <div className="relative w-full md:w-1/2 max-w-md aspect-video rounded-lg overflow-hidden">
-            {/* <img TODO
-          src={project.heroImage}
-          alt={project.title}
-          className="w-full h-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="white"
-            viewBox="0 0 24 24"
-            stroke="none"
-            className="w-14 h-14 opacity-90"
-          >
-            <path d="M5.25 5.25v13.5L19.5 12 5.25 5.25z" />
-          </svg>
-        </div> */}
-          </div>
-        </div>
-        {/* PROJECT DETAILS */}
-        <div className="py-12">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-            <div className="flex flex-wrap gap-8 text-left text-sm">
+
+            {/* Project Details */}
+            <div className="py-6 flex flex-wrap gap-6 text-left text-sm">
               {project.industry && (
-                <div className="min-w-[150px]">
+                <div className="flex-1 min-w-[150px]">
                   <h4 className="font-semibold text-gray-400 dark:text-gray-400">
                     Industry
                   </h4>
@@ -416,7 +461,7 @@ const PortfolioSinglePage = () => {
                 </div>
               )}
               {project.duration && (
-                <div className="min-w-[150px] ml-3">
+                <div className="flex-1 min-w-[150px]">
                   <h4 className="font-semibold text-gray-400 dark:text-gray-400">
                     Duration
                   </h4>
@@ -426,7 +471,7 @@ const PortfolioSinglePage = () => {
                 </div>
               )}
               {project.scope && (
-                <div className="min-w-[150px] ml-3">
+                <div className="flex-1 min-w-[150px]">
                   <h4 className="font-semibold text-gray-400 dark:text-gray-400">
                     Scope
                   </h4>
@@ -436,7 +481,7 @@ const PortfolioSinglePage = () => {
                 </div>
               )}
               {project.client && (
-                <div className="min-w-[150px] ml-3">
+                <div className="flex-1 min-w-[150px]">
                   <h4 className="font-semibold text-gray-400 dark:text-gray-400">
                     Client
                   </h4>
@@ -446,7 +491,7 @@ const PortfolioSinglePage = () => {
                 </div>
               )}
               {project.platform && (
-                <div className="min-w-[150px] ml-3">
+                <div className="flex-1 min-w-[150px]">
                   <h4 className="font-semibold text-gray-400 dark:text-gray-400">
                     Platform
                   </h4>
@@ -456,9 +501,22 @@ const PortfolioSinglePage = () => {
                 </div>
               )}
             </div>
-            <button className="mt-8 w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer">
+
+            {/* Live Demo Button (moved up slightly) */}
+            <button className="mt-4 w-[120px] h-[42px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer">
               Live Demo
             </button>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="md:w-1/2 flex justify-end">
+            <div className="w-[90%] max-h-[500px] rounded-lg overflow-hidden">
+              <img
+                src={project.heroImage}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -486,7 +544,6 @@ const PortfolioSinglePage = () => {
 
         {Array.isArray(project.solution) ? (
           project.solution.map((item, i) => {
-            // If it's just a paragraph (string)
             if (typeof item === "string") {
               return (
                 <p
@@ -497,8 +554,6 @@ const PortfolioSinglePage = () => {
                 </p>
               );
             }
-
-            // If it's a list object (with bullets)
             if (item.type === "list" && Array.isArray(item.items)) {
               return (
                 <ul
@@ -511,7 +566,6 @@ const PortfolioSinglePage = () => {
                 </ul>
               );
             }
-
             return null;
           })
         ) : (
@@ -521,11 +575,10 @@ const PortfolioSinglePage = () => {
         )}
       </div>
 
-      {/* PERFORMANCE METRICS (Only for eCommerce) */}
+      {/* PERFORMANCE METRICS */}
       {project.performanceMetrics && (
         <div className="flex flex-row justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-[1440px] mx-auto min-h-[130px] flex flex-col lg:flex-row items-center gap-6 lg:gap-0 px-4 sm:px-6 lg:px-10">
-            {/* Text Section */}
             <div className="flex flex-col w-full lg:w-2/5 gap-1 text-center lg:text-left">
               <div className="text-2xl sm:text-3xl lg:text-4xl text-gray-400 dark:text-gray-400 font-semibold">
                 Performance
@@ -534,8 +587,6 @@ const PortfolioSinglePage = () => {
                 Metrics Overview
               </div>
             </div>
-
-            {/* Stats Section */}
             <div className="flex flex-col sm:flex-row justify-between w-full gap-6 sm:gap-4 lg:gap-0 lg:px-12">
               {project.performanceMetrics.map(([label, value], i) => (
                 <div key={i} className="flex flex-col items-center gap-1">
@@ -560,24 +611,6 @@ const PortfolioSinglePage = () => {
         <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed text-center">
           {project.businessImpact}
         </p>
-
-        {/* Impact Pills */}
-        {project.id === "moonbeam-glamour" && (
-          <div className="flex flex-wrap gap-4 mt-8 justify-center">
-            <div className="px-5 py-2 bg-[#1A1A1A] text-white rounded-full text-sm font-medium">
-              +25% Conversions
-            </div>
-            <div className="px-5 py-2 bg-[#1A1A1A] text-white rounded-full text-sm font-medium">
-              +40% Session Duration
-            </div>
-            <div className="px-5 py-2 bg-[#1A1A1A] text-white rounded-full text-sm font-medium">
-              +50% Mobile Engagement
-            </div>
-            <div className="px-5 py-2 bg-[#1A1A1A] text-white rounded-full text-sm font-medium">
-              -35% Bounce Rate
-            </div>
-          </div>
-        )}
       </div>
 
       {/* PROJECT HIGHLIGHTS */}
@@ -592,7 +625,7 @@ const PortfolioSinglePage = () => {
                 key={i}
                 className="flex items-center gap-3 text-gray-400 dark:text-gray-400 text-[17px]"
               >
-                <CheckCircle className="text-[#FFD400] w-5 h-5 flex-shrink-0" />{" "}
+                <CheckCircle className="text-[#FFD400] w-5 h-5 flex-shrink-0" />
                 {item}
               </li>
             ))}
@@ -605,31 +638,23 @@ const PortfolioSinglePage = () => {
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white text-center">
           Final Design & Performance Showcase
         </h2>
-
-        {Array.isArray(project.finalDesignText) ? (
-          project.finalDesignText.map((para, i) => (
-            <p
-              key={i}
-              className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mb-6 text-center"
-            >
-              {para}
-            </p>
-          ))
-        ) : (
-          <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mb-8 text-center">
-            {project.finalDesignText}
-          </p>
-        )}
-
-        {/* Optional image */}
-        {/* {project.finalImage && (
-    <img
-      src={project.finalImage}
-      alt={`${project.title} Landing`}
-      className="w-full rounded-lg shadow-2xl"
-    />
-  )} */}
+        <p className="text-gray-700 dark:text-gray-300 text-[17px] leading-relaxed mb-8 text-center">
+          {project.finalDesignText}
+        </p>
       </div>
+
+      {/* FINAL IMAGE SHOWCASE */}
+      {project.finalImage && (
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-8">
+          <div className="w-full overflow-hidden">
+            <img
+              src={project.finalImage}
+              alt="Final Showcase"
+              className="w-full max-h-[80vh] object-cover"
+            />
+          </div>
+        </div>
+      )}
 
       {/* CLIENT FEEDBACK */}
       {project.clientFeedback && (

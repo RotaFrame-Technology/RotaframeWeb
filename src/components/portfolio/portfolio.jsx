@@ -153,7 +153,7 @@ function Portfolio({ noHeader = false }) {
                 </div>
                 <img
                   src={item.img}
-                  className={`${item.imgClass} mt-4 ml-3 sm:mt-0 sm:self-end`}
+                  className={`${item.imgClass} mt-4 ml-3 sm:mt-0 sm:self-end sm:ml-auto`}
                   alt={item.title}
                 />
               </div>

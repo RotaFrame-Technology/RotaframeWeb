@@ -26,7 +26,7 @@ const PortfolioPage = () => {
           {/* Video Thumbnail */}
           <div className="relative w-full md:w-1/2 max-w-md aspect-video bg-black rounded-lg overflow-hidden cursor-pointer">
             <img
-              src="/video-thumbnail.jpg"
+              src="/assets/images/video-thumbnail.png"
               alt="Video Thumbnail"
               className="w-full h-full object-cover"
             />
@@ -61,7 +61,7 @@ const PortfolioPage = () => {
               {portfolioItems.slice(start, start + 2).map((item, index) => (
                 <div
                   key={index}
-                  className="relative flex flex-row border border-gray-400 bg-[#EDEDED] dark:bg-[#171717] rounded-[12px] min-h-[300px] w-full overflow-hidden"
+                  className="relative flex flex-row border border-gray-400 bg-[#EDEDED] dark:bg-[#171717] rounded-[12px] min-h-[300px] w-full sm:w-1/2 overflow-hidden"
                 >
                   {/* Left content */}
                   <div className="flex flex-col justify-between h-full py-6 sm:py-10 px-4 sm:px-6 w-full sm:w-1/2 z-10">
@@ -191,7 +191,7 @@ const PortfolioPage = () => {
                   {/* Right image */}
                   <img
                     src={item.img}
-                    className={`${item.imgClass} absolute bottom-0 right-0 w-1/2 h-auto object-contain`}
+                    className={`${item.imgClass} absolute bottom-0 right-0  h-auto object-contain`}
                     alt={item.title}
                   />
                 </div>

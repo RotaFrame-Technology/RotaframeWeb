@@ -1,4 +1,5 @@
 const portfolioItems = [
+  // render only first 6 items here in portfolio component
   {
     title: "Moonbeam Glamour",
     description:
@@ -6,8 +7,8 @@ const portfolioItems = [
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio1.png",
     imgClass:
-      "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
-    width: "w-full sm:w-2/4",
+      "h-[200px] sm:h-[300px] md:h-[300px] w-[200px] sm:w-[300px] md:w-[300px]",
+    width: "w-full sm:w-[45%]",
     github: "",
     behance: "",
     readMore: "",
@@ -20,7 +21,7 @@ const portfolioItems = [
     img: "/assets/images/portfolio2.png",
     imgClass:
       "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[120px] md:w-[145px]",
-    width: "w-full sm:w-1/4",
+    width: "w-full sm:w-[30%]",
     github: "",
     behance:
       "",
@@ -34,7 +35,7 @@ const portfolioItems = [
     img: "/assets/images/portfolio3.png",
     imgClass:
       "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[120px] md:w-[145px]",
-    width: "w-full sm:w-1/4",
+    width: "w-full sm:w-[30%]",
     github: "",
     behance:
       "",
@@ -47,8 +48,8 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio4.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[120px] md:w-[145px]",
-    width: "w-full sm:w-1/4",
+      "h-[180px] sm:h-[250px] md:h-[290px] w-[100px] sm:w-[120px] md:w-[145px]",
+    width: "w-full sm:w-[30%]",
     github: "",
     behance:
       "",
@@ -61,21 +62,34 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio5.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[130px] md:w-[170px]",
-    width: "w-full sm:w-1/4",
+      "h-[180px] sm:h-[250px] md:h-[290px] w-[100px] sm:w-[120px] md:w-[200px]",
+    width: "w-full sm:w-[30%]",
     github: "",
     behance:
       "",
     readMore: "",
   },
-  
-
   {
     title: "Cloothik",
     description:
       "A modern eCommerce platform offering a sleek, fast, and intuitive fashion shopping experience across desktop and mobile devices.",
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio6.png",
+    imgClass:
+      "h-[200px] sm:h-[300px] md:h-[300px] w-[200px] sm:w-[300px] md:w-[300px]",
+    width: "w-full sm:w-[45%]",
+    github: "",
+    behance: "",
+    readMore: "",
+  },
+
+  // additional items for portfolio page
+  {
+    title: "Jayanath Spices",
+    description:
+      "A refreshed, heritage-rich website for a premium organic spice exporter, blending Sri Lankan authenticity with global trust and seamless export inquiry flows.",
+    icon: "/assets/images/portfolioicon.png",
+    img: "/assets/images/portfolio7.png",
     imgClass:
       "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
     width: "w-full sm:w-2/4",
