@@ -86,26 +86,25 @@ function Header() {
 
   // Smooth scroll to contact section
   const scrollToContact = () => {
-  const isPortfolioSingle =
-    location.pathname.startsWith("/portfolio/") &&
-    location.pathname !== "/portfolio";
+    const isPortfolioSingle =
+      location.pathname.startsWith("/portfolio/") &&
+      location.pathname !== "/portfolio";
 
-  if (isPortfolioSingle) {
-    // ✅ If on a portfolio project page, go home and scroll to contact
-    navigate("/", { state: { scrollTo: "contact" } });
-  } else {
-    // ✅ Otherwise, scroll to contact section on the same page
-    const element = document.getElementById("contact");
-    if (element) {
-      const headerOffset = 20;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    if (isPortfolioSingle) {
+      // ✅ If on a portfolio project page, go home and scroll to contact
+      navigate("/", { state: { scrollTo: "contact" } });
+    } else {
+      // ✅ Otherwise, scroll to contact section on the same page
+      const element = document.getElementById("contact");
+      if (element) {
+        const headerOffset = 20;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
     }
-  }
-};
-
+  };
 
   return (
     <>
@@ -116,14 +115,19 @@ function Header() {
       >
         {/* Background strip */}
         <div
-          className={`absolute -top-4 sm:-top-7 left-0 w-full h-4 sm:h-7 z-[-1] ${
-            isDarkMode ? "bg-[#121212]" : "bg-white"
-          }`}
-        />
+  className={`absolute -top-4 sm:-top-7 left-1/2 -translate-x-1/2 w-full max-w-[1300px] h-4 sm:h-7 z-[-1] rounded-xl transition-all duration-300 ${
+    isScrolled
+      ? "bg-white/20 dark:bg-[#121212]/20 backdrop-blur-sm"
+      : isDarkMode
+      ? "bg-[#121212]"
+      : "bg-white"
+  }`}
+/>
 
-        {/* Main header */}
+
+        {/* Main header container — also narrower */}
         <div
-          className={`w-full max-w-[1400px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300 ${
+          className={`w-full max-w-[1300px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300 ${
             isScrolled
               ? "bg-white/70 dark:bg-[#171717]"
               : "bg-[#EDEDED] dark:bg-[#171717]"

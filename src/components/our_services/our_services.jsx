@@ -13,7 +13,7 @@ function OurServices() {
       vector: "/assets/images/VectorWhite.png",
       vectorDark: "/assets/images/Vector.png",
       vectorLeft: false,
-      desc: "Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors. From visually stunning interfaces to seamless user experiences, we tailor every aspect to align with your brand and engage your audience effectively.",
+      desc: "Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications. ",
       descShort: "Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors.",
     },
     {
@@ -25,7 +25,7 @@ function OurServices() {
       vector: "/assets/images/VectorLeftWhite.png",
       vectorDark: "/assets/images/VectorLeft.png",
       vectorLeft: true,
-      desc: "Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors. From visually stunning interfaces to seamless user experiences, we tailor every aspect to align with your brand and engage your audience effectively.",
+      desc: "Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications. ",
       descShort: "Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors.",
     },
     {
@@ -37,7 +37,7 @@ function OurServices() {
       vector: "/assets/images/VectorWhite.png",
       vectorDark: "/assets/images/Vector.png",
       vectorLeft: false,
-      desc: "Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications. Elevate your user experience, resonate with your audience, and make a lasting impact in the digital realm.",
+      desc: "Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications. ",
       descShort: "Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications.",
     },
     {
@@ -49,7 +49,7 @@ function OurServices() {
       vector: "/assets/images/VectorLeftWhite.png",
       vectorDark: "/assets/images/VectorLeft.png",
       vectorLeft: true,
-      desc: "Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors. From visually stunning interfaces to seamless user experiences, we tailor every aspect to align with your brand and engage your audience effectively.",
+      desc: "Stay at the forefront of the mobile-first era with Rotaframe Technology's stellar mobile app development services. Whether it's iOS or Android, our team specializes in creating intuitive and feature-rich applications. ",
       descShort: "Unleash the potential of your online identity with Rotaframe Technology's bespoke web design and development services. Our expert team crafts captivating websites and robust web applications that leave a lasting impression on your visitors.",
     },
   ];
@@ -154,8 +154,9 @@ function OurServices() {
     descShort: PropTypes.string.isRequired,
   };
 
-  return (
-    <div className="flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+return (
+  <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div className="w-full max-w-[1300px] px-4 mx-auto">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-4">
         Our Services
       </h2>
@@ -163,14 +164,16 @@ function OurServices() {
         Kickstart your next project with templates built by us and our community.
       </p>
 
-      {/* Grid with consistent gap-2 */}
+      {/* Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
         {cards.map((card) => (
           <ServiceCard key={card.id} {...card} />
         ))}
       </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default OurServices;

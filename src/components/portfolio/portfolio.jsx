@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import portfolioItems from "./portfolioItemsData.js";
 function Portfolio({ noHeader = false }) {
   return (
-    <div className="flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-12">
+    <div className="flex flex-col w-full max-w-[1300px] mx-auto mt-14 px-4 sm:mt-18 md:mt-26">
       {!noHeader && (
         <>
           <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white">

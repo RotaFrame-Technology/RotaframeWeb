@@ -66,7 +66,7 @@ function Footer() {
 
   return (
     <div
-      className="flex flex-col w-full max-w-[1440px] mx-auto items-center px-4 sm:px-6 lg:px-8 footer-container"
+      className="flex flex-col w-full max-w-[1300px] mx-auto items-center footer-container"
     >
       {/* Globe Section  */}
 
@@ -76,7 +76,7 @@ function Footer() {
           style={{ height: isMobile ? "230px" : "300px", zIndex: 1 }}
         >
           <div
-            className="w-full max-w-[1440px] globe-container"
+            className="w-full max-w-[1300px] globe-container"
             style={{ height: isMobile ? "600px" : "600px", position: "relative" }}
           >
             <Suspense fallback={<div className="w-full h-full bg-black" />}>

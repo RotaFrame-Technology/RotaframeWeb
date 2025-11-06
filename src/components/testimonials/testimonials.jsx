@@ -94,7 +94,7 @@ const TestimonialCard = ({ img, name, username, body }) => {
 
 export function TestimonialsMasonry() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#121212] transition-colors duration-300 flex flex-col items-center py-12">
+    <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#121212] transition-colors duration-300 flex flex-col items-center py-12">
       <h2 className="text-[65px] leading-[72px] font-bold mb-10 w-11/12 text-gray-800 dark:text-white text-center">
         Testimonials
       </h2>

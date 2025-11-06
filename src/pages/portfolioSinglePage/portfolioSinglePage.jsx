@@ -430,7 +430,7 @@ const PortfolioSinglePage = () => {
     <section className="w-full text-white dark:text-white">
       {/* HERO */}
       <div className="w-full py-16 md:py-20">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-stretch gap-10">
+        <div className="max-w-[1300px] px-4 mx-auto flex flex-col md:flex-row items-stretch gap-10">
           {/* Left Column */}
           <div className="md:w-1/2 space-y-4 flex flex-col">
             <h2 className="uppercase text-sm tracking-wider font-semibold flex items-center gap-2 text-gray-800 dark:text-gray-300">
@@ -522,7 +522,7 @@ const PortfolioSinglePage = () => {
       </div>
 
       {/* PROJECT OVERVIEW */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
+      <div className="max-w-[1300px] px-4 mx-auto  py-16">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
           Project Overview
         </h2>
@@ -537,7 +537,7 @@ const PortfolioSinglePage = () => {
       </div>
 
       {/* SOLUTION & ANALYSIS */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-[1300px] px-4 mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
           Solution & Analysis
         </h2>
@@ -578,7 +578,7 @@ const PortfolioSinglePage = () => {
       {/* PERFORMANCE METRICS */}
       {project.performanceMetrics && (
         <div className="flex flex-row justify-center mt-10 sm:mt-16 md:mt-20 px-4 sm:px-6 lg:px-8">
-          <div className="w-full max-w-[1440px] mx-auto min-h-[130px] flex flex-col lg:flex-row items-center gap-6 lg:gap-0 px-4 sm:px-6 lg:px-10">
+          <div className="w-full max-w-[1300px] px-4 mx-auto min-h-[130px] flex flex-col lg:flex-row items-center gap-6 lg:gap-0">
             <div className="flex flex-col w-full lg:w-2/5 gap-1 text-center lg:text-left">
               <div className="text-2xl sm:text-3xl lg:text-4xl text-gray-400 dark:text-gray-400 font-semibold">
                 Performance
@@ -604,7 +604,7 @@ const PortfolioSinglePage = () => {
       )}
 
       {/* BUSINESS IMPACT */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
+      <div className="max-w-[1300px] px-4 mx-auto py-16">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white text-center">
           Business Impact
         </h2>
@@ -615,7 +615,7 @@ const PortfolioSinglePage = () => {
 
       {/* PROJECT HIGHLIGHTS */}
       <div className="py-16">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1300px] px-4 mx-auto">
           <h2 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white text-center">
             Project Highlights
           </h2>
@@ -634,7 +634,7 @@ const PortfolioSinglePage = () => {
       </div>
 
       {/* FINAL DESIGN & SHOWCASE */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-16">
+      <div className="max-w-[1300px] px-4 mx-auto py-16">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white text-center">
           Final Design & Performance Showcase
         </h2>
@@ -645,7 +645,7 @@ const PortfolioSinglePage = () => {
 
       {/* FINAL IMAGE SHOWCASE */}
       {project.finalImage && (
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-8">
+        <div className="max-w-[1300px] px-4 mx-auto  py-8">
           <div className="w-full overflow-hidden">
             <img
               src={project.finalImage}
@@ -659,7 +659,7 @@ const PortfolioSinglePage = () => {
       {/* CLIENT FEEDBACK */}
       {project.clientFeedback && (
         <div className="py-8">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 text-center">
+          <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-10 text-center">
             <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
               Client Feedback
             </h2>

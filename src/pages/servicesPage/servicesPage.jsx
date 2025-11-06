@@ -57,7 +57,7 @@ return (
   <section className="w-full">
     {/* Hero Section */}
     <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[300px] bg-cover bg-center relative mt-16">
-      <div className="w-full max-w-[1440px] mx-auto h-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 px-4 sm:px-6 lg:px-10">
+      <div className="w-full max-w-[1300px] mx-auto h-full flex flex-col md:flex-row items-center justify-between px-4">
         {/* Text */}
         <div className="text-left md:w-1/2">
           <p className="text-[18px] sm:text-[20px] font-bold text-gray-800 dark:text-white ml-1">Our Services</p>
@@ -98,7 +98,7 @@ return (
       <hr className="w-full border-t border-[#2E2E2E]" />
 
       {/* Services List */}
-      <div className="w-full max-w-[1440px] flex flex-col px-4 sm:px-6 lg:px-10 mt-14 sm:mt-20 space-y-18 sm:space-y-20">
+      <div className="w-full max-w-[1300px] flex flex-col px-4  mt-14 sm:mt-20 space-y-18 sm:space-y-20">
         {sections.map((section, index) => (
           <div key={index} className="w-full">
             <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
@@ -135,7 +135,7 @@ return (
       <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
 
       {/* Logo Slider */}
-      <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-16 sm:mt-20">
+      <div className="w-full max-w-[1300px] mt-16 sm:mt-20">
         <LogoSlider noMargin />
       </div>
 
@@ -143,7 +143,7 @@ return (
       <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
 
       {/* Contact Section */}
-      <div id="contact" className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 mt-2 sm:mt-2">
+      <div id="contact" className="w-full max-w-[1300px] px-4 sm:px-6 lg:px-10 mt-2 sm:mt-2">
         <ContactUs />
       </div>
     </div>

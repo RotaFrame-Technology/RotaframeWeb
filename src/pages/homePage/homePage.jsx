@@ -48,8 +48,8 @@ function HomePage() {
 
       {/* Homepage sections */}
       <OurServices />
-      <Portfolio />
       <Banner />
+      <Portfolio />
       <ContactUs />
     </>
   );

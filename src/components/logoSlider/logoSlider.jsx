@@ -13,25 +13,17 @@ function LogoSlider({ noMargin = false }) {
     { src: "/assets/images/logoSlider/Swift.png", alt: "Swift" },
   ];
 
-  const mobileFallbackLogos = [
-    { src: "/assets/images/logoSlider/Figma.png", alt: "Figma" },
-    { src: "/assets/images/logoSlider/Illustrator.png", alt: "Illustrator" },
-    { src: "/assets/images/logoSlider/Photoshop.png", alt: "Photoshop" },
-    { src: "/assets/images/logoSlider/React.png", alt: "React" },
-    { src: "/assets/images/logoSlider/WooCommerce.png", alt: "WooCommerce" },
-    { src: "/assets/images/logoSlider/Dotnet.png", alt: "Dotnet" },
-    { src: "/assets/images/logoSlider/Wordpress.png", alt: "Wordpress" },
-    { src: "/assets/images/logoSlider/Swift.png", alt: "Swift" },
-  ];
+  const mobileFallbackLogos = [...logoData];
 
   return (
     <div
-      className={`w-full max-w-[1440px] mx-auto overflow-hidden px-4 sm:px-6 lg:px-8 ${
+      className={`w-full max-w-[1300px] mx-auto overflow-hidden px-2 ${
         noMargin ? "" : "mt-16 sm:mt-20 lg:mt-[100px]"
       }`}
     >
       <div className="flex flex-row w-full justify-center">
-        <div className="hidden sm:flex justify-center w-full px-4 lg:px-10">
+        {/* Desktop & Tablet */}
+        <div className="hidden sm:flex justify-center w-full">
           <Marquee direction="left" speed={20} className="mb-8">
             {[...Array(3)].map((_, repeatIndex) =>
               logoData.map((logo, index) => (
@@ -46,6 +38,7 @@ function LogoSlider({ noMargin = false }) {
           </Marquee>
         </div>
 
+        {/* Mobile */}
         <div className="w-full sm:hidden">
           <Marquee
             direction="left"
