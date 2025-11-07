@@ -3,6 +3,8 @@ import OurServices from "../../components/our_services/our_services";
 import Portfolio from "../../components/portfolio/portfolio";
 import Banner from "../../components/banner/banner";
 import ContactUs from "../../components/contact_us/contact_us";
+import { AuroraText } from "@/components/ui/aurora-text";
+import { LightRays } from "@/components/ui/light-rays";
 
 function HomePage() {
   return (
@@ -11,8 +13,19 @@ function HomePage() {
       <section className="w-full bg-white dark:bg-[#121212] transition-colors duration-300 flex justify-center">
         <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8 w-full max-w-[1440px]">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] leading-tight sm:leading-snug md:leading-[60px] lg:leading-[70px] xl:leading-[72px] font-bold mb-4 w-full sm:w-11/12 text-gray-800 dark:text-white">
+          {/* <LightRays
+            color="#FFD400"
+            opacity={0.6}
+            blur={36}
+            count={7}
+            speed={14}
+            length="70vh"
+            className="relative h-[200px] w-full overflow-hidden rounded-xl border"
+          /> */}
             Empowering your digital transformation with{" "}
-            <span className="text-[#FFD400]">Innovative Solutions!</span>
+            <AuroraText colors={["#FFD400", "#F4A300", "#E0E0E0", "#FFD400"]}>
+              Innovative Solutions!
+            </AuroraText>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-[17.44px] leading-6 sm:leading-7 md:leading-[28px] mb-6 w-full sm:w-10/12 md:w-9/12 text-gray-700 dark:text-gray-300">
