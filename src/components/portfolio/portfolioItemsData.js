@@ -97,6 +97,19 @@ const portfolioItems = [
     behance: "",
     readMore: "",
   },
+  {
+    title: "Event Management",
+    description:
+      "A comprehensive web and mobile platform for event planners to manage venues, vendors, tasks, and attendees with real-time updates and seamless coordination.",
+    icon: "/assets/images/portfolioicon.png",
+    img: "/assets/images/portfolio8.png",
+    imgClass:
+      "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
+    width: "w-full sm:w-2/4",
+    github: "",
+    behance: "",
+    readMore: "/portfolio/event-management",
+  },
 ];
 
 export default portfolioItems

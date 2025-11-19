@@ -410,6 +410,83 @@ const projectsData = [
     ],
     finalImage: "/assets/images/jayanath-spices-final.png",
   },
+  // ──────────────────────────────────────────────────────────────
+  // 8. Event Management
+  // ──────────────────────────────────────────────────────────────
+  {
+    id: "event-management",
+    title: "Event Management",
+    subtitle: "Web & Mobile Platform",
+    icon: "/assets/images/portfolioicon.png",
+    tagline:
+      "A comprehensive dashboard solution built for event planners to manage venues, vendors, tasks, timelines, and attendees with ease.",
+    industry: "Event Management / Hospitality",
+    scope:
+      "UI/UX Design, Frontend & Backend Development, Real-time Data Integration, Role-based Access",
+    duration: "4 Months",
+    client: "Event Management Solutions",
+    platform: "Web Dashboard + Mobile Companion App (iOS & Android)",
+    heroImage: "/assets/images/event-management-hero.png",
+
+    overview: [
+      "The Event Management Dashboard is a full-stack design and development project aimed at streamlining the complex workflows of event planning. From venue booking and vendor coordination to attendee tracking and real-time status updates, the platform brings all key event operations into one unified interface.",
+      "Rotaframe Technology handled both UI/UX design and software development, delivering a modern, scalable solution that supports high-volume events and multiple stakeholder roles including organisers, vendors, staff, and attendees.",
+      "The platform was built to address the critical pain points in event management—fragmented tools, manual coordination, delayed updates, and lack of central oversight. By consolidating everything into a single ecosystem, we created a solution that empowers event planners to deliver exceptional experiences with confidence and efficiency.",
+    ],
+
+    solution: [
+      "The project began with a deep dive into existing event management pain points through interviews with planners, vendors, and attendees. We mapped comprehensive user journeys identifying critical touchpoints like vendor status tracking, budget management, and attendee engagement to understand where operational friction occurred.",
+      {
+        type: "list",
+        items: [
+          "Central Event Hub – A dashboard showing calendar, tasks, budget, and status at a glance for complete operational oversight.",
+          "Vendor & Task Module – Planners can assign tasks, track vendor progress, manage contracts, and monitor deliverables in real-time.",
+          "Attendee Management – Comprehensive check-in interfaces, guest lists, and live updates to streamline event day operations.",
+          "Real-time Notifications – Instant dashboard updates reflecting changes in schedule, vendor status, or critical alerts.",
+          "Mobile Companion App – Enabling off-site staff and vendors to stay updated, submit progress reports, and communicate on the go.",
+          "Role-based Access Control – Customized views and permissions for organisers, vendors, staff, and attendees ensuring data security and relevance.",
+        ],
+      },
+      "The visual design focused on clean UI components, clear data visualizations through charts and progress bars, and role-specific layouts to reduce cognitive load. Every interaction was optimized for speed and clarity, ensuring users could manage complex events without feeling overwhelmed.",
+    ],
+
+    performanceMetrics: [
+      ["Performance Score", "93%", "Excellent"],
+      ["Average Dashboard Load Time", "1.5s", "Fast"],
+      ["API Response Time", "0.45s", "Optimized"],
+      ["Task Update Sync Delay", "<1s", "Instant Sync"],
+      ["Crash Rate", "0%", "Stable"],
+      ["Mobile Companion Launch Time", "1.8s", "Smooth"],
+      ["User Retention Rate", "86%", "High Engagement"],
+    ],
+
+    businessImpact:
+      "By replacing multiple standalone tools with a unified platform, the Event Management Dashboard dramatically improves operational efficiency and communication across all stakeholders. Key outcomes include faster planning cycles, reduced risk of missed deadlines, and improved transparency among team members. Organisers who adopted the solution saw up to 35% faster event setup time, 50% fewer manual coordination errors, and improved vendor and attendee satisfaction. The platform empowers event professionals to scale their operations confidently and deliver better experiences consistently.",
+
+    clientFeedback: {
+      quote:
+        "Rotaframe created a game-changing platform that transformed how we manage events. The unified dashboard, real-time updates, and mobile app have eliminated coordination chaos and helped us deliver flawless events every time. Our team's productivity has increased significantly, and our clients have noticed the difference.",
+      author: "Event Management Solutions Team",
+    },
+
+    highlights: [
+      "Average load time: 1.5 seconds with instant sync",
+      "Unified platform for planners, vendors & attendees",
+      "Real-time notifications with <1s delay for critical updates",
+      "Responsive mobile companion app for on-the-go management",
+      "Zero crashes in test deployment — Rock-solid stability",
+      "Clear data visualizations and role-based dashboards",
+      "Scalable architecture for large-scale events and multi-user roles",
+    ],
+
+    finalDesignText: [
+      "The final deliverable features a sleek, user-friendly desktop dashboard along with a mobile companion app, both utilizing a cohesive visual system and seamless interactions. The dashboard home screen presents event KPIs, upcoming tasks, and vendor statuses in one comprehensive glance, enabling planners to make informed decisions quickly.",
+      "Vendor and staff mobile apps provide real-time updates, check-in capabilities, and live notifications, ensuring on-site teams remain aligned and responsive throughout the event lifecycle. The interface balances information density with visual clarity, making complex event operations feel manageable and intuitive.",
+      "Every component was designed with performance in mind—from the instant synchronization of task updates to the smooth transitions between dashboard views. The platform's architecture supports everything from intimate gatherings to large-scale conferences, adapting seamlessly to the unique requirements of each event type.",
+    ],
+
+    finalImage: "/assets/images/event-management-final.png",
+  },
 ];
 
 const PortfolioSinglePage = () => {
