@@ -65,32 +65,31 @@ function Footer() {
   }, []);
 
   return (
-    <div
-      className="flex flex-col w-full max-w-[1300px] mx-auto items-center footer-container"
-    >
+    <div className="flex flex-col w-full max-w-[1300px] mx-auto items-center footer-container">
       {/* Globe Section  */}
 
-      { (
+      {
         <div
-          className="w-full flex justify-center relative overflow-visible globe-section"
-          style={{ height: isMobile ? "230px" : "300px", zIndex: 1 }}
+          className="w-full flex justify-center relative overflow-visible globe-section  mt-4"
+          style={{ height: isMobile ? "230px" : "200px", zIndex: 1 }}
         >
           <div
             className="w-full max-w-[1300px] globe-container"
-            style={{ height: isMobile ? "600px" : "600px", position: "relative" }}
+            style={{
+              height: isMobile ? "600px" : "550px",
+              position: "relative",
+            }}
           >
             <Suspense fallback={<div className="w-full h-full bg-black" />}>
-              <LazyGlobe
-                className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0 globe-element"
-              />
+              <LazyGlobe className="w-full h-full object-contain rounded-4xl invert-0 dark:invert z-0 globe-element" />
             </Suspense>
           </div>
         </div>
-      )}
+      }
 
       {/* Footer Content */}
       <div
-        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-6 py-12 sm:py-8 md:py-10 bg-[#F9F9F9] dark:bg-[#0F0F0F] transition-colors duration-300 footer-content"
+        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-12 py-12 sm:py-8 md:py-12 bg-[#F9F9F9] dark:bg-[#0F0F0F] transition-colors duration-300 footer-content"
         style={{
           marginTop: "0px",
           borderTopLeftRadius: "1.5rem",
@@ -110,17 +109,37 @@ function Footer() {
               className="h-[35px] sm:h-[40px] w-auto"
             />
             <div className="flex flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
-              {[1, 2, 3, 4].map((num) => (
-                <button
-                  key={num}
+              {[
+                {
+                  icon: "/assets/images/social1.svg",
+                  url: "https://www.facebook.com/share/1CBdTsP4Uz/?mibextid=wwXIfr",
+                },
+                {
+                  icon: "/assets/images/social2.svg",
+                  url: "https://x.com/rotaframe?s=21",
+                },
+                {
+                  icon: "/assets/images/social3.svg",
+                  url: "https://www.linkedin.com/company/rotaframetechnology/",
+                },
+                {
+                  icon: "/assets/images/social4.svg",
+                  url: "https://www.instagram.com/rotaframe?igsh=amMxbGo1eDA2N2s=",
+                },
+              ].map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="cursor-pointer hover:opacity-80 transition-opacity"
                 >
                   <img
-                    src={`/assets/images/social${num}.svg`}
-                    alt={`social-icon-${num}`}
+                    src={social.icon}
+                    alt={`social-icon-${index + 1}`}
                     className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]"
                   />
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -176,10 +195,11 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 sm:mt-10 mb-4 sm:mb-6 h-[1px] w-full bg-[#D9D9D9] dark:bg-[#2E2E2E]" />
+        <div className="mt-8 sm:mt-10 mb-1 sm:mb-8 h-[1px] w-full bg-[#D9D9D9] dark:bg-[#2E2E2E]" />
 
-        <div className="text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-          2025 © Rotaframe Technology
+        <div className="text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
+          <img src="/favicon.png" alt="Logo" className="h-4 w-auto sm:h-5" />©
+          2025 Rotaframe Technology Pvt Ltd. All rights reserved.
         </div>
       </div>
 

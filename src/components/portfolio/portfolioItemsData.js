@@ -7,8 +7,8 @@ const portfolioItems = [
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio1.png",
     imgClass:
-      "h-[200px] sm:h-[300px] md:h-[300px] w-[200px] sm:w-[300px] md:w-[300px]",
-    width: "w-full sm:w-[45%]",
+      "h-[200px] sm:h-[300px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[250px]",
+    width: "w-full sm:w-[45%] ",
     github: "",
     behance: "",
     readMore: "",
@@ -16,11 +16,11 @@ const portfolioItems = [
   {
     title: "CineRu",
     description:
-      "A sleek mobile app concept that redefines subtitle discovery with a clean, cinematic design and effortless search-to-download experience.",
+      "A sleek mobile app concept that redefines subtitle discovery with a clean, cinematic design...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio2.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[120px] md:w-[145px]",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -30,11 +30,11 @@ const portfolioItems = [
   {
     title: "Rest Provider",
     description:
-      "A simple, user-friendly onboarding for a food ordering app, guiding users through setup and preferences with clear visuals.",
+      "A simple, user-friendly onboarding for a food ordering app, guiding users through setup and...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio3.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[300px] w-[100px] sm:w-[120px] md:w-[145px]",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -44,11 +44,11 @@ const portfolioItems = [
   {
     title: "iNfo",
     description:
-      "A student-focused mobile app offering lecture schedules, attendance tracking, GPA calculation, and campus navigation for a seamless university experience.",
+      "A student-focused mobile app offering lecture schedules, attendance tracking, GPA calculation,...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio4.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[290px] w-[100px] sm:w-[120px] md:w-[145px]",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -58,11 +58,11 @@ const portfolioItems = [
   {
     title: "Travel Nebula",
     description:
-      "This project aims to develop a user-friendly and visually engaging mobile application interface for seamless travel ticket booking.",
+      "This project aims to develop a user-friendly and visually engaging mobile application interface for...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio5.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[290px] w-[100px] sm:w-[120px] md:w-[200px]",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -76,7 +76,7 @@ const portfolioItems = [
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio6.png",
     imgClass:
-      "h-[200px] sm:h-[300px] md:h-[300px] w-[200px] sm:w-[300px] md:w-[300px]",
+      "h-[200px] sm:h-[300px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[250px]",
     width: "w-full sm:w-[45%]",
     github: "",
     behance: "",

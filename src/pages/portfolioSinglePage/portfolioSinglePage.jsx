@@ -69,7 +69,7 @@ const projectsData = [
     scope: "User Research, App UI/UX, Prototyping, Interaction Design",
     platform: "Mobile (iOS / Android focus)",
     duration: "Case Study (Concept → Hi-Fi Prototype)",
-    heroImage: "/assets/images/moonbeam-glamour-hero.png",
+    heroImage: "/assets/images/cineru-hero.png",
     overview: [
       "CineRu is a mobile UI/UX design project that reimagines the subtitle downloading experience for movie lovers. The goal was to create an app that makes it quick and intuitive for users to find accurate subtitles for their favorite movies and series without ads, clutter, or confusion.",
       "The app’s interface was built around clarity, efficiency, and modern aesthetics. Through elegant typography, dark cinematic visuals, and an intuitive search experience, CineRu offers a simple yet engaging platform that prioritizes user satisfaction and usability.",
@@ -105,7 +105,7 @@ const projectsData = [
       " Users can easily search, filter, and preview subtitles with a visually rich yet minimal layout. The download process features clear progress indicators, visual confirmation screens, and micro-interactions that enhance the overall feedback experience. ",
       " Every screen was optimized for fast performance, dark theme readability, and touch-friendly controls, ensuring that CineRu feels both elegant and effortless to use across mobile devices.",
     ],
-    finalImage: "/assets/images/moonbeam-glamour-final.png",
+    finalImage: "/assets/images/cineru-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────
@@ -186,7 +186,7 @@ const projectsData = [
     scope: "UI/UX Design, Mobile App Development, System Integration",
     platform: "Mobile (Android / iOS)",
     client: "iNfo (Academic Solutions Concept)",
-    heroImage: "/assets/images/moonbeam-glamour-hero.png",
+    heroImage: "/assets/images/info-hero.png",
     overview: [
       "iNfo is a mobile application conceptualized and developed to simplify academic communication and digital document distribution within educational institutes.",
       "The goal was to create a centralized, user-friendly platform where institutes can share notices, timetables, course materials, and official documents securely and efficiently.",
@@ -234,7 +234,7 @@ const projectsData = [
     ],
     finalDesignText:
       "The final design presents a clean, functional, and modern mobile interface built to simplify how educational institutes share information and documents with students and staff. The dashboard-based layout ensures that all key features—announcements, course materials, and notices—are accessible within seconds, reducing communication friction and improving user experience.",
-    finalImage: "/assets/images/moonbeam-glamour-final.png",
+    finalImage: "/assets/images/info-final.png",
   },
 
   // ──────────────────────────────────────────────────────────────

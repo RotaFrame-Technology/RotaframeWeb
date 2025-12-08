@@ -8,7 +8,7 @@ function LogoSlider({ noMargin = false }) {
     { src: "/assets/images/logoSlider/Photoshop.png", alt: "Photoshop" },
     { src: "/assets/images/logoSlider/React.png", alt: "React" },
     { src: "/assets/images/logoSlider/WooCommerce.png", alt: "WooCommerce" },
-    { src: "/assets/images/logoSlider/Dotnet.png", alt: "Dotnet" },
+    // { src: "/assets/images/logoSlider/Dotnet.png", alt: "Dotnet" },
     { src: "/assets/images/logoSlider/Wordpress.png", alt: "Wordpress" },
     { src: "/assets/images/logoSlider/Swift.png", alt: "Swift" },
   ];
@@ -17,21 +17,21 @@ function LogoSlider({ noMargin = false }) {
 
   return (
     <div
-      className={`w-full max-w-[1300px] mx-auto overflow-hidden px-2 ${
-        noMargin ? "" : "mt-16 sm:mt-20 lg:mt-[100px]"
+      className={`w-full max-w-[1300px] mx-auto overflow-hidden ${
+        noMargin ? "" : ""
       }`}
     >
       <div className="flex flex-row w-full justify-center">
         {/* Desktop & Tablet */}
         <div className="hidden sm:flex justify-center w-full">
-          <Marquee direction="left" speed={20} className="mb-8">
+          <Marquee direction="left" speed={20} className="mt-12 mb-12">
             {[...Array(3)].map((_, repeatIndex) =>
               logoData.map((logo, index) => (
                 <img
                   key={`${repeatIndex}-${index}`}
                   src={logo.src}
                   alt={logo.alt}
-                  className="w-16 h-16 sm:w-20 sm:h-20 mx-4 sm:mx-6 lg:mx-8 object-contain"
+                  className="w-16 h-16 sm:w-20 sm:h-16 mx-4 sm:mx-6 lg:mx-8 object-contain"
                 />
               ))
             )}
@@ -45,7 +45,7 @@ function LogoSlider({ noMargin = false }) {
             speed={20}
             gradient
             gradientColor="transparent"
-            className="mb-8"
+            className="mb-8 mt-8"
           >
             {[...Array(3)].map((_, repeatIndex) =>
               mobileFallbackLogos.map((logo, index) => (

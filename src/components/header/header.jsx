@@ -115,15 +115,14 @@ function Header() {
       >
         {/* Background strip */}
         <div
-  className={`absolute -top-4 sm:-top-7 left-1/2 -translate-x-1/2 w-full max-w-[1300px] h-4 sm:h-7 z-[-1] rounded-xl transition-all duration-300 ${
-    isScrolled
-      ? "bg-white/20 dark:bg-[#121212]/20 backdrop-blur-sm"
-      : isDarkMode
-      ? "bg-[#121212]"
-      : "bg-white"
-  }`}
-/>
-
+          className={` ${
+            isScrolled
+              ? "bg-white/20 dark:bg-[#121212]/20 backdrop-blur-sm"
+              : isDarkMode
+              ? "bg-[#121212]"
+              : "bg-white"
+          }`}
+        />
 
         {/* Main header container — also narrower */}
         <div
@@ -161,11 +160,35 @@ function Header() {
                       navigate("/");
                       scrollToTop();
                     } else if (item === "Services") {
-                      navigate("/services");
-                      setTimeout(scrollToTop, 100); // delay to ensure navigation completes
+                      const element = document.getElementById("our-services");
+                      if (element) {
+                        const headerOffset = -100; // adjust if needed
+                        const elementPosition =
+                          element.getBoundingClientRect().top;
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth",
+                        });
+                      }
+                      // navigate("/our-services");
+                      // setTimeout(scrollToTop, 100); // delay to ensure navigation completes
                     } else if (item === "Portfolio") {
-                      navigate("/portfolio");
-                      setTimeout(scrollToTop, 100);
+                      const element = document.getElementById("our-portfolio");
+                      if (element) {
+                        const headerOffset = 50; // adjust if needed
+                        const elementPosition =
+                          element.getBoundingClientRect().top;
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth",
+                        });
+                      }
+                      // navigate("/portfolio");
+                      // setTimeout(scrollToTop, 100);
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
@@ -174,7 +197,7 @@ function Header() {
                       }
                     }
                   }}
-                  className={`relative px-2 text-[15px] py-2 cursor-pointer transition-colors ${
+                  className={`relative px-2 text-[16px] py-2 cursor-pointer transition-colors ${
                     activeLink === item.toLowerCase().replace(/\s+/g, "")
                       ? "text-black dark:text-[#FFD400] after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-3/5 after:h-[2px] after:bg-[#FFD400] dark:after:bg-[#FFD400] after:rounded-full"
                       : "text-black dark:text-[#FAFAFA] hover:text-[#FFD400] dark:hover:text-[#FFD400]"
@@ -187,7 +210,7 @@ function Header() {
 
             {/* Theme toggle + CTA */}
             <div className="flex flex-row gap-6 items-center">
-              <button
+              {/* <button
                 onClick={toggleDarkMode}
                 className="text-xl text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
                 aria-label={
@@ -195,7 +218,7 @@ function Header() {
                 }
               >
                 {isDarkMode ? <FaSun /> : <FaMoon />}
-              </button>
+              </button> */}
               <button
                 onClick={scrollToContact}
                 className="w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"

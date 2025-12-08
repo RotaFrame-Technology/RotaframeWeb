@@ -4,44 +4,54 @@ import Portfolio from "../../components/portfolio/portfolio";
 import Banner from "../../components/banner/banner";
 import ContactUs from "../../components/contact_us/contact_us";
 import { AuroraText } from "@/components/ui/aurora-text";
-import { LightRays } from "@/components/ui/light-rays";
 
 function HomePage() {
   return (
     <>
-      {/* Hero / Banner */}
-      <section className="w-full bg-white dark:bg-[#121212] transition-colors duration-300 flex justify-center">
-        <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8 w-full max-w-[1440px]">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] leading-tight sm:leading-snug md:leading-[60px] lg:leading-[70px] xl:leading-[72px] font-bold mb-4 w-full sm:w-11/12 text-gray-800 dark:text-white">
-          {/* <LightRays
-            color="#FFD400"
-            opacity={0.6}
-            blur={36}
-            count={7}
-            speed={14}
-            length="70vh"
-            className="relative h-[200px] w-full overflow-hidden rounded-xl border"
-          /> */}
-            Empowering your digital transformation with{" "}
+      {/* Hero Section */}
+      <section
+        className="
+          relative w-full 
+          h-[90vh] 
+          -mt-[84px] pt-[84px]
+          bg-white dark:bg-[#121212]
+          overflow-hidden
+          flex justify-center items-center
+        "
+      >
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/images/heroBG.png"
+            className="w-full h-full object-cover object-top"
+            alt="Vector Background"
+          />
+        </div>
+
+        {/* Main content */}
+        <div className="flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 w-full max-w-[1440px] relative z-10 mt-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[56px] leading-tight sm:leading-snug md:leading-[60px] lg:leading-[70px] xl:leading-[72px] font-bold mb-4 w-full sm:w-11/12 text-white dark:text-white">
+            Transforming Ideas into Intuitive{" "}
             <AuroraText colors={["#FFD400", "#F4A300", "#E0E0E0", "#FFD400"]}>
-              Innovative Solutions!
+              Digital Experiences!
             </AuroraText>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-[17.44px] leading-6 sm:leading-7 md:leading-[28px] mb-6 w-full sm:w-10/12 md:w-9/12 text-gray-700 dark:text-gray-300">
-            Welcome to Rotaframe Technology, where innovation meets functionality
-            to redefine your online presence. Transcend boundaries to transform
-            your digital aspirations into reality. As a renowned software
-            development and IT consulting company, we take pride in delivering
-            cutting-edge solutions that propel your business forward in the
-            ever-evolving digital landscape.
+          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-[24px] leading-6 sm:leading-7 md:leading-[28px] w-full sm:w-10/12 md:w-9/12 text-white dark:text-gray-300">
+            We create digital solutions engineered for clarity and impact.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-[24px] leading-6 sm:leading-7 md:leading-[28px] w-full sm:w-10/12 md:w-9/12 text-white dark:text-gray-300">
+            Designed for long-term growth and meaningful results.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full sm:w-auto">
-            <button className="w-full sm:w-auto px-4 sm:px-6 h-[45px] bg-[#FFD400] text-black text-base sm:text-lg font-semibold rounded-lg transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer">
-              Request Proposal
-            </button>
-
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-16 justify-center w-full sm:w-auto mb-12">
+            <a
+              href="mailto:info@rotaframetechnology.com"
+              className="w-full sm:w-auto px-4 sm:px-6 h-[45px] bg-[#FFD400] text-black text-base sm:text-lg font-semibold rounded-lg transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 flex items-center justify-center cursor-pointer"
+            >
+              Start your Project
+            </a>
             <button
               onClick={() => {
                 const element = document.getElementById("contact");
@@ -55,11 +65,14 @@ function HomePage() {
             </button>
           </div>
 
-          <LogoSlider />
+          {/* Logo Slider at bottom */}
         </div>
       </section>
+      <div className="w-full bg-white dark:bg-black">
+        <LogoSlider />
+      </div>
 
-      {/* Homepage sections */}
+      {/* Other Sections */}
       <OurServices />
       <Banner />
       <Portfolio />
