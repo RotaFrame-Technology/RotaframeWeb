@@ -230,12 +230,12 @@ function Header() {
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-3">
-            <button
+            {/* <button
               onClick={toggleDarkMode}
               className="text-lg text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
-            </button>
+            </button> */}
             <button
               onClick={toggleMobileMenu}
               className="text-lg text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
@@ -268,11 +268,35 @@ function Header() {
                       navigate("/");
                       scrollToTop();
                     } else if (item === "Services") {
-                      navigate("/services");
-                      setTimeout(scrollToTop, 100);
+                      const element = document.getElementById("our-services");
+                      if (element) {
+                        const headerOffset = -100; // adjust if needed
+                        const elementPosition =
+                          element.getBoundingClientRect().top;
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth",
+                        });
+                      }
+                      // navigate("/our-services");
+                      // setTimeout(scrollToTop, 100); // delay to ensure navigation completes
                     } else if (item === "Portfolio") {
-                      navigate("/portfolio");
-                      setTimeout(scrollToTop, 100);
+                      const element = document.getElementById("our-portfolio");
+                      if (element) {
+                        const headerOffset = 50; // adjust if needed
+                        const elementPosition =
+                          element.getBoundingClientRect().top;
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth",
+                        });
+                      }
+                      // navigate("/portfolio");
+                      // setTimeout(scrollToTop, 100);
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
