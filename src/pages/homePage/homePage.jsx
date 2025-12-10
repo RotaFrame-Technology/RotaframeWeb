@@ -65,7 +65,7 @@ function HomePage() {
             </button>
           </div>
 
-          {/* Logo Slider at bottom */}
+          {/* Logo Slider*/}
         </div>
       </section>
       <div className="w-full bg-white dark:bg-black">

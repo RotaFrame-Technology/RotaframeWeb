@@ -17,7 +17,7 @@ function LogoSlider({ noMargin = false }) {
 
   return (
     <div
-      className={`w-full max-w-[1300px] mx-auto overflow-hidden ${
+      className={`w-full  mx-auto overflow-hidden ${
         noMargin ? "" : ""
       }`}
     >

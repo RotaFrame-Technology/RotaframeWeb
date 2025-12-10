@@ -70,8 +70,8 @@ function Footer() {
 
       {
         <div
-          className="w-full flex justify-center relative overflow-visible globe-section  mt-4"
-          style={{ height: isMobile ? "230px" : "200px", zIndex: 1 }}
+          className="w-full flex justify-center relative overflow-visible globe-section mt-0 sm:mt-4 md:mt-16 "
+          style={{ height: isMobile ? "250px" : "200px", zIndex: 1 }}
         >
           <div
             className="w-full max-w-[1300px] globe-container"
@@ -89,116 +89,219 @@ function Footer() {
 
       {/* Footer Content */}
       <div
-        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-12 py-12 sm:py-8 md:py-12 bg-[#F9F9F9] dark:bg-[#0F0F0F] transition-colors duration-300 footer-content"
+        className="relative z-10 flex flex-col w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-8 md:py-12 bg-[#F9F9F9] dark:bg-[#0F0F0F] transition-colors duration-300 footer-content"
         style={{
           marginTop: "0px",
           borderTopLeftRadius: "1.5rem",
           borderTopRightRadius: "1.5rem",
         }}
       >
-        <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10">
-          {/* Logo and Social Icons */}
-          <div className="flex flex-col items-start">
-            <img
-              src={
-                isDarkMode
-                  ? "/assets/images/Rotaframe Yellow.png"
-                  : "/assets/images/Rotaframe Black.png"
-              }
-              alt="Rotaframe Technology"
-              className="h-[35px] sm:h-[40px] w-auto"
-            />
-            <div className="flex flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
-              {[
-                {
-                  icon: "/assets/images/social1.svg",
-                  url: "https://www.facebook.com/share/1CBdTsP4Uz/?mibextid=wwXIfr",
-                },
-                {
-                  icon: "/assets/images/social2.svg",
-                  url: "https://x.com/rotaframe?s=21",
-                },
-                {
-                  icon: "/assets/images/social3.svg",
-                  url: "https://www.linkedin.com/company/rotaframetechnology/",
-                },
-                {
-                  icon: "/assets/images/social4.svg",
-                  url: "https://www.instagram.com/rotaframe?igsh=amMxbGo1eDA2N2s=",
-                },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                >
-                  <img
-                    src={social.icon}
-                    alt={`social-icon-${index + 1}`}
-                    className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Footer Links */}
-          <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-12 mt-6 lg:mt-0">
-            <div className="flex flex-col gap-2">
-              <div className="text-base sm:text-lg font-semibold mb-2 text-[#000000] dark:text-[#FAFAFA]">
-                Services
+        {isMobile ? (
+          // Mobile layout
+          <div className="flex flex-col w-full">
+            <div className="flex flex-row justify-between items-center">
+              <img
+                src={
+                  isDarkMode
+                    ? "/assets/images/Rotaframe Yellow.png"
+                    : "/assets/images/Rotaframe Black.png"
+                }
+                alt="Rotaframe Technology"
+                className="h-[30px] w-auto"
+              />
+              <div className="flex flex-row gap-3">
+                {[
+                  {
+                    icon: "/assets/images/social1.svg",
+                    url: "https://www.facebook.com/share/1CBdTsP4Uz/?mibextid=wwXIfr",
+                  },
+                  {
+                    icon: "/assets/images/social2.svg",
+                    url: "https://x.com/rotaframe?s=21",
+                  },
+                  {
+                    icon: "/assets/images/social3.svg",
+                    url: "https://www.linkedin.com/company/rotaframetechnology/",
+                  },
+                  {
+                    icon: "/assets/images/social4.svg",
+                    url: "https://www.instagram.com/rotaframe?igsh=amMxbGo1eDA2N2s=",
+                  },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer hover:opacity-80 transition-opacity"
+                  >
+                    <img
+                      src={social.icon}
+                      alt={`social-icon-${index + 1}`}
+                      className="w-[16px] h-[16px]"
+                    />
+                  </a>
+                ))}
               </div>
-              {[
-                "e-Commerce development",
-                "Custom software development",
-                "Mobile Application development",
-                "UX/UI & Product development",
-              ].map((service) => (
-                <div
-                  key={service}
-                  className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
-                >
-                  {service}
-                </div>
-              ))}
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="text-base sm:text-lg font-semibold mb-2 text-[#000000] dark:text-[#FAFAFA]">
-                Company
+            {/* Services and Company */}
+            <div className="flex flex-row justify-between gap-4 mt-6">
+              <div className="flex flex-col gap-1">
+                <div className="text-sm font-semibold mb-1 text-[#000000] dark:text-[#FAFAFA]">
+                  Services
+                </div>
+                {[
+                  "e-Commerce development",
+                  "Custom software development",
+                  "Mobile Application development",
+                  "UX/UI & Product development",
+                ].map((service) => (
+                  <div
+                    key={service}
+                    className="text-xs text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  >
+                    {service}
+                  </div>
+                ))}
               </div>
-              {["Home", "Services", "Portfolio", "Contact"].map((link) => (
-                <div
-                  key={link}
-                  className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
-                >
-                  {link}
+
+              <div className="flex flex-col gap-1 mr-10">
+                <div className="text-sm font-semibold mb-1 text-[#000000] dark:text-[#FAFAFA]">
+                  Company
                 </div>
-              ))}
+                {["Home", "Services", "Portfolio", "Contact"].map((link) => (
+                  <div
+                    key={link}
+                    className="text-xs text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  >
+                    {link}
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="text-base sm:text-lg font-semibold mb-2 text-[#000000] dark:text-[#FAFAFA]">
+            {/* Legal below */}
+            <div className="flex flex-col gap-1 mt-6">
+              <div className="text-sm font-semibold mb-1 text-[#000000] dark:text-[#FAFAFA]">
                 Legal
               </div>
               {["Terms of Service", "Privacy Policy"].map((legal) => (
                 <div
                   key={legal}
-                  className="text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  className="text-xs text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
                 >
                   {legal}
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        ) : (
+          // Original desktop layout
+          <div className="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 lg:gap-10">
+            {/* Logo and Social Icons */}
+            <div className="flex flex-col items-start">
+              <img
+                src={
+                  isDarkMode
+                    ? "/assets/images/Rotaframe Yellow.png"
+                    : "/assets/images/Rotaframe Black.png"
+                }
+                alt="Rotaframe Technology"
+                className="h-[30px] sm:h-[40px] w-auto"
+              />
+              <div className="flex flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 lg:mt-10">
+                {[
+                  {
+                    icon: "/assets/images/social1.svg",
+                    url: "https://www.facebook.com/share/1CBdTsP4Uz/?mibextid=wwXIfr",
+                  },
+                  {
+                    icon: "/assets/images/social2.svg",
+                    url: "https://x.com/rotaframe?s=21",
+                  },
+                  {
+                    icon: "/assets/images/social3.svg",
+                    url: "https://www.linkedin.com/company/rotaframetechnology/",
+                  },
+                  {
+                    icon: "/assets/images/social4.svg",
+                    url: "https://www.instagram.com/rotaframe?igsh=amMxbGo1eDA2N2s=",
+                  },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer hover:opacity-80 transition-opacity"
+                  >
+                    <img
+                      src={social.icon}
+                      alt={`social-icon-${index + 1}`}
+                      className="w-[16px] h-[16px] sm:w-[20px] sm:h-[20px]"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
 
-        <div className="mt-8 sm:mt-10 mb-1 sm:mb-8 h-[1px] w-full bg-[#D9D9D9] dark:bg-[#2E2E2E]" />
+            {/* Footer Links */}
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-12 mt-6 lg:mt-0">
+              <div className="flex flex-col gap-1 sm:gap-2">
+                <div className="text-sm sm:text-lg font-semibold mb-1 sm:mb-2 text-[#000000] dark:text-[#FAFAFA]">
+                  Services
+                </div>
+                {[
+                  "e-Commerce development",
+                  "Custom software development",
+                  "Mobile Application development",
+                  "UX/UI & Product development",
+                ].map((service) => (
+                  <div
+                    key={service}
+                    className="text-xs sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  >
+                    {service}
+                  </div>
+                ))}
+              </div>
 
-        <div className="text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1">
-          <img src="/favicon.png" alt="Logo" className="h-4 w-auto sm:h-5" />©
+              <div className="flex flex-col gap-1 sm:gap-2">
+                <div className="text-sm sm:text-lg font-semibold mb-1 sm:mb-2 text-[#000000] dark:text-[#FAFAFA]">
+                  Company
+                </div>
+                {["Home", "Services", "Portfolio", "Contact"].map((link) => (
+                  <div
+                    key={link}
+                    className="text-xs sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  >
+                    {link}
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-1 sm:gap-2">
+                <div className="text-sm sm:text-lg font-semibold mb-1 sm:mb-2 text-[#000000] dark:text-[#FAFAFA]">
+                  Legal
+                </div>
+                {["Terms of Service", "Privacy Policy"].map((legal) => (
+                  <div
+                    key={legal}
+                    className="text-xs sm:text-base text-gray-600 dark:text-gray-400 hover:text-[#000000] dark:hover:text-[#FAFAFA] cursor-pointer transition-colors"
+                  >
+                    {legal}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-6 sm:mt-8 mb-1 sm:mb-6 h-[1px] w-full bg-[#D9D9D9] dark:bg-[#2E2E2E]" />
+
+        <div className="text-center text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 mt-4">
+          <img src="/favicon.png" alt="Logo" className="h-3 w-auto sm:h-5" />©
           2025 Rotaframe Technology Pvt Ltd. All rights reserved.
         </div>
       </div>

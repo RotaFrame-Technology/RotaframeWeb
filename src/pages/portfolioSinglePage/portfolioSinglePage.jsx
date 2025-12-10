@@ -579,7 +579,7 @@ const PortfolioSinglePage = () => {
               )}
             </div>
 
-            {/* Live Demo Button (moved up slightly) */}
+            {/* Live Demo Button */}
             <button className="mt-4 w-[120px] h-[42px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer">
               Live Demo
             </button>

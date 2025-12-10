@@ -64,14 +64,14 @@ function ContactUs() {
               </span>
             </h2>
 
-            <p className=" sm:pt-4 text-[16px] sm:text-[52px] font-semibold  text-gray-700 dark:text-gray-300 max-w-3xl ">
+            <p className=" sm:pt-4 mt-4 md:mt-0 text-[32px] sm:text-[52px] font-semibold  text-gray-700 dark:text-gray-300 max-w-3xl ">
               <span className="text-gray-600 dark:text-gray-400">
                 Let&apos;s
               </span>{" "}
               Work Together
             </p>
 
-            <p className=" sm:pt-4 text-[12px] sm:text-[20px] text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1 mb-16 ">
+            <p className=" sm:pt-4 mt-2 sm:mt-0 md:mt-0 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mx-auto max-w-[800px]  ">
               Reach out to us today to{" "}
               <span className="text-black dark:text-white">discuss</span> your
               project ideas, goals, and challenges. Let&apos;s leverage our
@@ -84,7 +84,7 @@ function ContactUs() {
 
           </div>
 
-          <div className="flex flex-col gap-4 sm:gap-6">
+          <div className="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-0 md:mt-0 ">
             {/* Email Row */}
             <div className="flex flex-row items-center gap-2">
               <img

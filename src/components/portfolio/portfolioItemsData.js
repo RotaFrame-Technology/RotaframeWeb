@@ -20,7 +20,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio2.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -34,7 +34,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio3.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -48,7 +48,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio4.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -62,7 +62,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio5.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[100px] sm:w-[120px] md:w-[150px] mt-8",
+      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
