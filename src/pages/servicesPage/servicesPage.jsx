@@ -1,4 +1,3 @@
-
 import ContactUs from "../../components/contact_us/contact_us";
 import LogoSlider from "../../components/logoSlider/logoSlider";
 import Banner from "../../components/banner/banner";
@@ -53,103 +52,106 @@ const ServicesPage = () => {
     },
   ];
 
-return (
-  <section className="w-full">
-    {/* Hero Section */}
-    <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[300px] bg-cover bg-center relative mt-16">
-      <div className="w-full max-w-[1300px] mx-auto h-full flex flex-col md:flex-row items-center justify-between px-4">
-        {/* Text */}
-        <div className="text-left md:w-1/2">
-          <p className="text-[18px] sm:text-[20px] font-bold text-gray-800 dark:text-white ml-1">Our Services</p>
-          <h1 className="mt-2 text-[40px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold text-white leading-tight">
-            <span className="text-gray-600 dark:text-gray-400 block">Innovating the</span> 
-            <div className="text-gray-800 dark:text-white">Future</div>
-          </h1>
-        </div>
-
-        {/* Video Thumbnail */}
-        <div className="relative w-full md:w-1/2 max-w-md aspect-video bg-black rounded-lg overflow-hidden cursor-pointer">
-          <img
-            src="/assets/images/video-thumbnail.png"
-            alt="Video Thumbnail"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="white"
-              viewBox="0 0 24 24"
-              stroke="none"
-              className="w-14 h-14 sm:w-16 sm:h-16"
-            >
-              <path d="M5.25 5.25v13.5L19.5 12 5.25 5.25z" />
-            </svg>
+  return (
+    <section className="w-full">
+      {/* Hero Section */}
+      <div className="w-full h-[400px] sm:h-[300px] md:h-[300px] lg:h-[300px] bg-cover bg-center relative mt-16">
+        <div className="w-full max-w-[1300px] px-4 mx-auto h-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-10">
+          {/* Text */}
+          <div className="text-left md:w-1/2">
+            <p className="text-[18px] sm:text-[20px] font-bold text-gray-800 dark:text-white ml-1">
+              Our Services
+            </p>
+            <h1 className="mt-2 text-[40px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold text-white leading-tight">
+              <span className="text-gray-600 dark:text-gray-400 block">
+                Innovating the
+              </span>
+              <div className="text-gray-800 dark:text-white">Future</div>
+            </h1>
           </div>
-        </div>
-      </div>
-    </div>
 
-    {/* Banner */}
-    <Banner />
-
-    {/* Services Section */}
-    <div className="services-container flex flex-col items-center w-full py-14 sm:py-16">
-      {/* Top Divider */}
-      <hr className="w-full border-t border-[#2E2E2E]" />
-
-      {/* Services List */}
-      <div className="w-full max-w-[1300px] flex flex-col px-4  mt-14 sm:mt-20 space-y-18 sm:space-y-20">
-        {sections.map((section, index) => (
-          <div key={index} className="w-full">
-            <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
-              <h2 className="text-[26px] sm:text-[30px] lg:text-[35px] font-bold lg:w-1/4 text-left">
-                {section.title}
-              </h2>
-              <div className="lg:w-3/4 text-left space-y-4">
-                <p className="text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-400">
-                  {section.subtitle}
-                </p>
-                {section.paragraphs.map((p, i) => (
-                  <p
-                    key={i}
-                    className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed"
-                  >
-                    {p}
-                  </p>
-                ))}
-                <p className="pt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                  <strong>Key focus:</strong> {section.keyFocus}
-                </p>
-              </div>
+          {/* Video Thumbnail */}
+          <div className="relative w-full md:w-1/2 max-w-md aspect-video bg-black rounded-lg overflow-hidden cursor-pointer">
+            <img
+              src="/assets/images/video-thumbnail.png"
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                viewBox="0 0 24 24"
+                stroke="none"
+                className="w-14 h-14 sm:w-16 sm:h-16"
+              >
+                <path d="M5.25 5.25v13.5L19.5 12 5.25 5.25z" />
+              </svg>
             </div>
-
-            {/* Divider between sections */}
-            {index !== sections.length - 1 && (
-              <hr className="w-full border-t mt-12 sm:mt-20 border-[#2E2E2E]" />
-            )}
           </div>
-        ))}
+        </div>
       </div>
 
-      {/* Middle Divider */}
-      <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
-
-      {/* Logo Slider */}
-      <div className="w-full max-w-[1300px] mt-16 sm:mt-20">
-        <LogoSlider noMargin />
+      {/* Banner */}
+      <div className="mt-12 sm:mt-28 md:mt-28">
+        <Banner noMargins={true} />
       </div>
 
-      {/* Bottom Divider */}
-      <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
+      {/* Services Section */}
+      <div className="services-container flex flex-col items-center w-full ">
+        {/* Top Divider */}
+        <hr className="w-full border-t border-[#2E2E2E] mt-16 sm:mt-28 md:mt-28" />
 
-      {/* Contact Section */}
-      <div id="contact" className="w-full max-w-[1300px] px-4 sm:px-6 lg:px-10 mt-2 sm:mt-2">
-        <ContactUs />
+        {/* Services List */}
+        <div className="w-full max-w-[1300px] flex flex-col px-4  mt-14 sm:mt-20 space-y-18 sm:space-y-20">
+          {sections.map((section, index) => (
+            <div key={index} className="w-full">
+              <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
+                <h2 className="text-[26px] sm:text-[30px] lg:text-[35px] font-bold lg:w-1/4 text-left">
+                  {section.title}
+                </h2>
+                <div className="lg:w-3/4 text-left space-y-4">
+                  <p className="text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-400">
+                    {section.subtitle}
+                  </p>
+                  {section.paragraphs.map((p, i) => (
+                    <p
+                      key={i}
+                      className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed"
+                    >
+                      {p}
+                    </p>
+                  ))}
+                  <p className="pt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                    <strong>Key focus:</strong> {section.keyFocus}
+                  </p>
+                </div>
+              </div>
+
+              {/* Divider between sections */}
+              {index !== sections.length - 1 && (
+                <hr className="w-full border-t mt-12 sm:mt-20 border-[#2E2E2E]" />
+              )}
+            </div>
+          ))}
+        </div>
+
+        <hr className="w-full border-t  border-[#2E2E2E] mt-16 sm:mt-28 md:mt-28" />
+        <div className="w-full max-w-[1300px] px-4">
+          <LogoSlider noMargin />
+        </div>
+        <hr className="w-full border-t border-[#2E2E2E]" />
+
+        {/* Contact Section */}
+       <div
+          id="contact"
+          className="w-full max-w-[1300px] px-4 sm:px-6 lg:px-10 mt-16 sm:mt-28 md:mt-28"
+        >
+          <ContactUs noMargin />
+        </div>
       </div>
-    </div>
-  </section>
-);
-
+    </section>
+  );
 };
 
 export default ServicesPage;

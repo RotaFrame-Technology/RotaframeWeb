@@ -8,8 +8,8 @@ const PortfolioPage = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
-      <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[300px] bg-cover bg-center relative mt-16">
-        <div className="w-full max-w-[1300px] px-4 mx-auto h-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
+      <div className="w-full h-[400px] sm:h-[300px] md:h-[300px] lg:h-[300px] bg-cover bg-center relative mt-16">
+        <div className="w-full max-w-[1300px] px-4 mx-auto h-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-10">
           {/* Text */}
           <div className="text-left md:w-1/2">
             <p className="text-[18px] sm:text-[20px] ml-1 font-bold text-gray-800 dark:text-white">
@@ -46,12 +46,14 @@ const PortfolioPage = () => {
       </div>
 
       {/* Banner */}
-      <Banner />
+      <div className="mt-12 sm:mt-28 md:mt-28">
+        <Banner noMargins={true} />
+      </div>
 
-      <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
+      <hr className="w-full border-t border-[#2E2E2E] mt-16 sm:mt-28 md:mt-28" />
 
       {/* Direct Portfolio Grid */}
-      <div className="flex flex-col w-full max-w-[1300px] px-4 mx-auto mt-20">
+      <div className="flex flex-col w-full max-w-[1300px] px-4 mx-auto  mt-16 sm:mt-28 md:mt-28">
         <div className="flex flex-col w-full gap-4">
           {[0, 2, 4, 6].map((start, rowIndex) => (
             <div
@@ -202,19 +204,18 @@ const PortfolioPage = () => {
       </div>
 
       {/* Logo Slider */}
-      <div className="services-container flex flex-col mt-10 items-center w-full py-14 sm:py-16">
-        <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
-        <div className="w-full max-w-[1300px] px-4 mt-16 sm:mt-20">
+      <div className="services-container flex flex-col items-center w-full ">
+        <hr className="w-full border-t  border-[#2E2E2E] mt-16 sm:mt-28 md:mt-28" />
+        <div className="w-full max-w-[1300px] px-4">
           <LogoSlider noMargin />
         </div>
-        <hr className="w-full border-t mt-20 border-[#2E2E2E]" />
-
+        <hr className="w-full border-t border-[#2E2E2E]" />
         {/* Contact Section */}
         <div
           id="contact"
-          className="w-full max-w-[1300px] px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16"
+          className="w-full max-w-[1300px] px-4 sm:px-6 lg:px-10 mt-16 sm:mt-28 md:mt-28"
         >
-          <ContactUs />
+          <ContactUs noMargin />
         </div>
       </div>
     </section>

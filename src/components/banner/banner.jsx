@@ -1,9 +1,9 @@
 import { AuroraText } from "@/components/ui/aurora-text";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 
-function Banner() {
+function Banner({ noMargins = false }) {
   return (
-    <div className="relative mt-28 sm:mt-32 md:mt-48 mb-28 sm:mb-32 md:mb-48 px-4 sm:px-6 lg:px-8">
+    <div className={`relative ${noMargins ? "" : "mt-28 sm:mt-32 md:mt-48"} px-4 sm:px-6 lg:px-8`}>
       {/* Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="h-[140px] sm:h-[160px] lg:h-[150px] w-full max-w-[1200px] mx-auto">

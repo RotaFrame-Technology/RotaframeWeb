@@ -160,35 +160,11 @@ function Header() {
                       navigate("/");
                       scrollToTop();
                     } else if (item === "Services") {
-                      const element = document.getElementById("our-services");
-                      if (element) {
-                        const headerOffset = -100; // adjust if needed
-                        const elementPosition =
-                          element.getBoundingClientRect().top;
-                        const offsetPosition =
-                          elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({
-                          top: offsetPosition,
-                          behavior: "smooth",
-                        });
-                      }
-                      // navigate("/our-services");
-                      // setTimeout(scrollToTop, 100); // delay to ensure navigation completes
+                      navigate("/services");
+                      setTimeout(scrollToTop, 100);
                     } else if (item === "Portfolio") {
-                      const element = document.getElementById("our-portfolio");
-                      if (element) {
-                        const headerOffset = 50; // adjust if needed
-                        const elementPosition =
-                          element.getBoundingClientRect().top;
-                        const offsetPosition =
-                          elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({
-                          top: offsetPosition,
-                          behavior: "smooth",
-                        });
-                      }
-                      // navigate("/portfolio");
-                      // setTimeout(scrollToTop, 100);
+                      navigate("/portfolio");
+                      setTimeout(scrollToTop, 100);
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
@@ -197,7 +173,7 @@ function Header() {
                       }
                     }
                   }}
-                  className={`relative px-2 text-[16px] py-2 cursor-pointer transition-colors ${
+                  className={`relative px-2 text-[16px] py-2 cursor-pointer transition-colors select-none focus:outline-none ${
                     activeLink === item.toLowerCase().replace(/\s+/g, "")
                       ? "text-black dark:text-[#FFD400] after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-3/5 after:h-[2px] after:bg-[#FFD400] dark:after:bg-[#FFD400] after:rounded-full"
                       : "text-black dark:text-[#FAFAFA] hover:text-[#FFD400] dark:hover:text-[#FFD400]"

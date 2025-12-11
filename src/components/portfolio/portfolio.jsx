@@ -5,7 +5,7 @@ function Portfolio({ noHeader = false }) {
   return (
     <div
       id="our-portfolio"
-      className="flex flex-col w-full max-w-[1300px] mx-auto mt-12 sm:mt-16 md:mt-28  px-4"
+      className="flex flex-col w-full max-w-[1300px] mx-auto  mt-28 sm:mt-32 md:mt-48 px-4"
     >
       {!noHeader && (
         <>

@@ -76,7 +76,7 @@ function Footer() {
           <div
             className="w-full max-w-[1300px] globe-container"
             style={{
-              height: isMobile ? "600px" : "550px",
+              height: isMobile ? "700px" : "550px",
               position: "relative",
             }}
           >
