@@ -33,7 +33,7 @@ function Portfolio({ noHeader = false }) {
             {portfolioItems.slice(start, start + 3).map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-row border border-gray-400 bg-[#EDEDED] dark:bg-[#171717] hover:border-[#FFD400] transition-colors duration-300 rounded-[16px] h-auto min-h-[300px] ${item.width} relative items-center`}
+                className={`flex flex-row border border-gray-400 bg-[#EDEDED] dark:bg-[#171717] hover:border-[#FFD400] transition-colors duration-300 rounded-[16px] h-auto min-h-[250px] sm:min-h-[260px] ${item.width} relative items-center`}
               >
                 <div className="flex flex-col justify-between h-full py-6 sm:py-6 ml-6 w-full sm:w-1/2 ">
                   <div className="flex flex-col">

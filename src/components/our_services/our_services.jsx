@@ -139,10 +139,11 @@ function OurServices() {
 
         {/* Mobile */}
         <div className="lg:hidden flex flex-col border border-gray-400 rounded-2xl overflow-hidden group-hover:border-[#FFD400] transition-colors duration-300">
-          <div className="relative h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden">
+          <div className="relative h-[220px] sm:h-[240px] md:h-[260px] overflow-hidden
+">
             <img
               src={img}
-              className="w-full h-full object-cover group-hover:hidden transition-opacity duration-300"
+              className="w-full h-full  group-hover:hidden transition-opacity duration-300 object-contain sm:object-cover"
               alt={title}
             />
             <img

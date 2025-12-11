@@ -70,13 +70,13 @@ function Footer() {
 
       {
         <div
-          className="w-full flex justify-center relative overflow-visible globe-section mt-0 sm:mt-4 md:mt-16 "
-          style={{ height: isMobile ? "250px" : "200px", zIndex: 1 }}
+          className="w-[90%] sm:w-full flex justify-center relative overflow-visible globe-section mt-0 sm:mt-4 md:mt-16 "
+          style={{ height: isMobile ? "290px" : "200px", zIndex: 1 }}
         >
           <div
             className="w-full max-w-[1300px] globe-container"
             style={{
-              height: isMobile ? "700px" : "550px",
+              height: isMobile ? "660px" : "550px",
               position: "relative",
             }}
           >

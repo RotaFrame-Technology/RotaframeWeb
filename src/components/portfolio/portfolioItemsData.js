@@ -1,5 +1,4 @@
 const portfolioItems = [
-  // render only first 6 items here in portfolio component
   {
     title: "Moonbeam Glamour",
     description:
@@ -81,34 +80,6 @@ const portfolioItems = [
     github: "",
     behance: "",
     readMore: "",
-  },
-
-  // additional items for portfolio page
-  {
-    title: "Jayanath Spices",
-    description:
-      "A refreshed, heritage-rich website for a premium organic spice exporter, blending Sri Lankan authenticity with global trust and seamless export inquiry flows.",
-    icon: "/assets/images/portfolioicon.png",
-    img: "/assets/images/portfolio7.png",
-    imgClass:
-      "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
-    width: "w-full sm:w-2/4",
-    github: "",
-    behance: "",
-    readMore: "",
-  },
-  {
-    title: "Event Management",
-    description:
-      "A comprehensive web and mobile platform for event planners to manage venues, vendors, tasks, and attendees with real-time updates and seamless coordination.",
-    icon: "/assets/images/portfolioicon.png",
-    img: "/assets/images/portfolio8.png",
-    imgClass:
-      "h-[200px] sm:h-[300px] md:h-[330px] w-[200px] sm:w-[300px] md:w-[350px]",
-    width: "w-full sm:w-2/4",
-    github: "",
-    behance: "",
-    readMore: "/portfolio/event-management",
   },
 ];
 
