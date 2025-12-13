@@ -9,19 +9,21 @@ function OurServices() {
       title: "E-Commerce Web Development",
       tag: "Multi-Platform",
       img: "/assets/images/service1.png",
+      imgMobile: "/assets/images/service1mobile.png",
       imgHover: "/assets/images/service1cols.png",
       vector: "/assets/images/VectorWhite.png",
       vectorDark: "/assets/images/Vector.png",
       vectorLeft: false,
-      desc: "We build high performance, conversion focused e-commerce platforms that deliver seamless shopping experiences across B2C and B2B markets.",
+      desc: "We build high performance, conversion focused E-Commerce platforms that deliver shopping experiences across B2C and B2B markets.",
       descShort:
-        "We build high performance, conversion focused e-commerce platforms that deliver seamless shopping experiences across B2C and B2B markets.",
+        "We build high performance, conversion focused E-Commerce platforms that deliver shopping experiences across B2C and B2B markets.",
     },
     {
       id: 2,
       title: "Custom Software Development",
       tag: "Multi-Platform",
       img: "/assets/images/service2.png",
+      imgMobile: "/assets/images/service2mobile.png",
       imgHover: "/assets/images/service2cols.png",
       vector: "/assets/images/VectorLeftWhite.png",
       vectorDark: "/assets/images/VectorLeft.png",
@@ -35,6 +37,7 @@ function OurServices() {
       title: "Mobile Application Development",
       tag: "Multi-Platform",
       img: "/assets/images/service3.png",
+      imgMobile: "/assets/images/service3mobile.png",
       imgHover: "/assets/images/service3cols.png",
       vector: "/assets/images/VectorWhite.png",
       vectorDark: "/assets/images/Vector.png",
@@ -48,6 +51,7 @@ function OurServices() {
       title: "UX/UI & Product Development",
       tag: "Multi-Platform",
       img: "/assets/images/service4.png",
+      imgMobile: "/assets/images/service4mobile.png",
       imgHover: "/assets/images/service4cols.png",
       vector: "/assets/images/VectorLeftWhite.png",
       vectorDark: "/assets/images/VectorLeft.png",
@@ -62,6 +66,7 @@ function OurServices() {
     title,
     tag,
     img,
+    imgMobile,
     imgHover,
     vector,
     vectorDark,
@@ -94,7 +99,7 @@ function OurServices() {
         {/* Desktop */}
         <div className="hidden lg:grid h-[300px] items-center">
           {" "}
-          <div className="grid grid-cols-5 h-[300px] border border-gray-400 rounded-[16px] hover:border-[#FFD400] transition-colors duration-300">
+          <div className="grid grid-cols-5 h-[300px] border border-gray-300 dark:border-gray-600 rounded-[16px] hover:border-[#FFD400] transition-colors duration-300">
             <div className="col-span-2 relative overflow-hidden w-[200px] h-[200px] items-center justify-center m-auto">
               <img
                 src={img}
@@ -108,15 +113,15 @@ function OurServices() {
               />
             </div>
             <div className="col-span-3 flex flex-col justify-center bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white rounded-r-2xl px-6">
-              <div className="text-[#FBBC05]  text-[16px] sm:text-[12px]">
+              <div className="text-[#FBBC05]  text-[10px] sm:text-[12px]">
                 <span className="bg-[#121212] px-4 py-2  rounded-full">
                   {tag}
                 </span>
               </div>
-              <div className="pt-2 text-2xl max-w-[250px] font-semibold mt-2 text-gray-700 dark:text-gray-300">
+              <div className=" text-2xl max-w-[250px] font-semibold mt-4 text-gray-700 dark:text-gray-300">
                 {title}
               </div>
-              <div className="pt-2 text-sm font-normal text-gray-600 dark:text-gray-400">
+              <div className="mt-2 text-sm font-normal text-gray-600 dark:text-gray-400">
                 {desc}
               </div>
               <button className="group mt-10 w-fit flex items-center gap-2 text-sm text-left text-gray-600 dark:text-gray-400 hover:text-[#FBBC05] transition-colors cursor-pointer">
@@ -138,12 +143,14 @@ function OurServices() {
         </div>
 
         {/* Mobile */}
-        <div className="lg:hidden flex flex-col border border-gray-400 rounded-2xl overflow-hidden group-hover:border-[#FFD400] transition-colors duration-300">
-          <div className="relative h-[220px] sm:h-[240px] md:h-[260px] overflow-hidden
-">
+        <div className="lg:hidden flex flex-col border border-gray-300 dark:border-gray-600 rounded-[24px] hover:border-[#FFD400] transition-colors duration-300">
+          <div
+            className="relative h-[220px] sm:h-[240px] md:h-[260px] overflow-hidden
+"
+          >
             <img
-              src={img}
-              className="w-full h-full  group-hover:hidden transition-opacity duration-300 object-contain sm:object-cover"
+              src={imgMobile}
+              className="w-full h-[300px]   group-hover:hidden transition-opacity duration-300 object-contain sm:object-cover"
               alt={title}
             />
             <img
@@ -152,17 +159,20 @@ function OurServices() {
               alt={`${title} Hover`}
             />
           </div>
-          <div className="flex flex-col bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white p-4 sm:p-6">
-            <div className="text-[#FBBC05] font-semibold text-sm sm:text-base">
-              {tag}
-            </div>
-            <div className="pt-2 text-lg sm:text-xl md:text-2xl max-w-[300px] font-semibold mt-2 text-gray-700 dark:text-gray-300">
+          <div className="flex flex-col bg-[#EDEDED] dark:bg-[#171717] text-black dark:text-white p-4 sm:p-6 pt-8 rounded-[24px]">
+            <div className="ml-2">
+              <div className="text-[#FBBC05]  text-[10px] sm:text-[12px]">
+                <span className="bg-[#121212] px-4 py-2  rounded-full">
+                  {tag}
+                </span>
+              </div>
+              <div className="text-[18px] max-w-[300px] font-semibold mt-4 text-gray-700 dark:text-gray-300">
                 {title}
               </div>
-            <div className="pt-2 text-sm font-normal text-gray-600 dark:text-gray-400">
-              {descShort}
-            </div>
-            <button className="group mt-10 w-fit flex items-center gap-2 text-sm text-left text-gray-600 dark:text-gray-400 hover:text-[#FBBC05] transition-colors cursor-pointer">
+              <div className=" text-[12px] font-normal mt-2 text-gray-600 dark:text-gray-400">
+                {descShort}
+              </div>
+              <button className="group  mt-8 pb-2 w-fit flex items-center gap-2 text-[12px] text-left text-gray-600 dark:text-gray-400 hover:text-[#FBBC05] transition-colors cursor-pointer">
                 <span>Read more</span>
                 <svg
                   className="h-[14px] w-[14px] transition-colors group-hover:fill-[#FBBC05]"
@@ -176,6 +186,7 @@ function OurServices() {
                   />
                 </svg>
               </button>
+            </div>
           </div>
         </div>
       </div>
@@ -186,6 +197,7 @@ function OurServices() {
     title: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
+    imgMobile: PropTypes.string.isRequired,
     imgHover: PropTypes.string.isRequired,
     vector: PropTypes.string,
     vectorDark: PropTypes.string,
@@ -197,7 +209,7 @@ function OurServices() {
   return (
     <div
       id="our-services"
-      className="flex flex-col items-center justify-center w-full px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 md:mt-28"
+      className="flex flex-col items-center justify-center w-full mt-12 sm:mt-16 md:mt-28"
     >
       <div className="w-full max-w-[1300px] px-4 mx-auto">
         <h2 className="text-sm sm:text-base font-semibold text-center text-[#FBBC05]">
@@ -206,17 +218,17 @@ function OurServices() {
           </span>
         </h2>
 
-        <p className="mt-4 sm:mt-0 md:mt-0 sm:pt-4 text-[16px] sm:text-[52px] font-semibold text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto ">
+        <p className="mt-4 sm:mt-0 md:mt-0 sm:pt-4 text-[28px] sm:text-[52px] font-semibold text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto ">
           What we can build for you
         </p>
 
-        <p className=" sm:pt-4 text-[12px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1  ">
+        <p className=" sm:pt-4 text-[16px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1  ">
           We help your brand grow with innovative design, memorable branding,
           high-performing e-commerce solutions, and smart marketing strategies.
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-8 sm:mt-12 md:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-8 sm:mt-12 md:mt-16  px-4 sm:px-6 lg:px-8">
           {cards.map((card) => (
             <ServiceCard key={card.id} {...card} />
           ))}

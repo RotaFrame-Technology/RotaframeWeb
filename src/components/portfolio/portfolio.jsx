@@ -14,17 +14,17 @@ function Portfolio({ noHeader = false }) {
               Project Portfolio
             </span>
           </h2>
-          <p className="mt-4 sm:mt-0 md:mt-0 sm:pt-4 text-[16px] sm:text-[52px] font-semibold text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto ">
+          <p className="mt-4 sm:mt-0 md:mt-0 sm:pt-4 text-[28px] sm:text-[52px] font-semibold text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto ">
             Building ideas into reality
           </p>
-          <p className=" sm:pt-4 text-[12px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1 ">
+          <p className=" sm:pt-4 text-[16px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1 ">
             A collection of our innovative delivered solutions and impactful
             success stories built through dedicated teamwork.
           </p>
         </>
       )}
 
-      <div className="flex flex-col w-full gap-4 mt-8 sm:mt-12 md:mt-16">
+      <div className="flex flex-col w-full gap-4 mt-8 sm:mt-12 md:mt-16  px-4 sm:px-6 lg:px-0">
         {[0, 3].map((start, rowIndex) => (
           <div
             key={rowIndex}
@@ -33,9 +33,10 @@ function Portfolio({ noHeader = false }) {
             {portfolioItems.slice(start, start + 3).map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-row border border-gray-400 bg-[#EDEDED] dark:bg-[#171717] hover:border-[#FFD400] transition-colors duration-300 rounded-[16px] h-auto min-h-[250px] sm:min-h-[260px] ${item.width} relative items-center`}
+                className={`flex flex-row border border-gray-300 dark:border-gray-600 bg-[#EDEDED] dark:bg-[#171717] hover:border-[#FFD400] transition-colors duration-300 rounded-[16px] h-auto sm:min-h-[260px] ${item.width} relative items-center overflow-hidden`}
               >
-                <div className="flex flex-col justify-between h-full py-6 sm:py-6 ml-6 w-full sm:w-1/2 ">
+                {/* Text Content */}
+                <div className="flex flex-col justify-between h-full py-6 sm:py-6 ml-4 md:ml-6 w-4/6 sm:w-1/2">
                   <div className="flex flex-col">
                     <div className="flex flex-row items-center gap-2">
                       <img
@@ -43,11 +44,11 @@ function Portfolio({ noHeader = false }) {
                         className="h-[16px] w-[16px] sm:h-[18px] sm:w-[18px] invert dark:invert-0"
                         alt="Portfolio Icon"
                       />
-                      <div className=" text-lg sm:text-xl md:text-2xl  font-semibold text-gray-700 dark:text-gray-300">
+                      <div className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">
                         {item.title}
                       </div>
                     </div>
-                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    <div className="text-xs w-[200px] md:w-full sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
                       {item.description}
                     </div>
                   </div>
@@ -115,7 +116,6 @@ function Portfolio({ noHeader = false }) {
                     {/* Read more */}
                     <div className="mt-2">
                       {item.readMore ? (
-                        // If item.readMore exists, link to external URL
                         <a
                           href={item.readMore}
                           target="_blank"
@@ -132,7 +132,6 @@ function Portfolio({ noHeader = false }) {
                           />
                         </a>
                       ) : (
-                        // If no external link, route to internal project page
                         <Link
                           to={`/portfolio/${item.title
                             .replace(/\s+/g, "-")
@@ -165,11 +164,15 @@ function Portfolio({ noHeader = false }) {
                     </div>
                   </div>
                 </div>
-                <img
-                  src={item.img}
-                  className={`${item.imgClass} items-center justify-end`}
-                  alt={item.title}
-                />
+
+                {/* Image - partially visible */}
+                <div className="absolute right-0 top-0 h-full overflow-hidden flex items-center">
+                  <img
+                    src={item.img}
+                    className={`${item.imgClass} translate-x-1/4`}
+                    alt={item.title}
+                  />
+                </div>
               </div>
             ))}
           </div>

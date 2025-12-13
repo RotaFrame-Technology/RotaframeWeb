@@ -18,7 +18,7 @@ function Banner({ noMargins = false }) {
           <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-[32px] text-gray-600 dark:text-gray-400">
             What can you get from
           </div>
-          <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-[44px] font-bold text-gray-700 dark:text-gray-300">
+          <div className="text-[32px] sm:text-4xl lg:text-5xl xl:text-[44px] font-bold text-gray-700 dark:text-gray-300">
             <AuroraText colors={["#FFD400", "#F4A300", "#E0E0E0", "#FFD400"]}>
               Rotaframe Technology
             </AuroraText>
@@ -28,7 +28,7 @@ function Banner({ noMargins = false }) {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-20 w-full lg:w-3/5">
           <div className="flex flex-col items-center gap-1 text-center">
-            <div className="text-4xl sm:text-4xl lg:text-[40px] font-semibold text-gray-700 dark:text-gray-300">
+            <div className="text-[32px] sm:text-4xl lg:text-[40px] font-semibold text-gray-700 dark:text-gray-300">
               24/7
             </div>
             <div className="text-base sm:text-lg lg:text-[20px] text-gray-600 dark:text-gray-400 whitespace-nowrap">
@@ -37,7 +37,7 @@ function Banner({ noMargins = false }) {
           </div>
 
           <div className="flex flex-col items-center gap-1 text-center">
-            <div className="text-4xl sm:text-4xl lg:text-[40px] font-semibold text-gray-700 dark:text-gray-300">
+            <div className="text-[32px] sm:text-4xl lg:text-[40px] font-semibold text-gray-700 dark:text-gray-300">
               100%
             </div>
             <div className="text-base sm:text-lg lg:text-[20px] text-gray-600 dark:text-gray-400 whitespace-nowrap">
@@ -46,7 +46,7 @@ function Banner({ noMargins = false }) {
           </div>
 
           <div className="flex flex-col items-center gap-1 text-center">
-            <div className="text-4xl sm:text-4xl lg:text-[40px] font-semibold text-gray-700 dark:text-gray-300">
+            <div className="text-[32px] sm:text-4xl lg:text-[40px] font-semibold text-gray-700 dark:text-gray-300">
               FREE
             </div>
             <div className="text-base sm:text-lg lg:text-[20px] text-gray-600 dark:text-gray-400 whitespace-nowrap">

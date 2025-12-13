@@ -2,11 +2,11 @@ const portfolioItems = [
   {
     title: "Moonbeam Glamour",
     description:
-      "A premium eCommerce platform designed to deliver a fast, elegant, and intuitive shopping experience for beauty and cosmetics customers.",
+      "A premium E-Commerce platform designed to deliver a fast, elegant, and intuitive shopping experience for beauty and cosmetics customers.",
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio1.png",
     imgClass:
-      "h-[200px] sm:h-[300px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[250px]",
+      "mt-16 md:mt-0 h-[150px] sm:h-[300px] md:h-[240px] w-[200px] sm:w-[200px] md:w-[300px]",
     width: "w-full sm:w-[45%] ",
     github: "",
     behance: "",
@@ -19,7 +19,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio2.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
+   "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -29,11 +29,11 @@ const portfolioItems = [
   {
     title: "Rest Provider",
     description:
-      "A simple, user-friendly onboarding for a food ordering app, guiding users through setup and...",
+      "A simple, user-friendly onboarding for  a food ordering app, guiding users through setup and...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio3.png",
-    imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
+     imgClass:
+     "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -47,7 +47,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio4.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
+      "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -61,7 +61,7 @@ const portfolioItems = [
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio5.png",
     imgClass:
-      "h-[180px] sm:h-[250px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[150px] mt-8",
+      "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
     behance:
@@ -75,8 +75,8 @@ const portfolioItems = [
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio6.png",
     imgClass:
-      "h-[200px] sm:h-[300px] md:h-[200px] w-[200px] sm:w-[200px] md:w-[250px]",
-    width: "w-full sm:w-[45%]",
+      "mt-16 md:mt-0 h-[150px] sm:h-[300px] md:h-[240px] w-[200px] sm:w-[200px] md:w-[300px]",
+    width: "w-full sm:w-[45%] ",
     github: "",
     behance: "",
     readMore: "",

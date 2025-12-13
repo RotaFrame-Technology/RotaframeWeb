@@ -126,7 +126,7 @@ function Header() {
 
         {/* Main header */}
         <div
-          className={`w-full max-w-[1300px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-xl transition-all duration-300 ${
+          className={`w-full max-w-[1300px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-[24px] transition-all duration-300 ${
             isScrolled
               ? "bg-white/70 dark:bg-[#171717]"
               : "bg-[#EDEDED] dark:bg-[#171717]"
@@ -197,7 +197,7 @@ function Header() {
               </button> */}
               <button
                 onClick={scrollToContact}
-                className="w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
+                className="w-[120px] h-[46px] flex items-center justify-center bg-[#FFD400] text-black border rounded-[16px] font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
               >
                 Contact Us
               </button>
@@ -281,7 +281,7 @@ function Header() {
                       }
                     }
                   }}
-                  className="py-3 px-2 text-base text-black dark:text-[#FAFAFA] hover:text-[#FFD400] border-b border-gray-200 dark:border-gray-600 transition-colors cursor-pointer"
+                  className="py-3 px-2 text-base text-black dark:text-[#FAFAFA] hover:text-[#FFD400]  border-b border-gray-200 dark:border-gray-600 transition-colors cursor-pointer"
                 >
                   {item}
                 </span>
@@ -292,7 +292,7 @@ function Header() {
                   setIsMobileMenuOpen(false);
                   scrollToContact();
                 }}
-                className="mt-6 w-[120px] h-[45px] flex items-center justify-center bg-[#FFD400] text-black border rounded-lg font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
+                className="mt-6  w-[120px] h-[44px] flex items-center justify-center bg-[#FFD400] text-black border rounded-[16px] font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
               >
                 Contact Us
               </button>
