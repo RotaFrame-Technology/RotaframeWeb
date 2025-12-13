@@ -214,7 +214,7 @@ const PortfolioPage = () => {
       {/* Logo Slider */}
       <div className="services-container flex flex-col items-center w-full ">
         <hr className="w-full border-t  border-[#2E2E2E] mt-16 sm:mt-28 md:mt-28" />
-        <div className="w-full max-w-[1300px] px-4">
+        <div className="w-full px-4">
           <LogoSlider noMargin />
         </div>
         <hr className="w-full border-t border-[#2E2E2E]" />

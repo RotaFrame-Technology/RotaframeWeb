@@ -5,7 +5,7 @@ function Portfolio({ noHeader = false }) {
   return (
     <div
       id="our-portfolio"
-      className="flex flex-col w-full max-w-[1300px] mx-auto  mt-28 sm:mt-32 md:mt-48 px-4"
+      className="flex flex-col w-full max-w-[1300px] mx-auto mt-28 sm:mt-32 md:mt-48 px-4"
     >
       {!noHeader && (
         <>
@@ -24,7 +24,7 @@ function Portfolio({ noHeader = false }) {
         </>
       )}
 
-      <div className="flex flex-col w-full gap-4 mt-8 sm:mt-12 md:mt-20">
+      <div className="flex flex-col w-full gap-4 mt-8 sm:mt-12 md:mt-16">
         {[0, 3].map((start, rowIndex) => (
           <div
             key={rowIndex}

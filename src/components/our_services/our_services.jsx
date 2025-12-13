@@ -210,13 +210,13 @@ function OurServices() {
           What we can build for you
         </p>
 
-        <p className=" sm:pt-4 text-[12px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1 mb-16 ">
+        <p className=" sm:pt-4 text-[12px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1  ">
           We help your brand grow with innovative design, memorable branding,
           high-performing e-commerce solutions, and smart marketing strategies.
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-8 sm:mt-12 md:mt-16">
           {cards.map((card) => (
             <ServiceCard key={card.id} {...card} />
           ))}

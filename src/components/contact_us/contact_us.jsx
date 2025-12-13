@@ -50,7 +50,7 @@ function ContactUs({ noMargin }) {
   return (
     <div
       id="contact"
-      className={`flex flex-col items-center w-full px-4 sm:px-6 lg:px-8 ${noMargin ? "" : "mt-14 sm:mt-56"}`}
+      className={`flex flex-col items-center w-full px-4 sm:px-6 lg:px-8 ${noMargin ? "" : " mt-28 sm:mt-32 md:mt-48"}`}
     >
       <Toaster />
       <div className="w-full max-w-[1100px] flex flex-col lg:flex-row gap-8 lg:gap-12 ">
