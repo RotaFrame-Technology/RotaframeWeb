@@ -246,33 +246,17 @@ function Header() {
                     } else if (item === "Services") {
                       const element = document.getElementById("our-services");
                       if (element) {
-                        const headerOffset = -100; // adjust if needed
-                        const elementPosition =
-                          element.getBoundingClientRect().top;
-                        const offsetPosition =
-                          elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({
-                          top: offsetPosition,
-                          behavior: "smooth",
-                        });
+                       navigate("/services");
+                      setTimeout(scrollToTop, 100); 
                       }
-                      // navigate("/our-services");
-                      // setTimeout(scrollToTop, 100); // delay to ensure navigation completes
+                      
                     } else if (item === "Portfolio") {
                       const element = document.getElementById("our-portfolio");
                       if (element) {
-                        const headerOffset = 50; // adjust if needed
-                        const elementPosition =
-                          element.getBoundingClientRect().top;
-                        const offsetPosition =
-                          elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({
-                          top: offsetPosition,
-                          behavior: "smooth",
-                        });
+                        navigate("/portfolio");
+                      setTimeout(scrollToTop, 100);
                       }
-                      // navigate("/portfolio");
-                      // setTimeout(scrollToTop, 100);
+                      
                     } else {
                       const sectionId = item.toLowerCase().replace(/\s+/g, "");
                       const element = document.getElementById(sectionId);
