@@ -224,7 +224,7 @@ function OurServices() {
 
         <p className=" sm:pt-4 text-[16px] sm:text-[20px] text-center text-gray-600 dark:text-gray-400 mx-auto max-w-[800px] mt-1  ">
           We help your brand grow with innovative design, memorable branding,
-          high-performing e-commerce solutions, and smart marketing strategies.
+          high-performing E-Commerce solutions, and smart marketing strategies.
         </p>
 
         {/* Grid */}

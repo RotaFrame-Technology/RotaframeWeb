@@ -4,10 +4,11 @@ const portfolioItems = [
     description:
       "A premium E-Commerce platform designed to deliver a fast, elegant, and intuitive shopping experience for beauty and cosmetics customers.",
     icon: "/assets/images/portfolioicon.png",
-    img: "/assets/images/portfolio1.png",
+    img: "/assets/images/portfolio1.png",         // Desktop partial image
+    imgMobile: "/assets/images/portfolio1.png", // New: full mobile hero
     imgClass:
       "mt-16 md:mt-0 h-[150px] sm:h-[300px] md:h-[240px] w-[200px] sm:w-[200px] md:w-[300px]",
-    width: "w-full sm:w-[45%] ",
+    width: "w-full sm:w-[45%]",
     github: "",
     behance: "",
     readMore: "",
@@ -18,26 +19,26 @@ const portfolioItems = [
       "A sleek mobile app concept that redefines subtitle discovery with a clean, cinematic design...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio2.png",
+    imgMobile: "/assets/images/portfolio2.png",
     imgClass:
-   "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
+      "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
-    behance:
-      "",
+    behance: "",
     readMore: "",
   },
   {
     title: "Rest Provider",
     description:
-      "A simple, user-friendly onboarding for  a food ordering app, guiding users through setup and...",
+      "A simple, user-friendly onboarding for a food ordering app, guiding users through setup and...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio3.png",
-     imgClass:
-     "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
+    imgMobile: "/assets/images/portfolio3.png",
+    imgClass:
+      "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
-    behance:
-      "",
+    behance: "",
     readMore: "",
   },
   {
@@ -46,12 +47,12 @@ const portfolioItems = [
       "A student-focused mobile app offering lecture schedules, attendance tracking, GPA calculation,...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio4.png",
+    imgMobile: "/assets/images/portfolio4.png",
     imgClass:
       "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
-    behance:
-      "",
+    behance: "",
     readMore: "",
   },
   {
@@ -60,12 +61,12 @@ const portfolioItems = [
       "This project aims to develop a user-friendly and visually engaging mobile application interface for...",
     icon: "/assets/images/portfoliomobileicon.png",
     img: "/assets/images/portfolio5.png",
+    imgMobile: "/assets/images/portfolio5.png",
     imgClass:
       "h-[180px] sm:h-[250px] md:h-[237px] w-[150px] sm:w-[200px] md:w-[180px]",
     width: "w-full sm:w-[30%]",
     github: "",
-    behance:
-      "",
+    behance: "",
     readMore: "",
   },
   {
@@ -74,13 +75,14 @@ const portfolioItems = [
       "A modern eCommerce platform offering a sleek, fast, and intuitive fashion shopping experience across desktop and mobile devices.",
     icon: "/assets/images/portfolioicon.png",
     img: "/assets/images/portfolio6.png",
+    imgMobile: "/assets/images/portfolio6.png",
     imgClass:
       "mt-16 md:mt-0 h-[150px] sm:h-[300px] md:h-[240px] w-[200px] sm:w-[200px] md:w-[300px]",
-    width: "w-full sm:w-[45%] ",
+    width: "w-full sm:w-[45%]",
     github: "",
     behance: "",
     readMore: "",
   },
 ];
 
-export default portfolioItems
+export default portfolioItems;
