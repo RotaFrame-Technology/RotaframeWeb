@@ -6,6 +6,7 @@ import NotFound from "../../pages/notFound/NotFound";
 import ErrorPage from "../../pages/error/ErrorPage";
 import PortfolioPage from "../../pages/portfolioPage/portfolioPage";
 import PortfolioSinglePage from "../../pages/portfolioSinglePage/portfolioSinglePage";
+import AboutUsPage from "../../pages/aboutUsPage/aboutUsPage";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUsPage />,
       },
       {
         path: "services",

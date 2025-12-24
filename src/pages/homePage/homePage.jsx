@@ -78,7 +78,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Logo Slider Section (Snow only here) */}
+      {/* Logo Slider Section (With Snow) */}
       <div className="relative w-full bg-white dark:bg-black overflow-hidden">
         <div className="absolute inset-0 z-10 pointer-events-none">
           <Snowfall

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ function Header() {
           const offsetPosition =
             elementPosition + window.pageYOffset - headerOffset;
           window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-        }, 400); // slight delay for page render
+        }, 400);
       }
     }
   }, [location]);
@@ -34,16 +34,17 @@ function Header() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Handle active link updates
+  // Update active link based on current path
   useEffect(() => {
     const path = location.pathname;
-    if (path === "/" || path.includes("home")) setActiveLink("home");
-    else if (path.includes("services")) setActiveLink("services");
-    else if (path.includes("portfolio")) setActiveLink("portfolio");
+    if (path === "/" || path === "") setActiveLink("home");
+    else if (path.includes("/about-us")) setActiveLink("aboutus");
+    else if (path.includes("/services")) setActiveLink("services");
+    else if (path.includes("/portfolio")) setActiveLink("portfolio");
     else setActiveLink("");
   }, [location]);
 
-  // Handle scroll detection
+  // Handle scroll for header hide/show and background
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -61,7 +62,7 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Restore theme from localStorage
+  // Restore theme from localStorage on mount
   useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.add("dark");
@@ -69,7 +70,7 @@ function Header() {
     }
   }, []);
 
-  // Toggle theme
+  // Toggle dark/light mode
   const toggleDarkMode = () => {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
@@ -91,10 +92,8 @@ function Header() {
       location.pathname !== "/portfolio";
 
     if (isPortfolioSingle) {
-      // ✅ If on a portfolio project page, go home and scroll to contact
       navigate("/", { state: { scrollTo: "contact" } });
     } else {
-      // ✅ Otherwise, scroll to contact section on the same page
       const element = document.getElementById("contact");
       if (element) {
         const headerOffset = 20;
@@ -106,6 +105,28 @@ function Header() {
     }
   };
 
+  // Navigation items configuration
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Services", path: "/services" },
+    { name: "Portfolio", path: "/portfolio" },
+  ];
+
+  const getActiveClass = (itemName) => {
+    const keyMap = {
+      Home: "home",
+      "About Us": "aboutus",
+      Services: "services",
+      Portfolio: "portfolio",
+    };
+    const key = keyMap[itemName];
+
+    return activeLink === key
+      ? "text-black dark:text-[#FFD400] after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-3/5 after:h-[2px] after:bg-[#FFD400] after:rounded-full"
+      : "text-black dark:text-[#FAFAFA] hover:text-[#FFD400] dark:hover:text-[#FFD400]";
+  };
+
   return (
     <>
       <header
@@ -115,7 +136,7 @@ function Header() {
       >
         {/* Background strip */}
         <div
-          className={` ${
+          className={`${
             isScrolled
               ? "bg-white/20 dark:bg-[#121212]/20 backdrop-blur-sm"
               : isDarkMode
@@ -124,7 +145,7 @@ function Header() {
           }`}
         />
 
-        {/* Main header */}
+        {/* Main header container */}
         <div
           className={`w-full max-w-[1300px] h-[64px] md:h-[84px] mx-auto flex items-center justify-between px-4 sm:px-6 rounded-[24px] transition-all duration-300 ${
             isScrolled
@@ -143,7 +164,7 @@ function Header() {
               className="h-[25px] sm:h-[30px] w-auto cursor-pointer"
               alt="Rotaframe Technology"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                scrollToTop();
                 navigate("/");
               }}
             />
@@ -152,40 +173,23 @@ function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex flex-row gap-8 items-center">
             <div className="flex flex-row gap-5">
-              {["Home", "About Us", "Services", "Portfolio"].map((item) => (
-                <span
-                  key={item}
-                  onClick={() => {
-                    if (item === "Home") {
-                      navigate("/");
-                      scrollToTop();
-                    } else if (item === "Services") {
-                      navigate("/services");
-                      setTimeout(scrollToTop, 100);
-                    } else if (item === "Portfolio") {
-                      navigate("/portfolio");
-                      setTimeout(scrollToTop, 100);
-                    } else {
-                      const sectionId = item.toLowerCase().replace(/\s+/g, "");
-                      const element = document.getElementById(sectionId);
-                      if (element) {
-                        element.scrollIntoView({ behavior: "smooth" });
-                      }
-                    }
-                  }}
-                  className={`relative px-2 text-[16px] py-2 cursor-pointer transition-colors select-none focus:outline-none ${
-                    activeLink === item.toLowerCase().replace(/\s+/g, "")
-                      ? "text-black dark:text-[#FFD400] after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-3/5 after:h-[2px] after:bg-[#FFD400] dark:after:bg-[#FFD400] after:rounded-full"
-                      : "text-black dark:text-[#FAFAFA] hover:text-[#FFD400] dark:hover:text-[#FFD400]"
-                  }`}
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={scrollToTop}
+                  className={`relative px-2 text-[16px] py-2 cursor-pointer transition-colors select-none focus:outline-none ${getActiveClass(
+                    item.name
+                  )}`}
                 >
-                  {item}
-                </span>
+                  {item.name}
+                </Link>
               ))}
             </div>
 
-            {/* Theme toggle + CTA */}
+            {/* Theme toggle + Contact CTA */}
             <div className="flex flex-row gap-6 items-center">
+              {/* Uncomment if you want the theme toggle button visible */}
               {/* <button
                 onClick={toggleDarkMode}
                 className="text-xl text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
@@ -195,6 +199,7 @@ function Header() {
               >
                 {isDarkMode ? <FaSun /> : <FaMoon />}
               </button> */}
+
               <button
                 onClick={scrollToContact}
                 className="w-[120px] h-[46px] flex items-center justify-center bg-[#FFD400] text-black border rounded-[16px] font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
@@ -206,12 +211,14 @@ function Header() {
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-3">
+            {/* Uncomment if you want theme toggle on mobile */}
             {/* <button
               onClick={toggleDarkMode}
               className="text-lg text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
             >
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </button> */}
+
             <button
               onClick={toggleMobileMenu}
               className="text-lg text-black dark:text-white cursor-pointer hover:text-[#FFD400] transition-colors"
@@ -222,7 +229,7 @@ function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
           className="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
@@ -235,40 +242,18 @@ function Header() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex flex-col p-6 pt-20">
-              {["Home", "About Us", "Services", "Portfolio"].map((item) => (
-                <span
-                  key={item}
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    if (item === "Home") {
-                      navigate("/");
-                      scrollToTop();
-                    } else if (item === "Services") {
-                      const element = document.getElementById("our-services");
-                      if (element) {
-                       navigate("/services");
-                      setTimeout(scrollToTop, 100); 
-                      }
-                      
-                    } else if (item === "Portfolio") {
-                      const element = document.getElementById("our-portfolio");
-                      if (element) {
-                        navigate("/portfolio");
-                      setTimeout(scrollToTop, 100);
-                      }
-                      
-                    } else {
-                      const sectionId = item.toLowerCase().replace(/\s+/g, "");
-                      const element = document.getElementById(sectionId);
-                      if (element) {
-                        element.scrollIntoView({ behavior: "smooth" });
-                      }
-                    }
+                    scrollToTop();
                   }}
-                  className="py-3 px-2 text-base text-black dark:text-[#FAFAFA] hover:text-[#FFD400]  border-b border-gray-200 dark:border-gray-600 transition-colors cursor-pointer"
+                  className="py-3 px-2 text-base text-black dark:text-[#FAFAFA] hover:text-[#FFD400] border-b border-gray-200 dark:border-gray-600 transition-colors"
                 >
-                  {item}
-                </span>
+                  {item.name}
+                </Link>
               ))}
 
               <button
@@ -276,7 +261,7 @@ function Header() {
                   setIsMobileMenuOpen(false);
                   scrollToContact();
                 }}
-                className="mt-6  w-[120px] h-[44px] flex items-center justify-center bg-[#FFD400] text-black border rounded-[16px] font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
+                className="mt-6 w-[120px] h-[44px] flex items-center justify-center bg-[#FFD400] text-black border rounded-[16px] font-semibold text-base transition-all duration-200 hover:bg-[#FFD400]/90 hover:brightness-95 cursor-pointer"
               >
                 Contact Us
               </button>

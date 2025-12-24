@@ -145,7 +145,7 @@ const ServicesPage = () => {
         {/* Contact Section */}
        <div
           id="contact"
-          className="w-full max-w-[1300px] px-4 sm:px-6 lg:px-10 mt-16 sm:mt-28 md:mt-28"
+          className="w-full max-w-[1300px]  mt-16 sm:mt-28 md:mt-28"
         >
           <ContactUs noMargin />
         </div>
